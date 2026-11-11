@@ -1,0 +1,31 @@
+{
+  "meta": {
+    "title": "Drone topographic survey and photogrammetry | DroneAtlas",
+    "description": "Drone topographic survey and photogrammetry for topographic maps, elevation models and measurable site data in Israel."
+  },
+  "kicker": "02  —  TOPO",
+  "title": "Topographic survey and photogrammetry",
+  "lede": "Drone survey and photogrammetric processing for topographic maps and elevation models.",
+  "intro": [
+    "Photogrammetry turns aerial imagery into a measurable model of the ground: elevation points, contours and a topographic map.",
+    "Survey extent, ground control and accuracy requirements are set for each project. No generic accuracy figures are stated here."
+  ],
+  "deliverablesTitle": "Typical deliverables",
+  "deliverables": [
+    "Topographic map",
+    "Elevation model (DSM / DTM as required)",
+    "Point cloud",
+    "Contours and vector data"
+  ],
+  "usesTitle": "Where it is used",
+  "uses": [
+    "Early and detailed planning",
+    "Recording the shape of the ground",
+    "Preparing quantity take-offs",
+    "Supporting a licensed surveyor, as defined for the project"
+  ],
+  "side": {
+    "title": "Talk about a survey",
+    "text": "Share the site boundary and the kind of map or model you need."
+  }
+}

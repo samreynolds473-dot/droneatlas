@@ -1,0 +1,12 @@
+{
+  "siteOrigin": "https://droneatlas.co.il",
+  "siteOriginStatus": "unconfirmed-recommended",
+  "siteOriginNote": "Recommended domain is droneatlas.co.il (not purchased). The owner buys it. Do not publish from this project.",
+  "basePath": "",
+  "noindex": true,
+  "phoneDisplay": "[TO FILL: 972XXXXXXXXX]",
+  "phoneE164": "[TO FILL: 972XXXXXXXXX]",
+  "email": "[TO FILL: email]",
+  "formAction": "{{FORM_ACTION}}",
+  "showDevPlaceholders": true
+}

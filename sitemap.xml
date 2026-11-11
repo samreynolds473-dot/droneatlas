@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://droneatlas.co.il/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://droneatlas.co.il/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://droneatlas.co.il/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://droneatlas.co.il/"/>
+  </url>
+  <url>
+    <loc>https://droneatlas.co.il/en/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://droneatlas.co.il/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://droneatlas.co.il/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://droneatlas.co.il/"/>
+  </url>
+  <url>
+    <loc>https://droneatlas.co.il/services/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://droneatlas.co.il/services/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://droneatlas.co.il/en/services/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://droneatlas.co.il/services/"/>
+  </url>
+  <url>
+    <loc>https://droneatlas.co.il/en/services/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://droneatlas.co.il/services/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://droneatlas.co.il/en/services/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://droneatlas.co.il/services/"/>
+  </url>
+  <url>
+    <loc>https://droneatlas.co.il/construction-progress-monitoring/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://droneatlas.co.il/construction-progress-monitoring/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://droneatlas.co.il/en/construction-progress-monitoring/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://droneatlas.co.il/construction-progress-monitoring/"/>
+  </url>
+  <url>
+    <loc>https://droneatlas.co.il/en/construction-progress-monitoring/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://droneatlas.co.il/construction-progress-monitoring/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://droneatlas.co.il/en/construction-progress-monitoring/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://droneatlas.co.il/construction-progress-monitoring/"/>
+  </url>
+  <url>
+    <loc>https://droneatlas.co.il/volume-calculation-earthworks/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://droneatlas.co.il/volume-calculation-earthworks/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://droneatlas.co.il/en/stockpile-volume-calculation/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://droneatlas.co.il/volume-calculation-earthworks/"/>
+  </url>
+  <url>
+    <loc>https://droneatlas.co.il/en/stockpile-volume-calculation/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://droneatlas.co.il/volume-calculation-earthworks/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://droneatlas.co.il/en/stockpile-volume-calculation/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://droneatlas.co.il/volume-calculation-earthworks/"/>
+  </url>
+  <url>
+    <loc>https://droneatlas.co.il/geodetic-mapping-rtk/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://droneatlas.co.il/geodetic-mapping-rtk/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://droneatlas.co.il/en/geodetic-mapping-rtk/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://droneatlas.co.il/geodetic-mapping-rtk/"/>
+  </url>
+  <url>
+    <loc>https://droneatlas.co.il/en/geodetic-mapping-rtk/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://droneatlas.co.il/geodetic-mapping-rtk/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://droneatlas.co.il/en/geodetic-mapping-rtk/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://droneatlas.co.il/geodetic-mapping-rtk/"/>
+  </url>
+  <url>
+    <loc>https://droneatlas.co.il/ground-control-points-gcp/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://droneatlas.co.il/ground-control-points-gcp/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://droneatlas.co.il/en/ground-control-points-gcp/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://droneatlas.co.il/ground-control-points-gcp/"/>
+  </url>
+  <url>
+    <loc>https://droneatlas.co.il/en/ground-control-points-gcp/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://droneatlas.co.il/ground-control-points-gcp/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://droneatlas.co.il/en/ground-control-points-gcp/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://droneatlas.co.il/ground-control-points-gcp/"/>
+  </url>
+  <url>
+    <loc>https://droneatlas.co.il/terrain-follow-mapping/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://droneatlas.co.il/terrain-follow-mapping/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://droneatlas.co.il/en/terrain-follow-mapping/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://droneatlas.co.il/terrain-follow-mapping/"/>
+  </url>
+  <url>
+    <loc>https://droneatlas.co.il/en/terrain-follow-mapping/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://droneatlas.co.il/terrain-follow-mapping/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://droneatlas.co.il/en/terrain-follow-mapping/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://droneatlas.co.il/terrain-follow-mapping/"/>
+  </url>
+  <url>
+    <loc>https://droneatlas.co.il/3d-modeling-point-cloud/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://droneatlas.co.il/3d-modeling-point-cloud/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://droneatlas.co.il/en/3d-modeling-point-cloud/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://droneatlas.co.il/3d-modeling-point-cloud/"/>
+  </url>
+  <url>
+    <loc>https://droneatlas.co.il/en/3d-modeling-point-cloud/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://droneatlas.co.il/3d-modeling-point-cloud/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://droneatlas.co.il/en/3d-modeling-point-cloud/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://droneatlas.co.il/3d-modeling-point-cloud/"/>
+  </url>
+  <url>
+    <loc>https://droneatlas.co.il/industrial-drone-photography/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://droneatlas.co.il/industrial-drone-photography/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://droneatlas.co.il/en/industrial-drone-photography/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://droneatlas.co.il/industrial-drone-photography/"/>
+  </url>
+  <url>
+    <loc>https://droneatlas.co.il/en/industrial-drone-photography/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://droneatlas.co.il/industrial-drone-photography/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://droneatlas.co.il/en/industrial-drone-photography/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://droneatlas.co.il/industrial-drone-photography/"/>
+  </url>
+  <url>
+    <loc>https://droneatlas.co.il/aerial-data-for-surveyors/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://droneatlas.co.il/aerial-data-for-surveyors/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://droneatlas.co.il/en/aerial-data-for-surveyors/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://droneatlas.co.il/aerial-data-for-surveyors/"/>
+  </url>
+  <url>
+    <loc>https://droneatlas.co.il/en/aerial-data-for-surveyors/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://droneatlas.co.il/aerial-data-for-surveyors/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://droneatlas.co.il/en/aerial-data-for-surveyors/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://droneatlas.co.il/aerial-data-for-surveyors/"/>
+  </url>
+  <url>
+    <loc>https://droneatlas.co.il/process/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://droneatlas.co.il/process/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://droneatlas.co.il/en/process/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://droneatlas.co.il/process/"/>
+  </url>
+  <url>
+    <loc>https://droneatlas.co.il/en/process/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://droneatlas.co.il/process/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://droneatlas.co.il/en/process/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://droneatlas.co.il/process/"/>
+  </url>
+  <url>
+    <loc>https://droneatlas.co.il/about/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://droneatlas.co.il/about/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://droneatlas.co.il/en/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://droneatlas.co.il/about/"/>
+  </url>
+  <url>
+    <loc>https://droneatlas.co.il/en/about/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://droneatlas.co.il/about/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://droneatlas.co.il/en/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://droneatlas.co.il/about/"/>
+  </url>
+  <url>
+    <loc>https://droneatlas.co.il/faq/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://droneatlas.co.il/faq/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://droneatlas.co.il/en/faq/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://droneatlas.co.il/faq/"/>
+  </url>
+  <url>
+    <loc>https://droneatlas.co.il/en/faq/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://droneatlas.co.il/faq/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://droneatlas.co.il/en/faq/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://droneatlas.co.il/faq/"/>
+  </url>
+  <url>
+    <loc>https://droneatlas.co.il/contact/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://droneatlas.co.il/contact/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://droneatlas.co.il/en/contact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://droneatlas.co.il/contact/"/>
+  </url>
+  <url>
+    <loc>https://droneatlas.co.il/en/contact/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://droneatlas.co.il/contact/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://droneatlas.co.il/en/contact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://droneatlas.co.il/contact/"/>
+  </url>
+  <url>
+    <loc>https://droneatlas.co.il/blog/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://droneatlas.co.il/blog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://droneatlas.co.il/en/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://droneatlas.co.il/blog/"/>
+  </url>
+  <url>
+    <loc>https://droneatlas.co.il/en/blog/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://droneatlas.co.il/blog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://droneatlas.co.il/en/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://droneatlas.co.il/blog/"/>
+  </url>
+  <url>
+    <loc>https://droneatlas.co.il/privacy/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://droneatlas.co.il/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://droneatlas.co.il/en/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://droneatlas.co.il/privacy/"/>
+  </url>
+  <url>
+    <loc>https://droneatlas.co.il/en/privacy/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://droneatlas.co.il/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://droneatlas.co.il/en/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://droneatlas.co.il/privacy/"/>
+  </url>
+  <url>
+    <loc>https://droneatlas.co.il/accessibility/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://droneatlas.co.il/accessibility/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://droneatlas.co.il/en/accessibility/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://droneatlas.co.il/accessibility/"/>
+  </url>
+  <url>
+    <loc>https://droneatlas.co.il/en/accessibility/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="he" href="https://droneatlas.co.il/accessibility/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://droneatlas.co.il/en/accessibility/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://droneatlas.co.il/accessibility/"/>
+  </url>
+</urlset>

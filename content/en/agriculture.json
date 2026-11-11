@@ -1,0 +1,31 @@
+{
+  "meta": {
+    "title": "Agricultural drone mapping | DroneAtlas",
+    "description": "Agricultural drone mapping in Israel, including vegetation indices such as NDVI when needed, to support field decisions."
+  },
+  "kicker": "06  —  AGRI",
+  "title": "Agricultural mapping",
+  "lede": "Drone mapping of fields and crops, including vegetation indices when needed.",
+  "intro": [
+    "Agricultural drone mapping provides an up-to-date image of the field, and a vegetation index such as NDVI can be added when the sensor and the question call for it.",
+    "Sensor type, timing and the kind of map are set according to the crop and the question being asked. No field results or case studies are listed here."
+  ],
+  "deliverablesTitle": "Typical deliverables",
+  "deliverables": [
+    "Field orthophoto",
+    "A vegetation-index map (for example NDVI) when required",
+    "Coverage boundary",
+    "A seasonal series of maps, if needed"
+  ],
+  "usesTitle": "Where it is used",
+  "uses": [
+    "Seeing variation across a field",
+    "Supporting irrigation or nutrition decisions as part of a wider process",
+    "Recording crop condition",
+    "Comparison between dates"
+  ],
+  "side": {
+    "title": "Talk about a field",
+    "text": "Share the crop, the field size and the kind of map you need."
+  }
+}

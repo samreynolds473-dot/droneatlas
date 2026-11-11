@@ -1,0 +1,22 @@
+{
+  "meta": {
+    "title": "About DroneAtlas | Drone mapping in Israel",
+    "description": "DroneAtlas is a new drone mapping and survey practice in Israel. Licence, team and track-record details will be added when they are ready to publish."
+  },
+  "kicker": "About",
+  "title": "About DroneAtlas",
+  "lede": "A new drone mapping and survey practice in Israel.",
+  "body": [
+    "DroneAtlas works in drone mapping and survey in Israel, and is separate from any other practice. Services include orthophoto, topographic survey and photogrammetry, 3D models, construction progress monitoring, volume calculations and agricultural mapping.",
+    "This page was prepared before brand, team, address or licence details were supplied. No activity figures, client names or testimonials have been added.",
+    "Professional background and full contact details will appear here once they have been provided."
+  ],
+  "licence": {
+    "label": "LICENCE",
+    "text": "The licence number, permit type and operating status will replace the temporary markers on this page."
+  },
+  "cta": {
+    "title": "Want to talk?",
+    "lede": "Use the form or WhatsApp, once the phone number has been updated."
+  }
+}

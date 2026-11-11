@@ -1,0 +1,198 @@
+{
+  "he": {
+    "skip": "דילוג לתוכן",
+    "mainNav": "ניווט ראשי",
+    "language": "בחירת שפה",
+    "menu": "תפריט",
+    "home": "בית",
+    "services": "שירותים",
+    "industries": "תחומים",
+    "process": "תהליך העבודה",
+    "about": "אודות",
+    "faq": "שאלות נפוצות",
+    "contact": "צור קשר",
+    "blog": "מגזין",
+    "privacy": "מדיניות פרטיות",
+    "accessibility": "הצהרת נגישות",
+    "learnMore": "לפרטים",
+    "footerCompany": "החברה",
+    "footerServices": "שירותים",
+    "footerContact": "יצירת קשר",
+    "footerBlurb": "דרון אטלס — מיפוי ומדידות ברחפן בכל הארץ. המפה המדויקת של הפרויקט שלך.",
+    "rights": "כל הזכויות שמורות.",
+    "domainNote": "כתובת האתר תיקבע עם רכישת הדומיין.",
+    "waPrimary": "קבלו הצעה לפי היקף בוואטסאפ",
+    "crumbHome": "בית",
+    "crumbServices": "שירותים",
+    "leadTag": "הצעת ליבה",
+    "blogEmpty": "המאמרים יופיעו כאן כשיפורסמו. אין כאן פוסטים לדוגמה.",
+    "thanksTitle": "תודה | דרון אטלס",
+    "thanksH1": "תודה!",
+    "thanksBody": "קיבלנו את הפרטים ונחזור אליכם בהקדם.",
+    "thanksMeta": "תודה על פנייתכם לדרון אטלס.",
+    "notFoundTitle": "העמוד לא נמצא | דרון אטלס",
+    "notFoundH1": "העמוד לא נמצא",
+    "notFoundBody": "ייתכן שהכתובת השתנתה או שהקישור שגוי.",
+    "backHome": "חזרה לעמוד הבית",
+    "formName": "שם מלא",
+    "formCompany": "חברה",
+    "formPhone": "טלפון",
+    "formEmail": "אימייל",
+    "formLocation": "מיקום האתר / יישוב",
+    "formService": "סוג השירות",
+    "formServicePh": "בחירת שירות",
+    "formArea": "גודל שטח משוער",
+    "formDetails": "פרטים נוספים",
+    "formFile": "העלאת קובץ גבולות",
+    "formConsent": "אני מסכים/ה ל",
+    "formConsentLink": "מדיניות הפרטיות",
+    "formSubmit": "שליחה",
+    "required": "חובה",
+    "optional": "רשות",
+    "svcOptions": [
+      [
+        "geodetic",
+        "מיפוי שטחים גאודטי"
+      ],
+      [
+        "gcp",
+        "נקודות בקרה GCP"
+      ],
+      [
+        "terrain",
+        "מיפוי עוקב קרקע"
+      ],
+      [
+        "3d",
+        "מידול תלת מימד וענן נקודות"
+      ],
+      [
+        "industrial",
+        "צילומי רחפן לתעשייה"
+      ],
+      [
+        "construction",
+        "מיפוי התקדמות בנייה"
+      ],
+      [
+        "volumes",
+        "חישוב נפחים"
+      ],
+      [
+        "surveyors",
+        "נתוני רחפן למודדים"
+      ]
+    ],
+    "waHref": "https://wa.me/[להשלמה: מספר וואטסאפ בפורמט 972XXXXXXXXX]",
+    "legalNote": "תבנית בלבד — לסקירת עורך דין לפני פרסום.",
+    "privacyTitle": "מדיניות פרטיות | דרון אטלס",
+    "privacyMeta": "מדיניות הפרטיות של אתר דרון אטלס. תבנית לסקירת עורך דין. פרטים משפטיים חסרים מסומנים להשלמה.",
+    "a11yTitle": "הצהרת נגישות | דרון אטלס",
+    "a11yMeta": "הצהרת הנגישות של אתר דרון אטלס, בהתאם לתקן הישראלי 5568. פרטים חסרים מסומנים להשלמה.",
+    "a11yH1": "הצהרת נגישות (תבנית)",
+    "privacyH1": "מדיניות פרטיות (תבנית)",
+    "tagline": "המפה המדויקת של הפרויקט שלך",
+    "illustrative": "איור להמחשה",
+    "dataPanelChrome": "DSM · EPSG:2039",
+    "dataPanelFormats": "GeoTIFF · LAS/LAZ · DWG · PDF",
+    "mediaPending": "התמונה תופיע כאן כשתתווסף"
+  },
+  "en": {
+    "skip": "Skip to content",
+    "mainNav": "Main navigation",
+    "language": "Language",
+    "menu": "Menu",
+    "home": "Home",
+    "services": "Services",
+    "industries": "Industries",
+    "process": "Process",
+    "about": "About",
+    "faq": "FAQ",
+    "contact": "Contact us",
+    "blog": "Blog",
+    "privacy": "Privacy policy",
+    "accessibility": "Accessibility statement",
+    "learnMore": "Learn more",
+    "footerCompany": "Company",
+    "footerServices": "Services",
+    "footerContact": "Contact",
+    "footerBlurb": "DroneAtlas — drone mapping and survey across Israel. The accurate map of your project.",
+    "rights": "All rights reserved.",
+    "domainNote": "The live domain will be set once it is purchased.",
+    "waPrimary": "Get a quote by scope on WhatsApp",
+    "crumbHome": "Home",
+    "crumbServices": "Services",
+    "leadTag": "Lead offer",
+    "blogEmpty": "Articles will appear here when they are published. No sample posts have been added.",
+    "thanksTitle": "Thank you | DroneAtlas",
+    "thanksH1": "Thank you!",
+    "thanksBody": "We have your details and will get back to you shortly.",
+    "thanksMeta": "Thank you for contacting DroneAtlas.",
+    "notFoundTitle": "Page not found | DroneAtlas",
+    "notFoundH1": "Page not found",
+    "notFoundBody": "The address may have changed, or the link may be incorrect.",
+    "backHome": "Back to the homepage",
+    "formName": "Full name",
+    "formCompany": "Company",
+    "formPhone": "Phone",
+    "formEmail": "Email",
+    "formLocation": "Site location / town",
+    "formService": "Service",
+    "formServicePh": "Select a service",
+    "formArea": "Approximate area",
+    "formDetails": "Details",
+    "formFile": "Upload boundary file",
+    "formConsent": "I agree to the",
+    "formConsentLink": "privacy policy",
+    "formSubmit": "Send",
+    "required": "required",
+    "optional": "optional",
+    "svcOptions": [
+      [
+        "geodetic",
+        "RTK geodetic mapping"
+      ],
+      [
+        "gcp",
+        "Ground control points"
+      ],
+      [
+        "terrain",
+        "Terrain-follow mapping"
+      ],
+      [
+        "3d",
+        "3D modelling and point clouds"
+      ],
+      [
+        "industrial",
+        "Industrial photography"
+      ],
+      [
+        "construction",
+        "Construction progress"
+      ],
+      [
+        "volumes",
+        "Volume calculation"
+      ],
+      [
+        "surveyors",
+        "Data for surveyors"
+      ]
+    ],
+    "waHref": "https://wa.me/[TO FILL: WhatsApp number in 972XXXXXXXXX format]",
+    "legalNote": "Template only — must be reviewed by a lawyer before publishing.",
+    "privacyTitle": "Privacy Policy | DroneAtlas",
+    "privacyMeta": "Privacy policy for the DroneAtlas website. Template pending lawyer review. Missing legal details are marked TO FILL.",
+    "a11yTitle": "Accessibility Statement | DroneAtlas",
+    "a11yMeta": "Accessibility statement for the DroneAtlas website, in line with Israeli Standard 5568. Missing details are marked TO FILL.",
+    "a11yH1": "Accessibility Statement (template)",
+    "privacyH1": "Privacy Policy (template)",
+    "tagline": "The accurate map of your project",
+    "illustrative": "Illustrative example",
+    "dataPanelChrome": "DSM · EPSG:2039",
+    "dataPanelFormats": "GeoTIFF · LAS/LAZ · DWG · PDF",
+    "mediaPending": "This image will appear here when it is added"
+  }
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+  <rect width="1200" height="800" fill="#0E1A2E"/>
+  <defs>
+    <radialGradient id="pile1" cx="35%" cy="55%" r="28%">
+      <stop offset="0%" stop-color="#b2182b"/>
+      <stop offset="55%" stop-color="#fddbc7"/>
+      <stop offset="100%" stop-color="#0E1A2E" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="pile2" cx="68%" cy="48%" r="32%">
+      <stop offset="0%" stop-color="#2166ac"/>
+      <stop offset="55%" stop-color="#d1e5f0"/>
+      <stop offset="100%" stop-color="#0E1A2E" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#pile1)"/>
+  <rect width="1200" height="800" fill="url(#pile2)"/>
+  <g fill="none" stroke="#7AEFFF" stroke-width="1.1" opacity="0.45">
+    <ellipse cx="420" cy="440" rx="160" ry="110"/>
+    <ellipse cx="420" cy="440" rx="100" ry="70"/>
+    <ellipse cx="820" cy="390" rx="200" ry="140"/>
+    <ellipse cx="820" cy="390" rx="130" ry="90"/>
+    <ellipse cx="820" cy="390" rx="70" ry="48"/>
+  </g>
+  <g fill="none" stroke="#00E5FF" stroke-width="2" stroke-dasharray="8 7" opacity="0.85">
+    <ellipse cx="420" cy="440" rx="190" ry="130"/>
+    <ellipse cx="820" cy="390" rx="230" ry="160"/>
+  </g>
+</svg>

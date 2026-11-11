@@ -1,0 +1,13 @@
+{
+  "meta": {
+    "title": "Contact | DroneAtlas",
+    "description": "Contact DroneAtlas about drone mapping and survey in Israel, by form or WhatsApp."
+  },
+  "kicker": "Contact",
+  "title": "Get in touch",
+  "lede": "Send details about the site and the service you need. The phone number and email will be updated before launch.",
+  "aside": {
+    "title": "WhatsApp and phone",
+    "text": "The WhatsApp button will be connected to the real number once it is provided. Until then it is marked as pending."
+  }
+}
