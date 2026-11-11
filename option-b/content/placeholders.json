@@ -1,0 +1,77 @@
+{
+  "tokens": [
+    {
+      "token": "{{PHONE}}",
+      "keys": [
+        "phoneDisplay",
+        "phoneE164"
+      ],
+      "where": [
+        "header/footer WhatsApp",
+        "contact page",
+        "js/config.js",
+        "config.json"
+      ]
+    },
+    {
+      "token": "{{EMAIL}}",
+      "keys": [
+        "email"
+      ],
+      "where": [
+        "footer",
+        "contact aside",
+        "privacy"
+      ]
+    },
+    {
+      "token": "{{FORM_ACTION}}",
+      "keys": [
+        "formAction"
+      ],
+      "where": [
+        "contact form action",
+        "js/config.js"
+      ]
+    },
+    {
+      "token": "{{LICENCE}}",
+      "keys": [],
+      "where": [
+        "home about box",
+        "about page"
+      ]
+    },
+    {
+      "token": "{{PORTFOLIO}}",
+      "keys": [],
+      "where": [
+        "home portfolio teaser",
+        "portfolio page plates"
+      ]
+    },
+    {
+      "token": "{{LEGAL_NAME}}",
+      "keys": [],
+      "where": [
+        "privacy policy"
+      ]
+    },
+    {
+      "token": "{{ADDRESS}}",
+      "keys": [],
+      "where": [
+        "privacy policy"
+      ]
+    },
+    {
+      "token": "SITE_ORIGIN",
+      "keys": [
+        "siteOrigin"
+      ],
+      "where": [
+        "canonical, hreflang, Open Graph, sitemap.xml, robots.txt, JSON-LD"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" role="img" aria-hidden="true">
+  <!-- map-tile frame -->
+  <rect x="36" y="36" width="568" height="568" rx="12" fill="rgba(5,7,11,0.25)" stroke="#7AEFFF" stroke-width="1.2" opacity="0.55"/>
+  <g stroke="#7AEFFF" stroke-width="0.9" opacity="0.45" fill="none">
+    <path d="M36 36h14M36 36v14M604 36h-14M604 36v14M36 604h14M36 604v-14M604 604h-14M604 604v-14"/>
+  </g>
+  <!-- orthophoto-style grid -->
+  <g stroke="#7AEFFF" stroke-width="0.55" opacity="0.18">
+    <path d="M36 148h568M36 260h568M36 372h568M36 484h568"/>
+    <path d="M148 36v568M260 36v568M372 36v568M484 36v568"/>
+  </g>
+  <!-- topographic contours -->
+  <g fill="none" stroke="#00E5FF" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M60 530 C 150 490, 210 560, 310 515 S 450 430, 540 490 S 610 555, 640 520" stroke-width="1.5" opacity="0.95"/>
+    <path d="M70 480 C 170 435, 240 515, 350 465 S 490 385, 580 445 S 630 510, 650 470" stroke-width="1.4"/>
+    <path d="M90 425 C 190 390, 280 460, 400 410 S 530 335, 620 385" stroke-width="1.35"/>
+    <path d="M120 370 C 230 345, 320 405, 450 360 S 560 295, 650 340" stroke-width="1.25"/>
+    <path d="M170 320 C 280 305, 360 355, 490 315 S 590 260, 655 295" stroke-width="1.15"/>
+    <path d="M230 275 C 330 265, 410 305, 530 275 S 610 230, 655 255" stroke-width="1.1"/>
+    <path d="M310 238 C 400 230, 470 268, 560 240 S 620 205, 655 225" stroke-width="1"/>
+    <path d="M400 208 C 475 202, 530 228, 610 212" stroke-width="0.95"/>
+  </g>
+  <!-- contour-peak logo motif, slightly offset -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round" transform="translate(214 86) scale(1.15)">
+    <path d="M10 140 L70 20 L130 140" stroke="#7AEFFF" stroke-width="8" opacity="0.95"/>
+    <path d="M34 140 L70 68 L106 140" stroke="#7AEFFF" stroke-width="5.5"/>
+    <path d="M56 140 L70 112 L84 140" stroke="#00E5FF" stroke-width="4"/>
+    <circle cx="70" cy="20" r="8" fill="#00E5FF" stroke="none"/>
+  </g>
+  <!-- point-cloud samples -->
+  <g fill="#7AEFFF">
+    <circle cx="150" cy="500" r="2" opacity="0.7"/>
+    <circle cx="190" cy="455" r="1.6" opacity="0.55"/>
+    <circle cx="240" cy="510" r="2.1" opacity="0.8"/>
+    <circle cx="280" cy="430" r="1.5" opacity="0.5"/>
+    <circle cx="330" cy="480" r="2" opacity="0.7"/>
+    <circle cx="390" cy="400" r="1.7" opacity="0.6"/>
+    <circle cx="450" cy="455" r="2.2" opacity="0.85"/>
+    <circle cx="510" cy="390" r="1.6" opacity="0.55"/>
+    <circle cx="548" cy="470" r="1.8" opacity="0.65"/>
+    <circle cx="200" cy="360" r="1.5" opacity="0.45"/>
+    <circle cx="360" cy="340" r="1.7" opacity="0.55"/>
+    <circle cx="500" cy="330" r="1.5" opacity="0.45"/>
+  </g>
+  <!-- survey target -->
+  <g stroke="#7AEFFF" stroke-width="1.35" fill="none" opacity="0.9">
+    <circle cx="452" cy="318" r="18"/>
+    <path d="M452 292v10M452 334v10M426 318h10M468 318h10"/>
+  </g>
+  <circle cx="452" cy="318" r="3.2" fill="#00E5FF"/>
+  <!-- small coordinate ticks -->
+  <g fill="#7AEFFF" font-family="JetBrains Mono, monospace" font-size="11" opacity="0.55">
+    <text x="52" y="622">N</text>
+    <text x="572" y="622">E</text>
+  </g>
+</svg>

@@ -1,0 +1,92 @@
+{
+  "nav": [
+    {
+      "id": "services",
+      "label": "Services"
+    },
+    {
+      "id": "about",
+      "label": "About"
+    },
+    {
+      "id": "portfolio",
+      "label": "Portfolio"
+    },
+    {
+      "id": "contact",
+      "label": "Contact"
+    }
+  ],
+  "ui": {
+    "skip": "Skip to content",
+    "mainNav": "Main navigation",
+    "language": "Language",
+    "menu": "Menu",
+    "contactCta": "Contact us",
+    "learnMore": "Learn more",
+    "allServices": "All services",
+    "home": "Home",
+    "privacy": "Privacy policy"
+  },
+  "footer": {
+    "blurb": "Drone mapping and survey in Israel: orthophoto, photogrammetry, 3D models, construction monitoring, volume calculations and agricultural mapping.",
+    "services": "Services",
+    "company": "Company",
+    "contact": "Contact",
+    "rights": "All rights reserved.",
+    "domainNote": "The live domain will be set once it is confirmed."
+  },
+  "placeholders": {
+    "phone": "[Phone number — to be updated]",
+    "email": "[Email address — to be updated]",
+    "licence": "[Operator licence — to be updated]",
+    "portfolio": "[Portfolio — to be updated]",
+    "portfolioItem": "[Project — to be updated]",
+    "form": "[Form action — to be updated, FORM_ACTION]",
+    "legal": "[Legal details — to be updated]",
+    "whatsappBlocked": "WhatsApp is not connected yet ({{PHONE}})."
+  },
+  "form": {
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "service": "Service",
+    "servicePlaceholder": "Select a service",
+    "message": "Message",
+    "hint": "Required fields must be filled. The form is static for now.",
+    "submit": "Send",
+    "todoMessage": "The form endpoint is not connected yet ({{FORM_ACTION}})."
+  },
+  "services": {
+    "orthophoto": {
+      "nav": "Orthophoto",
+      "title": "Orthophoto",
+      "card": "An up-to-date orthophoto of your site — a georeferenced aerial map ready for GIS and CAD."
+    },
+    "topo": {
+      "nav": "Topographic survey & photogrammetry",
+      "title": "Topographic survey and photogrammetry",
+      "card": "Drone survey and photogrammetric processing for topographic maps, elevation models and measurable site data."
+    },
+    "models": {
+      "nav": "3D models",
+      "title": "3D models",
+      "card": "A 3D model of the site for presentation, planning and progress review."
+    },
+    "construction": {
+      "nav": "Construction progress",
+      "title": "Construction progress monitoring",
+      "card": "Recurring aerial records of the construction site, for progress comparison and field coordination."
+    },
+    "volumes": {
+      "nav": "Volume calculations",
+      "title": "Volume calculations",
+      "card": "Stockpile, cut and fill volumes based on a drone survey of the site."
+    },
+    "agriculture": {
+      "nav": "Agricultural mapping",
+      "title": "Agricultural mapping",
+      "card": "Drone mapping for agriculture, including vegetation indices such as NDVI when needed."
+    }
+  }
+}

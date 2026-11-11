@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" role="img" aria-hidden="true">
+  <rect x="24" y="24" width="592" height="592" rx="8" fill="none" stroke="currentColor" stroke-width="1.25" opacity="0.7"/>
+  <rect x="40" y="40" width="560" height="560" rx="4" fill="none" stroke="currentColor" stroke-width="0.6" opacity="0.35"/>
+  <!-- coordinate ticks -->
+  <g stroke="currentColor" stroke-width="1" opacity="0.55">
+    <path d="M40 40h12M40 40v12M600 40h-12M600 40v12M40 600h12M40 600v-12M600 600h-12M600 600v-12"/>
+  </g>
+  <g fill="none" stroke="currentColor" stroke-width="0.6" opacity="0.2">
+    <path d="M40 180h560M40 320h560M40 460h560"/>
+    <path d="M180 40v560M320 40v560M460 40v560"/>
+  </g>
+  <g fill="none" stroke="currentColor" stroke-width="1.35" stroke-linejoin="round" opacity="0.85">
+    <path d="M70 520 C 150 470, 190 545, 280 500 S 400 410, 500 470 S 580 540, 620 500"/>
+    <path d="M70 470 C 170 420, 230 500, 330 450 S 450 370, 560 430 S 600 490, 630 450"/>
+    <path d="M80 415 C 170 380, 240 450, 360 400 S 500 320, 600 375"/>
+    <path d="M110 355 C 210 330, 290 390, 410 345 S 540 280, 630 330"/>
+    <path d="M160 300 C 260 280, 330 335, 450 300 S 560 245, 640 285"/>
+    <path d="M230 250 C 320 238, 390 285, 500 250 S 590 210, 650 240"/>
+    <path d="M310 208 C 390 200, 450 238, 540 212 S 610 180, 650 200"/>
+    <path d="M410 172 C 480 166, 530 192, 600 176"/>
+  </g>
+  <!-- peak + crosshair -->
+  <g stroke="currentColor" stroke-width="1.3" fill="none" opacity="0.9">
+    <circle cx="430" cy="300" r="18"/>
+    <path d="M430 274v10M430 316v10M404 300h10M446 300h10"/>
+  </g>
+  <circle cx="430" cy="300" r="3" fill="currentColor"/>
+</svg>

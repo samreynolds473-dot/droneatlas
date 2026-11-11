@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "title": "Privacy policy | DroneAtlas",
+    "description": "Privacy policy for the DroneAtlas website. Missing legal details are marked as pending."
+  },
+  "kicker": "Legal",
+  "title": "Privacy policy",
+  "lede": "This is an initial notice only. Missing legal fields are clearly marked.",
+  "sections": [
+    {
+      "title": "Who we are",
+      "paragraphs": [
+        "This site is operated by {{LEGAL_NAME}}. Address: {{ADDRESS}}. Email: {{EMAIL}}. Phone: {{PHONE}}.",
+        "These details will be updated before the site is published."
+      ]
+    },
+    {
+      "title": "What is collected",
+      "paragraphs": [
+        "If you submit the contact form, we collect your name, email, phone number (if provided), the service selected and the message you write.",
+        "No analytics or tracking identifier is used on this site until a decision is made and this notice is updated."
+      ]
+    },
+    {
+      "title": "How the data is used",
+      "paragraphs": [
+        "The data is used only to reply to your enquiry and to arrange work. It is not shared with third parties except where the law requires it, or where a form delivery service (such as Formspree) is needed to receive the message."
+      ]
+    },
+    {
+      "title": "Retention and contact",
+      "paragraphs": [
+        "Retention periods will be set once the legal details are complete. Privacy questions can be sent to {{EMAIL}} or through the contact form."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Drone 3D Modelling &amp; Point Clouds | DroneAtlas</title>
+  <meta name="description" content="Drone 3D modelling: textured OBJ and 3D Tiles models, LAS/LAZ point clouds and on-model measurements for buildings, facades and sites.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://samreynolds473-dot.github.io/droneatlas/option-b/en/3d-modeling-point-cloud/">
+  <link rel="alternate" hreflang="he" href="https://samreynolds473-dot.github.io/droneatlas/option-b/3d-modeling-point-cloud/">
+  <link rel="alternate" hreflang="en" href="https://samreynolds473-dot.github.io/droneatlas/option-b/en/3d-modeling-point-cloud/">
+  <link rel="alternate" hreflang="x-default" href="https://samreynolds473-dot.github.io/droneatlas/option-b/3d-modeling-point-cloud/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="he_IL">
+  <meta property="og:site_name" content="DroneAtlas">
+  <meta property="og:title" content="Drone 3D Modelling &amp; Point Clouds | DroneAtlas">
+  <meta property="og:description" content="Drone 3D modelling: textured OBJ and 3D Tiles models, LAS/LAZ point clouds and on-model measurements for buildings, facades and sites.">
+  <meta property="og:url" content="https://samreynolds473-dot.github.io/droneatlas/option-b/en/3d-modeling-point-cloud/">
+  <meta property="og:image" content="https://samreynolds473-dot.github.io/droneatlas/option-b/assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Drone 3D Modelling &amp; Point Clouds | DroneAtlas">
+  <meta name="twitter:description" content="Drone 3D modelling: textured OBJ and 3D Tiles models, LAS/LAZ point clouds and on-model measurements for buildings, facades and sites.">
+  <meta name="twitter:image" content="https://samreynolds473-dot.github.io/droneatlas/option-b/assets/og-image.png">
+  <link rel="icon" href="/droneatlas/option-b/assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/droneatlas/option-b/assets/apple-touch-icon.png">
+  <link rel="preload" href="/droneatlas/option-b/assets/fonts/TelAviv-BrutalistBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/droneatlas/option-b/assets/fonts/Heebo-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/droneatlas/option-b/assets/fonts/Rubik-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/droneatlas/option-b/css/fonts.css">
+  <link rel="stylesheet" href="/droneatlas/option-b/css/styles.css">
+  <link rel="stylesheet" href="/droneatlas/option-b/css/home-nav.css">
+  <link rel="stylesheet" href="/droneatlas/option-b/css/adapt.css">
+  <link rel="stylesheet" href="/droneatlas/option-b/css/service-page.css">
+  <link rel="stylesheet" href="/droneatlas/option-b/css/home-flow.css">
+  <link rel="stylesheet" href="/droneatlas/option-b/css/theme.css">
+  <link rel="stylesheet" href="/droneatlas/option-b/css/option-b.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://samreynolds473-dot.github.io/droneatlas/option-b/#organization",
+      "name": "DroneAtlas",
+      "alternateName": "דרון אטלס",
+      "url": "https://samreynolds473-dot.github.io/droneatlas/option-b/",
+      "image": "https://samreynolds473-dot.github.io/droneatlas/option-b/assets/og-image.png",
+      "logo": "https://samreynolds473-dot.github.io/droneatlas/option-b/assets/logo-mark.svg",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Israel"
+      },
+      "availableLanguage": [
+        "he",
+        "en"
+      ],
+      "knowsAbout": [
+        "Construction progress monitoring",
+        "Stockpile volume calculation",
+        "Orthophoto",
+        "Photogrammetry",
+        "3D site models"
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://samreynolds473-dot.github.io/droneatlas/option-b/en/3d-modeling-point-cloud/#webpage",
+      "url": "https://samreynolds473-dot.github.io/droneatlas/option-b/en/3d-modeling-point-cloud/",
+      "name": "Drone 3D Modelling & Point Clouds | DroneAtlas",
+      "description": "Drone 3D modelling: textured OBJ and 3D Tiles models, LAS/LAZ point clouds and on-model measurements for buildings, facades and sites.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://samreynolds473-dot.github.io/droneatlas/option-b/#website"
+      },
+      "about": {
+        "@id": "https://samreynolds473-dot.github.io/droneatlas/option-b/#organization"
+      },
+      "breadcrumb": {
+        "@id": "https://samreynolds473-dot.github.io/droneatlas/option-b/en/3d-modeling-point-cloud/#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://samreynolds473-dot.github.io/droneatlas/option-b/en/3d-modeling-point-cloud/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "DroneAtlas",
+          "item": "https://samreynolds473-dot.github.io/droneatlas/option-b/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://samreynolds473-dot.github.io/droneatlas/option-b/en/services/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Drone 3D modelling and point clouds",
+          "item": "https://samreynolds473-dot.github.io/droneatlas/option-b/en/3d-modeling-point-cloud/"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://samreynolds473-dot.github.io/droneatlas/option-b/en/3d-modeling-point-cloud/#service",
+      "name": "Drone 3D modelling and point clouds",
+      "serviceType": "Drone 3D modelling and point clouds",
+      "description": "Drone 3D modelling: textured OBJ and 3D Tiles models, LAS/LAZ point clouds and on-model measurements for buildings, facades and sites.",
+      "provider": {
+        "@id": "https://samreynolds473-dot.github.io/droneatlas/option-b/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Israel"
+      },
+      "url": "https://samreynolds473-dot.github.io/droneatlas/option-b/en/3d-modeling-point-cloud/"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://samreynolds473-dot.github.io/droneatlas/option-b/en/3d-modeling-point-cloud/#faq",
+      "inLanguage": "en",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the difference between a point cloud and a mesh?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A point cloud is millions of points with position and colour, and it is the base for measurement and design. A mesh is a continuous textured surface that is easier to view and present."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I open the model without special software?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. You can get a browser viewing link as well as files for professional software."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is a drone 3D model suitable for BIM?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A drone point cloud can serve as the base for as-built BIM modelling. Its level of detail depends on capture planning, so we define it up front."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body class="option-b page-3d" data-dev-placeholders="on">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 16 16"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M3 8h10M9 4l4 4-4 4"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.5 2 2 6.37 2 11.78c0 1.73.46 3.41 1.33 4.9L2 22l5.5-1.44a10.2 10.2 0 0 0 4.54 1.09h.04c5.54 0 10.04-4.37 10.04-9.78C22.12 6.37 17.58 2 12.04 2zm0 17.9h-.03a8.4 8.4 0 0 1-4.28-1.17l-.31-.18-3.26.85.87-3.18-.2-.33a8.16 8.16 0 0 1-1.26-4.36c0-4.54 3.77-8.23 8.42-8.23 2.25 0 4.36.86 5.95 2.42a8.18 8.18 0 0 1 2.46 5.81c0 4.54-3.77 8.23-8.36 8.23zm4.6-6.16c-.25-.13-1.48-.73-1.71-.81-.23-.09-.4-.13-.56.13-.17.25-.64.81-.79.98-.15.17-.29.19-.54.06-.25-.13-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.15-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.84-.2-.48-.4-.42-.56-.42h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.09 0 1.23.9 2.42 1.02 2.59.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.48-.6 1.69-1.19.21-.58.21-1.08.15-1.19-.06-.1-.23-.17-.48-.3z"/></symbol>
+</svg>
+  <header class="header" id="header">
+    <div class="wrap">
+      <a class="logo" href="/droneatlas/option-b/en/" aria-label="DroneAtlas">
+        <img class="logo-mark" src="/droneatlas/option-b/assets/logo-mark-light.svg" alt="" width="28" height="32">
+        <span class="logo-word">Drone<strong>Atlas</strong></span>
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <div class="nav-svc" id="navSvc">
+          <a href="/droneatlas/option-b/en/services/">Services</a>
+          <button type="button" class="nav-svc-btn" id="navSvcBtn" aria-expanded="false" aria-controls="navSvcMenu" aria-haspopup="true" aria-label="Open the services list"><svg viewBox="0 0 12 12" width="10" height="10" aria-hidden="true"><path d="M2.2 4.3 6 8.1 9.8 4.3" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="nav-svc-menu" id="navSvcMenu">
+            <div class="nav-svc-panel">
+      <a href="/droneatlas/option-b/en/services/">Services</a>
+      <a href="/droneatlas/option-b/en/construction-progress-monitoring/">Construction progress</a>
+      <a href="/droneatlas/option-b/en/stockpile-volume-calculation/">Quarries &amp; volumes</a>
+      <a href="/droneatlas/option-b/en/aerial-data-for-surveyors/">Data for surveyors</a>
+      <a href="/droneatlas/option-b/en/geodetic-mapping-rtk/">RTK geodetic mapping</a>
+      <a href="/droneatlas/option-b/en/ground-control-points-gcp/">Ground control points</a>
+      <a href="/droneatlas/option-b/en/terrain-follow-mapping/">Terrain-follow mapping</a>
+      <a href="/droneatlas/option-b/en/3d-modeling-point-cloud/" aria-current="page">3D models &amp; point clouds</a>
+      <a href="/droneatlas/option-b/en/industrial-drone-photography/">Industrial photography</a>
+            </div>
+          </div>
+        </div>
+        <a href="/droneatlas/option-b/en/about/">About</a>
+        <a href="/droneatlas/option-b/en/blog/">Blog</a>
+        <a href="/droneatlas/option-b/en/contact/">Contact us</a>
+      </nav>
+      <div class="header-cta">
+        <div class="lang-switch" aria-label="Language">
+          <a href="/droneatlas/option-b/3d-modeling-point-cloud/" lang="he" hreflang="he" class="">HE</a>
+          <a href="/droneatlas/option-b/en/3d-modeling-point-cloud/" lang="en" hreflang="en" class="is-active" aria-current="true">EN</a>
+        </div>
+        <a class="btn btn-ghost btn-sm" data-whatsapp href="https://wa.me/[TO FILL: WhatsApp number in 972XXXXXXXXX format]">WhatsApp</a>
+        <a class="btn btn-primary btn-sm" href="/droneatlas/option-b/en/contact/">Contact us</a>
+        <button class="burger" id="burger" type="button" aria-label="Open menu"><i></i></button>
+      </div>
+    </div>
+  </header>
+  <div class="mnav" id="mnav">
+    <button class="mnav-close" id="mclose" type="button" aria-label="Close menu">✕</button>
+    <div class="mnav-svc" id="mnavSvc">
+      <div class="mnav-svc-row">
+        <a href="/droneatlas/option-b/en/services/">Services</a>
+        <button type="button" class="mnav-svc-btn" id="mnavSvcBtn" aria-expanded="false" aria-controls="mnavSvcMenu" aria-haspopup="true" aria-label="Open the services list"><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path d="M2.2 4.3 6 8.1 9.8 4.3" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      </div>
+      <div class="mnav-svc-menu" id="mnavSvcMenu">
+      <a href="/droneatlas/option-b/en/services/">Services</a>
+      <a href="/droneatlas/option-b/en/construction-progress-monitoring/">Construction progress</a>
+      <a href="/droneatlas/option-b/en/stockpile-volume-calculation/">Quarries &amp; volumes</a>
+      <a href="/droneatlas/option-b/en/aerial-data-for-surveyors/">Data for surveyors</a>
+      <a href="/droneatlas/option-b/en/geodetic-mapping-rtk/">RTK geodetic mapping</a>
+      <a href="/droneatlas/option-b/en/ground-control-points-gcp/">Ground control points</a>
+      <a href="/droneatlas/option-b/en/terrain-follow-mapping/">Terrain-follow mapping</a>
+      <a href="/droneatlas/option-b/en/3d-modeling-point-cloud/" aria-current="page">3D models &amp; point clouds</a>
+      <a href="/droneatlas/option-b/en/industrial-drone-photography/">Industrial photography</a>
+      </div>
+    </div>
+    <a href="/droneatlas/option-b/en/about/">About</a>
+    <a href="/droneatlas/option-b/en/blog/">Blog</a>
+    <a href="/droneatlas/option-b/en/contact/">Contact us</a>
+        <div class="lang-switch" aria-label="Language">
+          <a href="/droneatlas/option-b/3d-modeling-point-cloud/" lang="he" hreflang="he" class="">HE</a>
+          <a href="/droneatlas/option-b/en/3d-modeling-point-cloud/" lang="en" hreflang="en" class="is-active" aria-current="true">EN</a>
+        </div>
+    <a class="btn btn-ghost" data-whatsapp href="https://wa.me/[TO FILL: WhatsApp number in 972XXXXXXXXX format]"><svg width="16" height="16" aria-hidden="true"><use href="#i-wa"/></svg> WhatsApp</a>
+    <a class="btn btn-primary" href="/droneatlas/option-b/en/contact/">Contact us</a>
+  </div>
+  <main id="main">
+    <section class="page-hero">
+      <img class="bg" src="/droneatlas/option-b/assets/imagery/hero-3d-1920.webp" alt="Illustrative 3D terrain model" width="1920" height="1080" decoding="async" fetchpriority="high" data-slot="3d-hero">
+      <div class="wrap">
+        <nav class="crumbs" aria-label="Breadcrumb"><a href="/droneatlas/option-b/en/">Home</a><span aria-hidden="true">/</span><a href="/droneatlas/option-b/en/services/">Services</a><span aria-hidden="true">/</span><span aria-current="page">Drone 3D modelling and point clouds</span></nav>
+        <h1>Drone 3D modelling and point clouds</h1>
+        <p class="dek">A <strong>drone 3D model</strong> is an accurate, full-colour reconstruction of a site, building or facade, built from hundreds of images taken from different angles. You can rotate it, measure distances, heights and areas on it, and bring it into your design work. DroneAtlas produces point clouds, meshes and existing-condition digital twins for projects across Israel.</p>
+      </div>
+    </section>
+    <section class="dark pad">
+      <div class="wrap">
+        <div class="air-media"><img class="air-photo" src="/droneatlas/option-b/assets/imagery/card-3d-terrain-surface.webp" alt="Illustrative 3D terrain surface" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-3d"></div>
+      </div>
+    </section>
+    <section class="light pad"><div class="wrap article">
+<h2>What is a digital twin?</h2>
+<p>A digital twin is a digital copy of a physical asset that is updated over time. In mapping, the first step is an accurate model of existing conditions. Capturing it again in rounds lets you compare the models and track change.</p>
+
+    </div></section>
+    <section class="dark pad"><div class="wrap article">
+<h2>What you receive</h2>
+<figure class="media-slot media-slot-body has-photo" data-slot="card-point-cloud" data-expects="/workspace/droneatlas/brand/imagery/card-point-cloud.webp"><img class="card-photo" src="/droneatlas/option-b/assets/imagery/card-point-cloud.webp" alt="Illustrative point cloud" width="1200" height="800" decoding="async" loading="lazy"><span class="media-badge">Illustrative example</span></figure>
+<ul><li>A <strong>point cloud</strong> as LAS or LAZ, for design and survey software.</li><li>A <strong>textured mesh</strong> as OBJ or FBX, plus 3D Tiles for web viewing.</li><li>A <strong>browser viewing link</strong> that also works on a phone, for sharing with clients and partners.</li><li><strong>Measurements from the model</strong>: heights, distances, facade and roof areas.</li><li>Where needed: an <a href="/droneatlas/option-b/en/geodetic-mapping-rtk/">orthophoto</a> and <a href="/droneatlas/option-b/en/geodetic-mapping-rtk/">elevation model</a> from the same flight.</li></ul>
+
+    </div></section>
+    <section class="light pad"><div class="wrap article">
+<h2>Common uses</h2>
+<figure class="media-slot media-slot-body has-photo" data-slot="card-dimension-grid" data-expects="/workspace/droneatlas/brand/imagery/card-roof-overlay-dimension-grid.webp"><img class="card-photo" src="/droneatlas/option-b/assets/imagery/card-roof-overlay-dimension-grid.webp" alt="Illustrative dimension grid over a structure" width="1200" height="800" decoding="async" loading="lazy"><span class="media-badge">Illustrative example</span></figure>
+<ul><li><strong>Design and renovation:</strong> existing conditions of a building and facade, including details that are hard to measure from the ground.</li><li><strong>Urban renewal:</strong> recording existing buildings and their surroundings.</li><li><strong>Supervision and records:</strong> site condition before and after a phase. See <a href="/droneatlas/option-b/en/construction-progress-monitoring/">construction progress monitoring</a>.</li><li><strong>Presenting the project:</strong> visualising it on the real site for developers and committees.</li><li><strong>Quantity control:</strong> a point cloud as the base for <a href="/droneatlas/option-b/en/stockpile-volume-calculation/">volume calculation</a>.</li></ul>
+
+    </div></section>
+    <section class="dark pad"><div class="wrap article">
+<h2>What affects model quality</h2>
+<ul><li><strong>Camera angles:</strong> facades also need oblique images, not just vertical ones.</li><li><strong>Distance to the subject:</strong> closer capture gives sharper detail.</li><li><strong>Light and weather:</strong> even light gives better texture.</li><li><strong>Difficult surfaces:</strong> glass, water and shiny surfaces are hard to reconstruct, so we plan for them.</li></ul>
+
+    </div></section>
+    <section class="light pad"><div class="wrap article">
+<h2>3D model FAQ</h2>
+<div class="faq-list">
+<div class="faq-item"><p class="q">What is the difference between a point cloud and a mesh?</p><div class="a"><p>A point cloud is millions of points with position and colour, and it is the base for measurement and design. A mesh is a continuous textured surface that is easier to view and present.</p></div></div>
+<div class="faq-item"><p class="q">Can I open the model without special software?</p><div class="a"><p>Yes. You can get a browser viewing link as well as files for professional software.</p></div></div>
+<div class="faq-item"><p class="q">Is a drone 3D model suitable for BIM?</p><div class="a"><p>A drone point cloud can serve as the base for as-built BIM modelling. Its level of detail depends on capture planning, so we define it up front.</p></div></div>
+</div>
+
+    </div></section>
+    <section class="dark pad related-services">
+      <div class="wrap">
+        <h2 class="h2">Services</h2>
+        <div class="svc-cards">
+   <a class="svc-photo" href="/droneatlas/option-b/en/construction-progress-monitoring/">
+    <img class="card-photo" src="/droneatlas/option-b/assets/imagery/card-construction-bim-overlay.webp" alt="Illustrative construction model with a measurement overlay" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-construction">
+    <span class="svc-photo-cap"><span>Construction progress mapping</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+   </a>
+   <a class="svc-photo" href="/droneatlas/option-b/en/stockpile-volume-calculation/">
+    <img class="card-photo" src="/droneatlas/option-b/assets/imagery/card-stockpile-cut-fill.webp" alt="Illustrative cut-and-fill heatmap of stockpiles" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-volumes">
+    <span class="svc-photo-cap"><span>Stockpile and earthwork volumes</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+   </a>
+   <a class="svc-photo" href="/droneatlas/option-b/en/aerial-data-for-surveyors/">
+    <img class="card-photo" src="/droneatlas/option-b/assets/imagery/card-surveyors.webp" alt="Illustrative point cloud with marked control points" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-surveyors">
+    <span class="svc-photo-cap"><span>Drone data for surveyors</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+   </a>
+   <a class="svc-photo" href="/droneatlas/option-b/en/geodetic-mapping-rtk/">
+    <img class="card-photo" src="/droneatlas/option-b/assets/imagery/card-geodetic.webp" alt="Illustrative relief map with a coordinate grid and control points" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-geodetic">
+    <span class="svc-photo-cap"><span>RTK geodetic mapping</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+   </a>
+   <a class="svc-photo" href="/droneatlas/option-b/en/ground-control-points-gcp/">
+    <img class="card-photo" src="/droneatlas/option-b/assets/imagery/card-gcp.webp" alt="Illustrative ground control points" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-gcp">
+    <span class="svc-photo-cap"><span>Ground control points (GCP)</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+   </a>
+   <a class="svc-photo" href="/droneatlas/option-b/en/terrain-follow-mapping/">
+    <img class="card-photo" src="/droneatlas/option-b/assets/imagery/card-terrain.webp" alt="Illustrative terrain profile with a terrain-follow flight path" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-terrain">
+    <span class="svc-photo-cap"><span>Terrain-follow mapping</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+   </a>
+   <a class="svc-photo" href="/droneatlas/option-b/en/industrial-drone-photography/">
+    <img class="card-photo" src="/droneatlas/option-b/assets/imagery/card-industrial.webp" alt="Illustrative industrial aerial photograph" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-industrial">
+    <span class="svc-photo-cap"><span>Industrial drone photography</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+   </a>
+</div>
+      </div>
+    </section>
+    <section class="cta-banner pad" id="cta"><div class="wrap"><h2 class="cta-heading">Not sure what your project needs?</h2>
+<p>Send us the site location, rough area, what the mapping is for and your preferred date on WhatsApp. We will recommend the right deliverables and send you a clear proposal.</p>
+<p class="btn-row"><strong><a href="https://wa.me/[TO FILL: WhatsApp number in 972XXXXXXXXX format]" data-whatsapp class="btn btn-primary">Message us on WhatsApp</a></strong> · <a href="/droneatlas/option-b/en/contact/" class="btn btn-secondary">Contact form</a></p></div></section>
+
+  </main>
+  <footer class="footer dark b-footer">
+    <div class="wrap">
+      <div class="top">
+        <div class="brand">
+          <a class="logo" href="/droneatlas/option-b/en/" aria-label="DroneAtlas">
+            <img class="logo-mark" src="/droneatlas/option-b/assets/logo-mark-light.svg" alt="" width="28" height="32">
+            <span class="logo-word">Drone<strong>Atlas</strong></span>
+          </a>
+          <p>DroneAtlas — drone mapping and survey across Israel. The accurate map of your project.</p>
+        </div>
+        <div>
+          <h5>Company</h5>
+          <ul>
+       <li><a href="/droneatlas/option-b/en/">Home</a></li>
+       <li><a href="/droneatlas/option-b/en/services/">Services</a></li>
+       <li><a href="/droneatlas/option-b/en/about/">About</a></li>
+       <li><a href="/droneatlas/option-b/en/process/">Process</a></li>
+       <li><a href="/droneatlas/option-b/en/faq/">FAQ</a></li>
+       <li><a href="/droneatlas/option-b/en/blog/">Blog</a></li>
+       <li><a href="/droneatlas/option-b/en/contact/">Contact us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Services</h5>
+          <ul>
+       <li><a href="/droneatlas/option-b/en/construction-progress-monitoring/">Construction progress</a></li>
+       <li><a href="/droneatlas/option-b/en/stockpile-volume-calculation/">Quarries &amp; volumes</a></li>
+       <li><a href="/droneatlas/option-b/en/aerial-data-for-surveyors/">Data for surveyors</a></li>
+       <li><a href="/droneatlas/option-b/en/geodetic-mapping-rtk/">RTK geodetic mapping</a></li>
+       <li><a href="/droneatlas/option-b/en/ground-control-points-gcp/">Ground control points</a></li>
+       <li><a href="/droneatlas/option-b/en/terrain-follow-mapping/">Terrain-follow mapping</a></li>
+       <li><a href="/droneatlas/option-b/en/3d-modeling-point-cloud/">3D models &amp; point clouds</a></li>
+       <li><a href="/droneatlas/option-b/en/industrial-drone-photography/">Industrial photography</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Contact</h5>
+          <ul>
+       <li><a href="/droneatlas/option-b/en/privacy/">Privacy policy</a></li>
+       <li><a href="/droneatlas/option-b/en/accessibility/">Accessibility statement</a></li>
+       <li><a class="btn btn-ghost btn-sm" data-whatsapp href="https://wa.me/[TO FILL: WhatsApp number in 972XXXXXXXXX format]">WhatsApp</a></li>
+       <li><a href="/droneatlas/option-b/en/contact/">Contact us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottom"><span>&#169; <span data-year></span> DroneAtlas · All rights reserved.</span><span>The live domain will be set once it is purchased.</span></div>
+      <div class="footer-credits">Contains modified Copernicus DEM GLO-30 data, produced using Copernicus WorldDEM-30 © DLR e.V. 2010-2014 and © Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all rights reserved.</div>
+    </div>
+  </footer>
+  <a class="btn btn-primary sticky-wa" data-whatsapp href="https://wa.me/[TO FILL: WhatsApp number in 972XXXXXXXXX format]">Get a quote by scope on WhatsApp</a>
+  <script src="/droneatlas/option-b/js/config.js"></script>
+  <script src="/droneatlas/option-b/js/home-nav.js"></script>
+  <script src="/droneatlas/option-b/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+{
+  "status": "proposed-pending-seo-desk",
+  "note": "SEO/AEO architecture, slugs, titles, metas and schema had not been delivered when this site was first built. This is a proposed IA aligned to the briefed services and keyword research in /workspace/droneatlas/research/. Replace slugs, titles and schema when the SEO plan arrives.",
+  "home": {
+    "he_path": "/",
+    "en_path": "/en/"
+  },
+  "services": [
+    {
+      "id": "orthophoto",
+      "icon": "orthophoto.svg",
+      "index": "01",
+      "code": "ORTHO",
+      "he_slug": "אורתופוטו",
+      "en_slug": "orthophoto"
+    },
+    {
+      "id": "topo",
+      "icon": "topo.svg",
+      "index": "02",
+      "code": "TOPO",
+      "he_slug": "מדידה-טופוגרפית-ופוטוגרמטריה",
+      "en_slug": "topographic-survey-photogrammetry"
+    },
+    {
+      "id": "models",
+      "icon": "model3d.svg",
+      "index": "03",
+      "code": "3D",
+      "he_slug": "מודלים-תלת-ממד",
+      "en_slug": "3d-models"
+    },
+    {
+      "id": "construction",
+      "icon": "construction.svg",
+      "index": "04",
+      "code": "SITE",
+      "he_slug": "ניטור-התקדמות-בנייה",
+      "en_slug": "construction-progress"
+    },
+    {
+      "id": "volumes",
+      "icon": "volume.svg",
+      "index": "05",
+      "code": "VOL",
+      "he_slug": "חישוב-נפחים",
+      "en_slug": "volume-calculations"
+    },
+    {
+      "id": "agriculture",
+      "icon": "agriculture.svg",
+      "index": "06",
+      "code": "AGRI",
+      "he_slug": "מיפוי-חקלאי",
+      "en_slug": "agricultural-mapping"
+    }
+  ],
+  "pages": [
+    {
+      "id": "home",
+      "kind": "home",
+      "schema_type": "WebPage",
+      "he_path": "/",
+      "en_path": "/en/",
+      "he_file": "index.html",
+      "en_file": "en/index.html"
+    },
+    {
+      "id": "services",
+      "kind": "services-index",
+      "schema_type": "CollectionPage",
+      "he_path": "/שירותים/",
+      "en_path": "/en/services/",
+      "he_file": "שירותים/index.html",
+      "en_file": "en/services/index.html"
+    },
+    {
+      "id": "orthophoto",
+      "kind": "service",
+      "schema_type": "WebPage",
+      "he_path": "/אורתופוטו/",
+      "en_path": "/en/orthophoto/",
+      "he_file": "אורתופוטו/index.html",
+      "en_file": "en/orthophoto/index.html"
+    },
+    {
+      "id": "topo",
+      "kind": "service",
+      "schema_type": "WebPage",
+      "he_path": "/מדידה-טופוגרפית-ופוטוגרמטריה/",
+      "en_path": "/en/topographic-survey-photogrammetry/",
+      "he_file": "מדידה-טופוגרפית-ופוטוגרמטריה/index.html",
+      "en_file": "en/topographic-survey-photogrammetry/index.html"
+    },
+    {
+      "id": "models",
+      "kind": "service",
+      "schema_type": "WebPage",
+      "he_path": "/מודלים-תלת-ממד/",
+      "en_path": "/en/3d-models/",
+      "he_file": "מודלים-תלת-ממד/index.html",
+      "en_file": "en/3d-models/index.html"
+    },
+    {
+      "id": "construction",
+      "kind": "service",
+      "schema_type": "WebPage",
+      "he_path": "/ניטור-התקדמות-בנייה/",
+      "en_path": "/en/construction-progress/",
+      "he_file": "ניטור-התקדמות-בנייה/index.html",
+      "en_file": "en/construction-progress/index.html"
+    },
+    {
+      "id": "volumes",
+      "kind": "service",
+      "schema_type": "WebPage",
+      "he_path": "/חישוב-נפחים/",
+      "en_path": "/en/volume-calculations/",
+      "he_file": "חישוב-נפחים/index.html",
+      "en_file": "en/volume-calculations/index.html"
+    },
+    {
+      "id": "agriculture",
+      "kind": "service",
+      "schema_type": "WebPage",
+      "he_path": "/מיפוי-חקלאי/",
+      "en_path": "/en/agricultural-mapping/",
+      "he_file": "מיפוי-חקלאי/index.html",
+      "en_file": "en/agricultural-mapping/index.html"
+    },
+    {
+      "id": "about",
+      "kind": "about",
+      "schema_type": "AboutPage",
+      "he_path": "/אודות/",
+      "en_path": "/en/about/",
+      "he_file": "אודות/index.html",
+      "en_file": "en/about/index.html"
+    },
+    {
+      "id": "portfolio",
+      "kind": "portfolio",
+      "schema_type": "CollectionPage",
+      "he_path": "/תיק-עבודות/",
+      "en_path": "/en/portfolio/",
+      "he_file": "תיק-עבודות/index.html",
+      "en_file": "en/portfolio/index.html"
+    },
+    {
+      "id": "contact",
+      "kind": "contact",
+      "schema_type": "ContactPage",
+      "he_path": "/צור-קשר/",
+      "en_path": "/en/contact/",
+      "he_file": "צור-קשר/index.html",
+      "en_file": "en/contact/index.html"
+    },
+    {
+      "id": "privacy",
+      "kind": "privacy",
+      "schema_type": "WebPage",
+      "he_path": "/מדיניות-פרטיות/",
+      "en_path": "/en/privacy/",
+      "he_file": "מדיניות-פרטיות/index.html",
+      "en_file": "en/privacy/index.html"
+    },
+    {
+      "id": "404",
+      "kind": "404",
+      "schema_type": "WebPage",
+      "he_path": "/404.html",
+      "en_path": "/en/404.html",
+      "he_file": "404.html",
+      "en_file": "en/404.html"
+    }
+  ]
+}

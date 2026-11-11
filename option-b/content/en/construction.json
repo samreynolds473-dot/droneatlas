@@ -1,0 +1,31 @@
+{
+  "meta": {
+    "title": "Construction progress monitoring by drone | DroneAtlas",
+    "description": "Recurring aerial records of construction sites in Israel for progress tracking, date comparison and field coordination."
+  },
+  "kicker": "04  —  SITE",
+  "title": "Construction progress monitoring",
+  "lede": "Recurring aerial records of the construction site, for comparison and coordination.",
+  "intro": [
+    "Repeated flights over the same coverage show how a site is changing: structure, earthworks, stockpiles and work areas.",
+    "Flight frequency and the type of comparison (orthophoto, model or walkthrough) are set for each site. No sample clients or sites are listed here."
+  ],
+  "deliverablesTitle": "Typical deliverables",
+  "deliverables": [
+    "A dated series of orthophotos",
+    "Visual comparison between visits",
+    "A model or point cloud when needed",
+    "A coverage record for each flight"
+  ],
+  "usesTitle": "Where it is used",
+  "uses": [
+    "Progress tracking",
+    "Coordination between contractors and consultants",
+    "Records for reporting",
+    "A base for staged quantity checks"
+  ],
+  "side": {
+    "title": "Talk about a construction site",
+    "text": "Share the site location and how often you want it documented."
+  }
+}

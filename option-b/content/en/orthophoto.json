@@ -1,0 +1,31 @@
+{
+  "meta": {
+    "title": "Drone orthophoto | DroneAtlas",
+    "description": "Georeferenced drone orthophoto and aerial mapping for GIS, CAD and planning in Israel."
+  },
+  "kicker": "01  —  ORTHO",
+  "title": "Orthophoto",
+  "lede": "An up-to-date, georeferenced orthophoto of the site, ready to use.",
+  "intro": [
+    "An orthophoto is an aerial image that has been geometrically corrected so it can be measured and placed on a map. It is used for planning, recording existing conditions and comparing a site over time.",
+    "Flight and processing are tailored to the size of the site and the output you need. Resolution, accuracy and scale figures are not listed here — they will be set for each project and included in a proposal."
+  ],
+  "deliverablesTitle": "Typical deliverables",
+  "deliverables": [
+    "Orthophoto map",
+    "Georeferenced file (for example GeoTIFF)",
+    "Export for CAD or GIS",
+    "Coverage boundary record"
+  ],
+  "usesTitle": "Where it is used",
+  "uses": [
+    "Recording existing conditions",
+    "A base map for planning and survey",
+    "Comparison between dates",
+    "Clear site context for stakeholders"
+  ],
+  "side": {
+    "title": "Talk about a site",
+    "text": "Send a site boundary and the kind of map you need, and we will get back to you."
+  }
+}

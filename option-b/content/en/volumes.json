@@ -1,0 +1,31 @@
+{
+  "meta": {
+    "title": "Drone stockpile and volume calculations | DroneAtlas",
+    "description": "Drone-based volume and earthwork calculations in Israel: stockpiles, cut and fill from an aerial survey of the site."
+  },
+  "kicker": "05  —  VOL",
+  "title": "Volume calculations",
+  "lede": "Stockpile, cut and fill volumes from a drone survey of the site.",
+  "intro": [
+    "The elevation model from the survey can be used to calculate stockpile, cut and fill volumes, and to compare them between dates.",
+    "The calculation method, reference surface and level of detail are set for each survey. No generic accuracy percentages are stated here."
+  ],
+  "deliverablesTitle": "Typical deliverables",
+  "deliverables": [
+    "A volume report",
+    "A height-difference map",
+    "The elevation model used for the calculation",
+    "A comparison with a previous date, when one exists"
+  ],
+  "usesTitle": "Where it is used",
+  "uses": [
+    "Material stockpiles",
+    "Earthworks",
+    "Tracking inventories",
+    "Checks against quantity records"
+  ],
+  "side": {
+    "title": "Talk about volumes",
+    "text": "Describe the material and the area that needs measuring."
+  }
+}

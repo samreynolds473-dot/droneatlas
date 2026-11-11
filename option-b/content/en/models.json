@@ -1,0 +1,31 @@
+{
+  "meta": {
+    "title": "Drone 3D models | DroneAtlas",
+    "description": "Drone-derived 3D models of a site for presentation, planning and progress review in Israel."
+  },
+  "kicker": "03  —  3D",
+  "title": "3D models",
+  "lede": "A 3D model of the site, for presentation, planning and review.",
+  "intro": [
+    "A 3D model is built from the flight imagery and shows the site as a volume: buildings, ground and obstacles.",
+    "The delivery format (mesh, point cloud or a viewable model) is chosen for the intended use. Software names and licence claims are not listed here."
+  ],
+  "deliverablesTitle": "Typical deliverables",
+  "deliverables": [
+    "Triangle mesh",
+    "Point cloud",
+    "A model for viewing or export",
+    "Combination with an orthophoto where useful"
+  ],
+  "usesTitle": "Where it is used",
+  "uses": [
+    "Showing existing conditions",
+    "Planning and visualisation",
+    "Recording a structure or envelope",
+    "A baseline for later comparison"
+  ],
+  "side": {
+    "title": "Talk about a model",
+    "text": "Describe the site and how you want to use the model."
+  }
+}

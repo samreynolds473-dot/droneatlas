@@ -1,0 +1,459 @@
+{
+  "_comment": "DroneAtlas imagery slots. Official files live in /workspace/droneatlas/brand/imagery/. Use WebP on the site (PNG/JPG masters sit alongside). Heroes 1920×1080, cards 1200×800. Alt text is taken from the IMAGE comments in copy/he and copy/en; this file mirrors those alts. Orphan slots for removed pages (orthophoto-hero, card-orthophoto, agri-hero, card-agri, industries-hero, survey-hero) are not included. src/ is not published.",
+  "slots": {
+    "home-hero": {
+      "files": [
+        "hero-elevation-hillshade-1920.webp",
+        "hero-elevation-hillshade-1920.png"
+      ],
+      "size": [
+        1920,
+        1080
+      ],
+      "standin": "elevation",
+      "uses": [
+        "Home hero"
+      ],
+      "alt_he": "איור להמחשה: מפת גבהים צבעונית עם הצללת תבליט",
+      "alt_en": "Illustrative colourful elevation map with hillshade"
+    },
+    "home-panel": {
+      "files": [
+        "home-panel.webp",
+        "home-panel.png"
+      ],
+      "size": [
+        1200,
+        800
+      ],
+      "standin": "elevation",
+      "uses": [
+        "Home data band after hero",
+        "FAQ DSM vs DTM answer",
+        "Geodetic DSM/DTM section"
+      ],
+      "alt_he": "איור להמחשה: השוואה בין תבליט פני השטח לבין מפת גבהים צבעונית",
+      "alt_en": "Illustrative split view of a surface model and a colourful elevation map"
+    },
+    "services-hero": {
+      "files": [
+        "hero-services-1920.webp",
+        "hero-services-1920.png"
+      ],
+      "size": [
+        1920,
+        1080
+      ],
+      "standin": "elevation",
+      "uses": [
+        "Services hub hero"
+      ],
+      "alt_he": "איור להמחשה: מפת גבהים צבעונית",
+      "alt_en": "Illustrative colourful elevation map"
+    },
+    "geodetic-hero": {
+      "files": [
+        "hero-geodetic-1920.webp",
+        "hero-geodetic-1920.png"
+      ],
+      "size": [
+        1920,
+        1080
+      ],
+      "standin": "elevation",
+      "uses": [
+        "RTK geodetic mapping hero"
+      ],
+      "alt_he": "איור להמחשה: מפת תבליט עם רשת קואורדינטות ונקודות בקרה",
+      "alt_en": "Illustrative relief map with a coordinate grid and control points"
+    },
+    "card-geodetic": {
+      "files": [
+        "card-geodetic.webp",
+        "card-geodetic.png"
+      ],
+      "size": [
+        1200,
+        800
+      ],
+      "standin": "elevation",
+      "uses": [
+        "Home/services card: geodetic"
+      ],
+      "alt_he": "איור להמחשה: מפת תבליט עם רשת קואורדינטות ונקודות בקרה",
+      "alt_en": "Illustrative relief map with a coordinate grid and control points"
+    },
+    "card-survey": {
+      "files": [
+        "card-contours-hillshade.webp",
+        "card-contours-hillshade.png"
+      ],
+      "size": [
+        1200,
+        800
+      ],
+      "standin": "elevation",
+      "uses": [
+        "Geodetic page contours section"
+      ],
+      "alt_he": "איור להמחשה: קווי גובה על הצללת תבליט",
+      "alt_en": "Illustrative contours over hillshade"
+    },
+    "gcp-hero": {
+      "files": [
+        "hero-gcp-1920.webp",
+        "hero-gcp-1920.jpg"
+      ],
+      "size": [
+        1920,
+        1080
+      ],
+      "standin": "ortho",
+      "uses": [
+        "GCP page hero"
+      ],
+      "alt_he": "איור להמחשה: סימון נקודות בקרה קרקעיות",
+      "alt_en": "Illustrative ground control point layout"
+    },
+    "card-gcp": {
+      "files": [
+        "card-gcp.webp",
+        "card-gcp.jpg"
+      ],
+      "size": [
+        1200,
+        800
+      ],
+      "standin": "ortho",
+      "uses": [
+        "Home/services card: GCP",
+        "GCP page body"
+      ],
+      "alt_he": "איור להמחשה: נקודות בקרה קרקעיות",
+      "alt_en": "Illustrative ground control points"
+    },
+    "terrain-hero": {
+      "files": [
+        "hero-terrain-follow-1920.webp",
+        "hero-terrain-follow-1920.png"
+      ],
+      "size": [
+        1920,
+        1080
+      ],
+      "standin": "terrain",
+      "uses": [
+        "Terrain-follow hero"
+      ],
+      "alt_he": "איור להמחשה: חתך פני שטח ומסלול טיסה בגובה קבוע מעל הקרקע",
+      "alt_en": "Illustrative terrain profile with a constant-height-above-ground flight path"
+    },
+    "card-terrain": {
+      "files": [
+        "card-terrain.webp",
+        "card-terrain.png"
+      ],
+      "size": [
+        1200,
+        800
+      ],
+      "standin": "terrain",
+      "uses": [
+        "Home/services card: terrain-follow"
+      ],
+      "alt_he": "איור להמחשה: חתך פני שטח ומסלול טיסה עוקב קרקע",
+      "alt_en": "Illustrative terrain profile with a terrain-follow flight path"
+    },
+    "3d-hero": {
+      "files": [
+        "hero-3d-1920.webp",
+        "hero-3d-1920.png"
+      ],
+      "size": [
+        1920,
+        1080
+      ],
+      "standin": "terrain",
+      "uses": [
+        "3D modelling hero"
+      ],
+      "alt_he": "איור להמחשה: מודל תלת־ממדי של פני השטח",
+      "alt_en": "Illustrative 3D terrain model"
+    },
+    "card-3d": {
+      "files": [
+        "card-3d-terrain-surface.webp",
+        "card-3d-terrain-surface.png"
+      ],
+      "size": [
+        1200,
+        800
+      ],
+      "standin": "terrain",
+      "uses": [
+        "Home/services card: 3D"
+      ],
+      "alt_he": "איור להמחשה: משטח תלת־ממדי של פני השטח",
+      "alt_en": "Illustrative 3D terrain surface"
+    },
+    "card-point-cloud": {
+      "files": [
+        "card-point-cloud.webp",
+        "card-point-cloud.png"
+      ],
+      "size": [
+        1200,
+        800
+      ],
+      "standin": "pointcloud",
+      "uses": [
+        "3D page point-cloud section"
+      ],
+      "alt_he": "איור להמחשה: ענן נקודות",
+      "alt_en": "Illustrative point cloud"
+    },
+    "card-dimension-grid": {
+      "files": [
+        "card-roof-overlay-dimension-grid.webp",
+        "card-roof-overlay-dimension-grid.jpg"
+      ],
+      "size": [
+        1200,
+        800
+      ],
+      "standin": "ortho",
+      "uses": [
+        "3D page supporting visual only (not a roof-inspection service)"
+      ],
+      "alt_he": "איור להמחשה: רשת מידות על גבי מבנה",
+      "alt_en": "Illustrative dimension grid over a structure"
+    },
+    "industrial-hero": {
+      "files": [
+        "hero-industrial-1920.webp",
+        "hero-industrial-1920.jpg"
+      ],
+      "size": [
+        1920,
+        1080
+      ],
+      "standin": "ortho",
+      "uses": [
+        "Industrial photography hero"
+      ],
+      "alt_he": "איור להמחשה: צילום אווירי של אתר",
+      "alt_en": "Illustrative aerial photograph of a site"
+    },
+    "card-industrial": {
+      "files": [
+        "card-industrial.webp",
+        "card-industrial.jpg"
+      ],
+      "size": [
+        1200,
+        800
+      ],
+      "standin": "ortho",
+      "uses": [
+        "Home/services card: industrial"
+      ],
+      "alt_he": "איור להמחשה: צילום אווירי לתעשייה",
+      "alt_en": "Illustrative industrial aerial photograph"
+    },
+    "construction-hero": {
+      "files": [
+        "hero-drone-construction-1920.webp",
+        "hero-drone-construction-1920.jpg"
+      ],
+      "size": [
+        1920,
+        1080
+      ],
+      "standin": "ortho",
+      "uses": [
+        "Construction progress hero"
+      ],
+      "alt_he": "איור להמחשה: מיפוי ברחפן באתר בנייה",
+      "alt_en": "Illustrative drone mapping over a construction site"
+    },
+    "card-construction": {
+      "files": [
+        "card-construction-bim-overlay.webp",
+        "card-construction-bim-overlay.jpg"
+      ],
+      "size": [
+        1200,
+        800
+      ],
+      "standin": "ortho",
+      "uses": [
+        "Home/services card: construction",
+        "Construction design-comparison section"
+      ],
+      "alt_he": "איור להמחשה: מודל אתר בנייה עם שכבת מדידה",
+      "alt_en": "Illustrative construction model with a measurement overlay"
+    },
+    "card-site-walkthrough": {
+      "files": [
+        "card-site-walkthrough-measurements.webp",
+        "card-site-walkthrough-measurements.jpg"
+      ],
+      "size": [
+        1200,
+        800
+      ],
+      "standin": "ortho",
+      "uses": [
+        "Construction page 3D/measurements section",
+        "Process page body"
+      ],
+      "alt_he": "איור להמחשה: מדידות באתר על גבי מודל",
+      "alt_en": "Illustrative site measurements on a model"
+    },
+    "volumes-hero": {
+      "files": [
+        "hero-quarry-stockpiles-1920.webp",
+        "hero-quarry-stockpiles-1920.jpg"
+      ],
+      "size": [
+        1920,
+        1080
+      ],
+      "standin": "heatmap",
+      "uses": [
+        "Volumes hero"
+      ],
+      "alt_he": "איור להמחשה: ערימות חומר במחצבה ומפת חום לנפחים",
+      "alt_en": "Illustrative quarry stockpiles and volume heatmap"
+    },
+    "card-volumes": {
+      "files": [
+        "card-stockpile-cut-fill.webp",
+        "card-stockpile-cut-fill.png"
+      ],
+      "size": [
+        1200,
+        800
+      ],
+      "standin": "heatmap",
+      "uses": [
+        "Home/services card: volumes",
+        "Volumes cut/fill section"
+      ],
+      "alt_he": "איור להמחשה: מפת חום של חפירה ומילוי בערימות",
+      "alt_en": "Illustrative cut-and-fill heatmap of stockpiles"
+    },
+    "surveyors-hero": {
+      "files": [
+        "hero-surveyors-1920.webp",
+        "hero-surveyors-1920.png"
+      ],
+      "size": [
+        1920,
+        1080
+      ],
+      "standin": "pointcloud",
+      "uses": [
+        "Data for surveyors hero"
+      ],
+      "alt_he": "איור להמחשה: ענן נקודות עם נקודות בקרה מסומנות",
+      "alt_en": "Illustrative point cloud with marked control points"
+    },
+    "card-surveyors": {
+      "files": [
+        "card-surveyors.webp",
+        "card-surveyors.png"
+      ],
+      "size": [
+        1200,
+        800
+      ],
+      "standin": "pointcloud",
+      "uses": [
+        "Home/services card: surveyors"
+      ],
+      "alt_he": "איור להמחשה: ענן נקודות עם נקודות בקרה מסומנות",
+      "alt_en": "Illustrative point cloud with marked control points"
+    },
+    "process-hero": {
+      "files": [
+        "hero-process-1920.webp",
+        "hero-process-1920.png"
+      ],
+      "size": [
+        1920,
+        1080
+      ],
+      "standin": "terrain",
+      "uses": [
+        "Process hero"
+      ],
+      "alt_he": "איור להמחשה: תוכנית טיסת מיפוי ונקודות בקרה על מפת תבליט",
+      "alt_en": "Illustrative mapping flight plan and control points over a relief map"
+    },
+    "about-hero": {
+      "files": [
+        "hero-about-1920.webp",
+        "hero-about-1920.png"
+      ],
+      "size": [
+        1920,
+        1080
+      ],
+      "standin": "terrain",
+      "uses": [
+        "About hero"
+      ],
+      "alt_he": "איור להמחשה: מפת תבליט",
+      "alt_en": "Illustrative terrain map"
+    },
+    "faq-hero": {
+      "files": [
+        "hero-faq-1920.webp",
+        "hero-faq-1920.png"
+      ],
+      "size": [
+        1920,
+        1080
+      ],
+      "standin": "elevation",
+      "uses": [
+        "FAQ hero"
+      ],
+      "alt_he": "איור להמחשה: מפת גבהים צבעונית",
+      "alt_en": "Illustrative colourful elevation map"
+    },
+    "contact-hero": {
+      "files": [
+        "hero-contact-1920.webp",
+        "hero-contact-1920.png"
+      ],
+      "size": [
+        1920,
+        1080
+      ],
+      "standin": "elevation",
+      "uses": [
+        "Contact hero"
+      ],
+      "alt_he": "איור להמחשה: מפת גבהים צבעונית",
+      "alt_en": "Illustrative colourful elevation map"
+    },
+    "blog-hero": {
+      "files": [
+        "hero-blog-1920.webp",
+        "hero-blog-1920.png"
+      ],
+      "size": [
+        1920,
+        1080
+      ],
+      "standin": "terrain",
+      "uses": [
+        "Blog index hero"
+      ],
+      "alt_he": "איור להמחשה: מפת תבליט",
+      "alt_en": "Illustrative terrain map"
+    }
+  }
+}

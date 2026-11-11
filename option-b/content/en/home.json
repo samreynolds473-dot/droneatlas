@@ -1,0 +1,59 @@
+{
+  "meta": {
+    "title": "DroneAtlas | Drone mapping and survey in Israel",
+    "description": "Drone mapping and survey in Israel: orthophoto, topographic survey and photogrammetry, 3D models, construction progress monitoring, volume calculations and agricultural mapping.",
+    "ogTitle": "DroneAtlas | Drone mapping and survey in Israel",
+    "ogDescription": "Drone mapping in Israel — orthophoto, photogrammetry, 3D models, construction monitoring, volume calculations and agricultural mapping."
+  },
+  "hero": {
+    "kicker": "Drone mapping  ·  Israel",
+    "title": "Drone mapping and survey in Israel",
+    "lede": "Orthophoto, topographic survey and photogrammetry, 3D models, construction progress monitoring, volume calculations and agricultural mapping.",
+    "coords": "N 31°  ·  E 35°  ·  IL"
+  },
+  "services": {
+    "kicker": "01  —  Services",
+    "title": "What a flight can produce",
+    "lede": "Each service has its own page. Accuracy figures and workload claims are omitted until they are provided."
+  },
+  "process": {
+    "kicker": "02  —  Process",
+    "title": "From first details to delivered files",
+    "steps": [
+      {
+        "title": "Enquiry and site details",
+        "text": "Share the purpose of the work, the site boundary and the outputs you need."
+      },
+      {
+        "title": "Flight planning and permits",
+        "text": "The flight is planned around the site and the requirements. Licence and permit details will be added here."
+      },
+      {
+        "title": "On-site capture",
+        "text": "The aerial survey is flown at an agreed time."
+      },
+      {
+        "title": "Processing and delivery",
+        "text": "The imagery is processed and the agreed outputs are delivered in the formats you need."
+      }
+    ]
+  },
+  "about": {
+    "kicker": "03  —  About",
+    "title": "A new drone mapping practice",
+    "text": "DroneAtlas is a new drone mapping and survey practice in Israel. Licence, team and track-record details will be added when they are ready to publish. No figures, clients or testimonials have been invented for this page.",
+    "link": "About DroneAtlas",
+    "licenceLabel": "LICENCE",
+    "licenceText": "The operator licence number and status will appear here once they have been provided."
+  },
+  "portfolio": {
+    "kicker": "04  —  Portfolio",
+    "title": "Work samples will appear here",
+    "lede": "The portfolio has not been filled yet. No sample projects have been added.",
+    "link": "View the portfolio"
+  },
+  "cta": {
+    "title": "Have a site that needs mapping?",
+    "lede": "Reach out with the form or on WhatsApp. The phone number will be updated before launch."
+  }
+}
