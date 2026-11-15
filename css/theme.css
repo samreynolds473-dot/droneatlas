@@ -207,7 +207,7 @@ input:focus,select:focus,textarea:focus,
 }
 .hero video{display:none}
 .hero-kicker,.hero-field,.hero-scroll-label{color:rgba(237,237,237,.8);font-family:var(--mono)}
-.hero-kicker b,
+.hero .hero-kicker b,
 .b-kicker b{color:var(--brand-green);font-weight:650}
 .hero h1 .accent{color:var(--text)}
 .hero-side p{color:rgba(237,237,237,.86)}

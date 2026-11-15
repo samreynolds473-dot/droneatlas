@@ -22,7 +22,7 @@ def surveyors():
 - **פרויקט עם סבבים** אותה תוכנית טיסה בכל ביקור.
 """, """
 1. **אתם שולחים** פוליגון, רזולוציה (GSD) נדרשת, שיטת עיגון ותוצרים.
-2. **אנחנו בודקים** מרחב אווירי, מתאמים ומטיסים.
+2. **מתכננים את הטיסה** מגדירים מסלול, גובה וזוויות צילום בהתאם לתוצר הנדרש, ואז מטיסים.
 3. **מסירה** במבנה תיקיות קבוע, עם מטא-דאטה: RTK, נקודות בקרה או שניהם, ומטרת השימוש.
 4. **אתם ממשיכים** מדידה, השלמות שדה, שרטוט וחתימה.
 5. **שקיפות** בכל מסירה מצוינים המצלמה ושיטת העיגון [להשלמה: דגם מצלמה, והאם היא מאושרת בידי המרכז למיפוי ישראל].
@@ -72,7 +72,7 @@ You remain the professional who surveys, checks and signs. DroneAtlas is not a l
 - **A job with repeat visits** the same flight plan every time.
 """, """
 1. **You send** the polygon, the required GSD, the control method and the deliverables.
-2. **We check** the airspace, coordinate and fly.
+2. **Plan the flight** Route, altitude and camera angles matched to the deliverable, then we fly.
 3. **Handoff** in a fixed folder structure, with metadata: RTK, ground control or both, and the intended use.
 4. **You continue** survey, field infill, drafting and signature.
 5. **Transparency** every delivery states the camera and the control method [TO FILL: camera model, and whether it is approved by the Survey of Israel].

@@ -23,7 +23,7 @@ def construction():
 """, """
 1. **מגדירים** גבולות האתר, מה נמסר בכל סבב, ואת התדירות: שבועית, דו-שבועית, חודשית, או לפי אבן דרך.
 2. **קובעים מסלול קבוע** ונקודות צילום קבועות. בתחילת הפרויקט נבנה מצב קיים ומודל בסיס.
-3. **בודקים מרחב אווירי** כולל עבודה ליד עגורנים ואנשים. הטיסה מתואמת עם מנהל העבודה.
+3. **מתכננים את הטיסה** מגדירים מסלול, גובה וזוויות צילום בהתאם לתוצר הנדרש.
 4. **טסים ומוסרים** אחרי כל סבב: מפה, תמונות, וכמויות אם הוזמנו.
 5. **משווים** לסבב הקודם ולתכנון, כשיש קובץ DWG או SHP מעוגן.
 """, """
@@ -79,7 +79,7 @@ It is DroneAtlas's core service, built for mid-size contractors and developers a
 """, """
 1. **Define** the site boundary, what each round includes, and the frequency: weekly, fortnightly, monthly, or by milestone.
 2. **Lock a route** and fixed photo viewpoints. At the start we record existing conditions and a baseline model.
-3. **Check the airspace** including work near cranes and people. The flight is coordinated with the site manager.
+3. **Plan the flight** Route, altitude and camera angles matched to the deliverable.
 4. **Fly and deliver** after every round: a map, photos, and quantities if they were ordered.
 5. **Compare** with the previous round and with the design, when a georeferenced DWG or SHP is provided.
 """, """

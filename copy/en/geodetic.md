@@ -24,8 +24,8 @@ DroneAtlas maps areas of any size across Israel, from a single plot to large sit
 ## How it works
 
 1. **Define the question** What the deliverable is for: design, quantities, comparison or a committee background. Record the area, formats, coordinate system and check method.
-2. **Check the airspace** Restrictions at the site, coordination on the ground, and a special authorisation when the ordinary rules are not enough.
-3. **Plan the flight** Height, image overlap and camera angle for the resolution. On a slope we switch to [terrain-follow mapping](/en/terrain-follow-mapping/).
+2. **Plan the flight** Route, altitude and camera angles matched to the deliverable.
+3. **Overlap and resolution** Height, image overlap and camera angle for the resolution. On a slope we switch to [terrain-follow mapping](/en/terrain-follow-mapping/).
 4. **Anchor and test** RTK in flight, control points to tie the model, and separate check points to test it.
 5. **Process and deliver** Processing in WebODM, a quality report, and files on the Israeli Grid.
 

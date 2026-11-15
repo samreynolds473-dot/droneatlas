@@ -228,14 +228,23 @@ def media_slot_html(slot_id: str, lang: str, kind: str = "hero", page_id: str | 
     slot, found, expected = resolve_slot(slot_id)
     alt = slot_alt(slot_id, lang, page_id)
     w, h = slot.get("size") or [1200, 800]
-    badge = '<span class="media-badge">%s</span>' % e(ui["illustrative"])
+    real_photo = slot_id in {"card-construction", "card-volumes"}
+    badge = "" if real_photo else '<span class="media-badge">%s</span>' % e(ui["illustrative"])
     if found:
         href = publish_image(found)
         priority = ' fetchpriority="high"' if kind == "hero" and slot_id == "home-hero" else ' loading="lazy"'
+        cls = "hero-photo" if kind == "hero" else "card-photo"
         img = (
             '<img class="%s" src="%s" alt="%s" width="%d" height="%d" decoding="async"%s>'
-            % ("hero-photo" if kind == "hero" else "card-photo", e(href), e(alt), w, h, priority)
+            % (cls, e(href), e(alt), w, h, priority)
         )
+        jpg = found.with_suffix(".jpg")
+        if found.suffix == ".webp" and jpg.exists():
+            img = (
+                '<picture><source srcset="%s" type="image/webp">'
+                '<img class="%s" src="%s" alt="%s" width="%d" height="%d" decoding="async"%s></picture>'
+                % (e(href), cls, e(publish_image(jpg)), e(alt), w, h, priority)
+            )
         body = img + badge
         has = " has-photo"
     else:
@@ -451,10 +460,18 @@ def slot_img(slot_id: str, lang: str, page_id: str | None, cls: str, lazy: bool 
     if found:
         href = publish_image(found)
         extra = ' fetchpriority="high"' if fetchpriority else (' loading="lazy"' if lazy else "")
-        return (
+        img = (
             '<img class="%s" src="%s" alt="%s" width="%d" height="%d" decoding="async"%s data-slot="%s">'
             % (e(cls), e(href), e(alt), w, h, extra, e(slot_id))
         )
+        jpg = found.with_suffix(".jpg")
+        if found.suffix == ".webp" and jpg.exists():
+            img = (
+                '<picture><source srcset="%s" type="image/webp">'
+                '<img class="%s" src="%s" alt="%s" width="%d" height="%d" decoding="async"%s data-slot="%s"></picture>'
+                % (e(href), e(cls), e(publish_image(jpg)), e(alt), w, h, extra, e(slot_id))
+            )
+        return img
     standin = STANDIN_SRC.get(slot.get("standin") or "elevation", STANDIN_SRC["elevation"])
     return (
         '<img class="%s" src="%s" alt="%s" width="%d" height="%d" decoding="async" loading="lazy" data-slot="%s" data-pending="true">'

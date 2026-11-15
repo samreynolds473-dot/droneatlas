@@ -24,8 +24,8 @@ The useful product is existing conditions: an orthophoto, an elevation model or 
 ## How it works
 
 1. **Define the corridor or the compound** and what must come out: a map, heights, photography, or an inspection.
-2. **Check the airspace early** lines, roads and built-up land often sit under restrictions. Without approval we do not fly.
-3. **Plan the flight** for a hilly corridor, [terrain-follow mapping](/en/terrain-follow-mapping/).
+2. **Plan the flight** Route, altitude and camera angles matched to the deliverable.
+3. **On a hilly corridor** we use [terrain-follow mapping](/en/terrain-follow-mapping/).
 4. **Process in WebODM** onto the Israeli Grid, when a measurable map is ordered.
 5. **Deliver** files and a report. For a bridge, tower, tank or solar array, see [visual and thermal inspection](/en/drone-ndt-inspection/), which can be scheduled for the same area if the proposal includes both.
 

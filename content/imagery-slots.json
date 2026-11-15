@@ -290,8 +290,8 @@
         "Home/services card: construction",
         "Construction design-comparison section"
       ],
-      "alt_he": "איור להמחשה: מודל אתר בנייה עם שכבת מדידה",
-      "alt_en": "Illustrative construction model with a measurement overlay"
+      "alt_he": "צילום אוויר של בניין בבנייה, מלמעלה",
+      "alt_en": "Aerial view of a building under construction"
     },
     "card-site-walkthrough": {
       "files": [
@@ -329,7 +329,7 @@
     "card-volumes": {
       "files": [
         "card-stockpile-cut-fill.webp",
-        "card-stockpile-cut-fill.png"
+        "card-stockpile-cut-fill.jpg"
       ],
       "size": [
         1200,
@@ -340,8 +340,8 @@
         "Home/services card: volumes",
         "Volumes cut/fill section"
       ],
-      "alt_he": "איור להמחשה: מפת חום של חפירה ומילוי בערימות",
-      "alt_en": "Illustrative cut-and-fill heatmap of stockpiles"
+      "alt_he": "צילום אוויר של ערימות חול ועפר ומתקן מיון",
+      "alt_en": "Aerial view of sand stockpiles and a screening plant"
     },
     "surveyors-hero": {
       "files": [

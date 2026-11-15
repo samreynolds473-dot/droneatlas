@@ -43,11 +43,10 @@
     v.muted = true;
     v.defaultMuted = true;
     v.playsInline = true;
-    v.autoplay = true;
+    v.autoplay = false;
     v.preload = "none";
     v.setAttribute("muted", "");
     v.setAttribute("playsinline", "");
-    v.setAttribute("autoplay", "");
     v.setAttribute("aria-hidden", "true");
     v.tabIndex = -1;
     if (poster) v.poster = poster;
@@ -77,6 +76,7 @@
       video.preload = "metadata";
       video.poster = src.replace(/hero-(\d+)\.(webm|mp4)(\?.*)?$/, "hero-$1-poster.jpg");
       video.src = src;
+      if (video !== cur) video.pause();
     }
 
     function failAll() {

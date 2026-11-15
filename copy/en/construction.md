@@ -25,7 +25,7 @@ It is DroneAtlas's core service, built for mid-size contractors and developers a
 
 1. **Define** the site boundary, what each round includes, and the frequency: weekly, fortnightly, monthly, or by milestone.
 2. **Lock a route** and fixed photo viewpoints. At the start we record existing conditions and a baseline model.
-3. **Check the airspace** including work near cranes and people. The flight is coordinated with the site manager.
+3. **Plan the flight** Route, altitude and camera angles matched to the deliverable.
 4. **Fly and deliver** after every round: a map, photos, and quantities if they were ordered.
 5. **Compare** with the previous round and with the design, when a georeferenced DWG or SHP is provided.
 

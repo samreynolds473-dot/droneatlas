@@ -23,8 +23,8 @@ def geodetic():
 - **מודדים מוסמכים** שכבת בסיס אווירית. אתם מודדים וחותמים. ראו [נתוני רחפן למודדים](/aerial-data-for-surveyors/).
 """, """
 1. **מגדירים את השאלה** מה התוצר צריך לשרת: תכנון, כמויות, השוואה או רקע לוועדה. רושמים שטח, פורמטים, מערכת קואורדינטות ושיטת בדיקה.
-2. **בודקים מרחב אווירי** מגבלות באזור האתר, תיאום עם האחראי, והרשאה כשהכללים הרגילים לא מספיקים.
-3. **מתכננים את הטיסה** גובה, חפיפה בין תמונות וזווית צילום לפי הרזולוציה. במדרון עוברים ל[מיפוי עוקב קרקע](/terrain-follow-mapping/).
+2. **מתכננים את הטיסה** מגדירים מסלול, גובה וזוויות צילום בהתאם לתוצר הנדרש.
+3. **חפיפה ורזולוציה** גובה, חפיפה בין תמונות וזווית צילום לפי הרזולוציה. במדרון עוברים ל[מיפוי עוקב קרקע](/terrain-follow-mapping/).
 4. **מעגנים ובודקים** RTK בטיסה, נקודות בקרה לעיגון, ונקודות ביקורת נפרדות לבדיקה.
 5. **מעבדים ומוסרים** עיבוד ב-WebODM, דוח איכות, וקבצים ברשת ישראל.
 """, """
@@ -85,8 +85,8 @@ DroneAtlas maps areas of any size across Israel, from a single plot to large sit
 - **Licensed surveyors** an aerial base layer. You survey and sign. See [drone data for surveyors](/en/aerial-data-for-surveyors/).
 """, """
 1. **Define the question** What the deliverable is for: design, quantities, comparison or a committee background. Record the area, formats, coordinate system and check method.
-2. **Check the airspace** Restrictions at the site, coordination on the ground, and a special authorisation when the ordinary rules are not enough.
-3. **Plan the flight** Height, image overlap and camera angle for the resolution. On a slope we switch to [terrain-follow mapping](/en/terrain-follow-mapping/).
+2. **Plan the flight** Route, altitude and camera angles matched to the deliverable.
+3. **Overlap and resolution** Height, image overlap and camera angle for the resolution. On a slope we switch to [terrain-follow mapping](/en/terrain-follow-mapping/).
 4. **Anchor and test** RTK in flight, control points to tie the model, and separate check points to test it.
 5. **Process and deliver** Processing in WebODM, a quality report, and files on the Israeli Grid.
 """, """

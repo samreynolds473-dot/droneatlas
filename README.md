@@ -77,6 +77,27 @@ The three clips are short, muted cuts of Pexels footage, encoded at 1600×900 wi
 
 No Mixkit footage is used.
 
+## Audience card photos
+
+The contractor card and the quarry card use real aerial photographs, cropped to 1200×800, as WebP with a JPEG beside them. Both are under the [Pexels License](https://www.pexels.com/license/): free to use and modify, including commercially, with no attribution required.
+
+| Card | File | Source | Creator |
+| --- | --- | --- | --- |
+| Contractors | `assets/imagery/card-construction-bim-overlay.webp` and `.jpg` | [Pexels 3525541](https://www.pexels.com/photo/aerial-view-of-buildings-under-construction-3525541/) | Juan Cruz Palacio Mir |
+| Quarries and earthworks | `assets/imagery/card-stockpile-cut-fill.webp` and `.jpg` | [Pexels 33122152](https://www.pexels.com/photo/33122152/) | Volker Braun |
+
+## Clients
+
+The homepage strip “לקוחות שעבדו איתנו” / “Clients we've worked with” uses the organisations’ own marks, shown in white or light grey on the dark band. Oranim Projects has no logo file on Wikimedia, so that cell is the name set in type.
+
+| Client | File | Source |
+| --- | --- | --- |
+| Mekorot | `assets/clients/mekorot.svg` | [מקורות סמליל 2020.svg](https://he.wikipedia.org/wiki/%D7%A7%D7%95%D7%91%D7%A5:%D7%9E%D7%A7%D7%95%D7%A8%D7%95%D7%AA_%D7%A1%D7%9E%D7%9C%D7%99%D7%9C_2020.svg) on Hebrew Wikipedia (the company’s 2020 mark) |
+| Israel Electric Corporation | `assets/clients/iec.svg` | [IsraelElectric.svg](https://he.wikipedia.org/wiki/%D7%A7%D7%95%D7%91%D7%A5:IsraelElectric.svg) on Hebrew Wikipedia |
+| ZIM | `assets/clients/zim.svg` | [ZIM Logo.svg](https://commons.wikimedia.org/wiki/File:ZIM_Logo.svg), public domain, ZIM Integrated Shipping Services Ltd. |
+| Emek Hefer Regional Council | `assets/clients/emek-hefer.svg` | [Emeq Hefer Regional Council emblem.svg](https://he.wikipedia.org/wiki/%D7%A7%D7%95%D7%91%D7%A5:Emeq_Hefer_Regional_Council_emblem.svg) on Hebrew Wikipedia |
+| Oranim Projects | wordmark only | No official logo file was found on Wikimedia |
+
 ## Removed-page redirects
 
 Static redirect pages (meta refresh + canonical, `noindex, nofollow`, excluded from the sitemap) stand in for archived URLs:
