@@ -1,14 +1,13 @@
-/* Three placeholder clips, played once each, then crossfaded.
-   Missing files are skipped. If none exist, the poster image stays. */
+/* Three clips, each played once, then crossfaded. The poster stays until
+   the first clip is actually playing. If play() is rejected, the poster remains. */
 (() => {
   const stages = [...document.querySelectorAll("[data-hero-stage]")];
   if (!stages.length) return;
 
-  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const narrow = matchMedia("(max-width: 720px)").matches;
+  const narrow = matchMedia("(max-width: 480px)").matches;
   const conn = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
   const saveData = !!(conn && (conn.saveData || /2g/.test(conn.effectiveType || "")));
-  if (reduce || narrow || saveData) return;
+  if (narrow || saveData) return;
 
   const tag = document.querySelector("script[src*='hero-video.js']");
   if (!tag) return;
@@ -43,10 +42,12 @@
     v.muted = true;
     v.defaultMuted = true;
     v.playsInline = true;
-    v.autoplay = false;
-    v.preload = "none";
+    v.autoplay = true;
+    v.preload = "auto";
     v.setAttribute("muted", "");
     v.setAttribute("playsinline", "");
+    v.setAttribute("autoplay", "");
+    v.setAttribute("preload", "auto");
     v.setAttribute("aria-hidden", "true");
     v.tabIndex = -1;
     if (poster) v.poster = poster;
@@ -58,6 +59,10 @@
     const poster = img ? (img.currentSrc || img.getAttribute("src") || "") : "";
     const a = makeVideo(poster);
     const b = makeVideo(poster);
+    b.autoplay = false;
+    b.preload = "none";
+    b.removeAttribute("autoplay");
+    b.setAttribute("preload", "none");
     stage.appendChild(a);
     stage.appendChild(b);
     const host = stage.classList.contains("hero") || stage.classList.contains("page-hero")
@@ -70,13 +75,24 @@
     let index = 0;
     let alive = true;
 
-    function arm(video, src) {
+    function arm(video, src, primary) {
       if (video.dataset.src === src) return;
       video.dataset.src = src;
-      video.preload = "metadata";
+      video.muted = true;
+      video.defaultMuted = true;
+      video.playsInline = true;
+      video.preload = primary ? "auto" : "metadata";
       video.poster = src.replace(/hero-(\d+)\.(webm|mp4)(\?.*)?$/, "hero-$1-poster.jpg");
+      if (primary) {
+        video.autoplay = true;
+        video.setAttribute("autoplay", "");
+        video.setAttribute("preload", "auto");
+      } else {
+        video.autoplay = false;
+        video.removeAttribute("autoplay");
+        video.setAttribute("preload", "metadata");
+      }
       video.src = src;
-      if (video !== cur) video.pause();
     }
 
     function failAll() {
@@ -86,47 +102,59 @@
       if (host) host.classList.remove("has-video");
     }
 
-    function play(video) {
-      const attempt = video.play();
-      if (attempt && attempt.catch) attempt.catch(() => {});
+    function reveal(video) {
+      if (!alive || video !== cur) return;
+      video.classList.add("is-on");
     }
 
-    function show(video) {
-      video.classList.add("is-on");
-      play(video);
+    function kick(video) {
+      const attempt = video.play();
+      if (attempt && attempt.then) {
+        attempt.then(() => reveal(video)).catch(() => {
+          /* Poster stays. The clip remains hidden at opacity 0. */
+        });
+      }
+      return attempt;
     }
 
     function bind(video) {
+      video.addEventListener("playing", () => reveal(video));
+      video.addEventListener("loadeddata", () => {
+        if (!alive || video !== cur || video.classList.contains("is-on")) return;
+        if (!video.paused) reveal(video);
+        else kick(video);
+      });
       video.addEventListener("playing", () => {
         if (!alive || video !== cur) return;
         const ahead = clips[(index + 1) % clips.length];
-        arm(nxt, ahead);
+        arm(nxt, ahead, false);
       }, { once: true });
       video.addEventListener("ended", () => {
         if (!alive || video !== cur) return;
         const nextIndex = (index + 1) % clips.length;
         const go = () => {
           if (!alive) return;
-          show(nxt);
           cur.classList.remove("is-on");
           const old = cur;
-          window.setTimeout(() => { if (alive) old.pause(); }, 900);
           cur = nxt;
           nxt = old;
           index = nextIndex;
+          reveal(cur);
+          kick(cur);
+          window.setTimeout(() => { if (alive) old.pause(); }, 900);
           bind(cur);
         };
         if (nxt.readyState >= 2) go();
-        else nxt.addEventListener("canplay", go, { once: true });
+        else nxt.addEventListener("loadeddata", go, { once: true });
       }, { once: true });
       video.addEventListener("error", () => {
         if (video === cur) failAll();
       }, { once: true });
     }
 
-    arm(cur, clips[0]);
-    cur.addEventListener("canplay", () => { if (alive) show(cur); }, { once: true });
+    arm(cur, clips[0], true);
     bind(cur);
+    kick(cur);
   }
 
   resolveClips().then((clips) => {

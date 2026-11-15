@@ -9,10 +9,10 @@ html[lang="en"] body{font-family:"Rubik",Heebo,system-ui,sans-serif}
 }
 .skip-link:focus{top:12px}
 
-.logo{display:inline-flex;align-items:center;gap:10px;color:#fff;text-decoration:none;flex:none}
+.logo{display:inline-flex;align-items:center;gap:10px;color:#fff;text-decoration:none;flex:none;direction:ltr}
 .logo-mark{height:30px;width:auto;display:block}
 .logo-word{font-family:Rubik,Heebo,sans-serif;font-weight:400;font-size:20px;letter-spacing:-.03em;line-height:1}
-.logo-word strong{font-weight:700}
+.logo-word strong{font-weight:700;color:var(--brand-green,#22c55e)}
 .footer .brand .logo{margin-bottom:22px}
 .footer .brand .logo-word{font-size:22px}
 

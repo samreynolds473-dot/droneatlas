@@ -88,7 +88,7 @@ The contractor card and the quarry card use real aerial photographs, cropped to 
 
 ## Clients
 
-The homepage strip “לקוחות שעבדו איתנו” / “Clients we've worked with” uses the organisations’ own marks, shown in white or light grey on the dark band. Oranim Projects has no logo file on Wikimedia, so that cell is the name set in type.
+The homepage strip “לקוחות שעבדו איתנו” / “Clients we've worked with” uses the organisations’ own marks, shown in white or light grey on the dark band.
 
 | Client | File | Source |
 | --- | --- | --- |
@@ -96,7 +96,7 @@ The homepage strip “לקוחות שעבדו איתנו” / “Clients we've w
 | Israel Electric Corporation | `assets/clients/iec.svg` | [IsraelElectric.svg](https://he.wikipedia.org/wiki/%D7%A7%D7%95%D7%91%D7%A5:IsraelElectric.svg) on Hebrew Wikipedia |
 | ZIM | `assets/clients/zim.svg` | [ZIM Logo.svg](https://commons.wikimedia.org/wiki/File:ZIM_Logo.svg), public domain, ZIM Integrated Shipping Services Ltd. |
 | Emek Hefer Regional Council | `assets/clients/emek-hefer.svg` | [Emeq Hefer Regional Council emblem.svg](https://he.wikipedia.org/wiki/%D7%A7%D7%95%D7%91%D7%A5:Emeq_Hefer_Regional_Council_emblem.svg) on Hebrew Wikipedia |
-| Oranim Projects | wordmark only | No official logo file was found on Wikimedia |
+| Shafir Engineering & Construction (שפיר הנדסה ובנייה) | `assets/clients/shafir.svg` | [Shafir.svg](https://he.wikipedia.org/wiki/%D7%A7%D7%95%D7%91%D7%A5:Shafir.svg) on Hebrew Wikipedia, the mark of שפיר הנדסה ותעשייה (Shapir Engineering and Industry, also known as קבוצת שפיר). Recoloured white for the dark band. shapir.co.il blocked the download, and no separate file for the name “הנדסה ובנייה” was found. |
 
 ## Removed-page redirects
 
