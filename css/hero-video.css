@@ -36,3 +36,10 @@
 @media (prefers-reduced-motion:reduce){
   .hero-vid{transition:none}
 }
+.hero h1{color:#fff;text-shadow:0 2px 4px rgba(0,0,0,.6),0 16px 40px rgba(0,0,0,.5)}
+.hero-side{
+  padding:18px 20px 16px;
+  border-radius:18px;
+  background:linear-gradient(180deg,rgba(0,0,0,.48),rgba(0,0,0,.66));
+}
+.hero-kicker,.hero-field{color:#fff}

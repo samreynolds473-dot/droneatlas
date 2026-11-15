@@ -25,7 +25,6 @@
 .hero::after{
   z-index:1;
   pointer-events:none;
-  background:linear-gradient(180deg,rgba(5,6,8,.55) 0%,rgba(5,6,8,.15) 30%,rgba(5,6,8,.35) 60%,rgba(5,6,8,.92) 100%),linear-gradient(270deg,rgba(5,6,8,.55),transparent 60%);
 }
 .hero-grid{
   position:absolute;
@@ -69,7 +68,8 @@
   line-height:1.55;
   letter-spacing:.16em;
   text-transform:uppercase;
-  color:rgba(214,222,232,.72);
+  color:#fff;
+  text-shadow:0 1px 2px rgba(0,0,0,.7);
   unicode-bidi:isolate;
 }
 .hero-kicker b{
@@ -131,11 +131,12 @@
   margin:0;
   max-width:24em;
   font-family:"IBM Plex Sans Hebrew",Heebo,sans-serif;
-  font-weight:400;
-  font-size:clamp(16px,1.25vw,19px);
-  line-height:1.62;
+  font-weight:500;
+  font-size:clamp(17px,1.35vw,20px);
+  line-height:1.6;
   letter-spacing:0;
-  color:rgba(255,255,255,.88);
+  color:#fff;
+  text-shadow:0 1px 2px rgba(0,0,0,.75),0 10px 24px rgba(0,0,0,.4);
   text-align:right;
 }
 .hero .btn{
