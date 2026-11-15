@@ -65,26 +65,33 @@ DroneAtlas is not a licensed surveyor. Statutory survey plans are signed by a pa
 
 ## Hero video
 
-The homepage and every service hero play the clips that exist, in order, crossfading from one to the next and then repeating the set. The next file loads only after the current clip starts. Each slot prefers WebM and falls back to MP4. A missing file is skipped, so one or two clips still rotate. If none exist, the page poster stays and no player is inserted. `prefers-reduced-motion`, a narrow screen, and data-saver also keep the poster. A dark gradient stays over the picture so the type keeps contrast.
+The homepage and every service hero play the clips that exist, in order, crossfading from one to the next and then repeating the set. The next file loads only after the current clip starts. Each slot prefers WebM and falls back to MP4. A missing file is skipped, so one or two clips still rotate. If none exist, the page poster stays and no player is inserted. A screen narrower than 480px, or data-saver, keeps the poster. Reduced motion still plays the clips, without the crossfade animation. The type sits on a dark scrim along the text side and along the bottom, not a flat filter over the whole frame.
 
-The three clips are short, muted cuts of Pexels footage, encoded at 1600×900 with no audio. Each has an H.264 MP4 (`+faststart`), a VP9 WebM, and a JPEG poster (`hero-N-poster.jpg`). They are used under the [Pexels License](https://www.pexels.com/license/): free to use and modify, including commercially, with no attribution required. Do not resell the unaltered files as stock.
+The three clips are muted cuts of the original 4K Pexels files, scaled down (never upscaled) to 1920×1080 and 2560×1440. `js/hero-video.js` picks 1440p when `screen width × devicePixelRatio` is at least 2200, and otherwise uses 1080p. Each size has an H.264 MP4 (high profile, CRF 20, `+faststart`) and a VP9 WebM. A JPEG poster is `hero-N-poster.jpg`. Only the first clip is preloaded. They are used under the [Pexels License](https://www.pexels.com/license/): free to use and modify, including commercially, with no attribution required. Do not resell the unaltered files as stock. libsvtav1 is available, but the WebM files are VP9 so Safari and Chrome both play them.
 
-| Slot | File | Source | Creator | Segment |
+| Slot | Files | Source | Creator | Segment |
 | --- | --- | --- | --- | --- |
-| hero-1 | `assets/video/hero-1.webm`, `hero-1.mp4` | [Aerial Footage of Trucks on a Construction Site](https://www.pexels.com/video/aerial-footage-of-trucks-on-a-construction-site-7518602/) (Pexels 7518602) | Tom Fisk | 12s, from 0:02, excavator beside the trucks |
-| hero-2 | `assets/video/hero-2.webm`, `hero-2.mp4` | [Aerial view of coastal construction in Netanya](https://www.pexels.com/video/aerial-view-of-coastal-construction-in-netanya-31383776/) (Pexels 31383776) | Rasmus Carlin | 12s, from 0:08, breakwater and shore works |
-| hero-3 | `assets/video/hero-3.webm`, `hero-3.mp4` | [Solar panel in rows used for energy production](https://www.pexels.com/video/solar-panel-in-rows-used-for-energy-production-2804595/) (Pexels 2804595) | K (name as published on the Pexels page) | 11.6s, from 0:00.4, rows of panels |
+| hero-1 | `hero-1.mp4` / `.webm` and `hero-1-1440.mp4` / `.webm` | [Aerial Footage of Trucks on a Construction Site](https://www.pexels.com/video/aerial-footage-of-trucks-on-a-construction-site-7518602/) (Pexels 7518602, original 3840×2160) | Tom Fisk | 12s, from 0:02 |
+| hero-2 | `hero-2.mp4` / `.webm` and `hero-2-1440.mp4` / `.webm` | [Aerial view of coastal construction in Netanya](https://www.pexels.com/video/aerial-view-of-coastal-construction-in-netanya-31383776/) (Pexels 31383776, original 3840×2160) | Rasmus Carlin | 12s, from 0:08 |
+| hero-3 | `hero-3.mp4` / `.webm` and `hero-3-1440.mp4` / `.webm` | [Solar panel in rows used for energy production](https://www.pexels.com/video/solar-panel-in-rows-used-for-energy-production-2804595/) (Pexels 2804595, original 3840×2160) | K (name as published on the Pexels page) | 11.6s, from 0:00.4 |
 
 No Mixkit footage is used.
 
-## Audience card photos
+## Photographs
 
-The contractor card and the quarry card use real aerial photographs, cropped to 1200×800, as WebP with a JPEG beside them. Both are under the [Pexels License](https://www.pexels.com/license/): free to use and modify, including commercially, with no attribution required.
+Illustrated cards and heroes are replaced with real photographs under the [Pexels License](https://www.pexels.com/license/). Each file is exported at 800, 1600 and 2400 pixels wide as AVIF, WebP and JPEG (JPEG quality 86, WebP quality 84). Pages use a `<picture>` srcset.
 
-| Card | File | Source | Creator |
-| --- | --- | --- | --- |
-| Contractors | `assets/imagery/card-construction-bim-overlay.webp` and `.jpg` | [Pexels 3525541](https://www.pexels.com/photo/aerial-view-of-buildings-under-construction-3525541/) | Juan Cruz Palacio Mir |
-| Quarries and earthworks | `assets/imagery/card-stockpile-cut-fill.webp` and `.jpg` | [Pexels 33122152](https://www.pexels.com/photo/33122152/) | Volker Braun |
+| Used for | Pexels photo |
+| --- | --- |
+| Construction, home poster | [3525541](https://www.pexels.com/photo/3525541/) |
+| Quarries and stockpiles | [33122152](https://www.pexels.com/photo/33122152/) |
+| Excavation / ground | [11467684](https://www.pexels.com/photo/11467684/) |
+| Sand dunes (survey, terrain, orthophoto card, home panel) | [1001435](https://www.pexels.com/photo/1001435/) |
+| Dune ridge (geodetic, 3D surface) | [1731660](https://www.pexels.com/photo/1731660/) |
+| Field harvest (agriculture only) | [2255801](https://www.pexels.com/photo/2255801/) |
+| Highway interchange (infrastructure, services) | [681335](https://www.pexels.com/photo/681335/) |
+| Industrial plant at night | [236722](https://www.pexels.com/photo/236722/) |
+| Solar panels (inspection card, FAQ hero) | [356036](https://www.pexels.com/photo/356036/) |
 
 ## Clients
 

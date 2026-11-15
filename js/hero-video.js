@@ -25,12 +25,25 @@
     }).catch(() => false);
   }
 
+  function wantHiRes() {
+    const dpr = window.devicePixelRatio || 1;
+    const width = Math.max(window.innerWidth || 0, (window.screen && window.screen.width) || 0);
+    return width * dpr >= 2200;
+  }
+
   function resolveClips() {
+    const hi = wantHiRes();
     const jobs = [1, 2, 3].map(async (n) => {
-      const webm = root + "/assets/video/hero-" + n + ".webm";
-      const mp4 = root + "/assets/video/hero-" + n + ".mp4";
-      if (await exists(webm)) return webm;
-      if (await exists(mp4)) return mp4;
+      const cands = [];
+      if (hi) {
+        cands.push(root + "/assets/video/hero-" + n + "-1440.webm");
+        cands.push(root + "/assets/video/hero-" + n + "-1440.mp4");
+      }
+      cands.push(root + "/assets/video/hero-" + n + ".webm");
+      cands.push(root + "/assets/video/hero-" + n + ".mp4");
+      for (const url of cands) {
+        if (await exists(url)) return url;
+      }
       return null;
     });
     return Promise.all(jobs).then((list) => list.filter(Boolean));
@@ -82,7 +95,7 @@
       video.defaultMuted = true;
       video.playsInline = true;
       video.preload = primary ? "auto" : "metadata";
-      video.poster = src.replace(/hero-(\d+)\.(webm|mp4)(\?.*)?$/, "hero-$1-poster.jpg");
+      video.poster = src.replace(/hero-(\d+)(?:-1440)?\.(webm|mp4)(\?.*)?$/, "hero-$1-poster.jpg");
       if (primary) {
         video.autoplay = true;
         video.setAttribute("autoplay", "");
