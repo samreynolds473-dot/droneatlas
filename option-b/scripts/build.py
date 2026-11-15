@@ -1210,7 +1210,7 @@ def org_schema() -> dict:
         "alternateName": "דרון אטלס",
         "url": abs_url("/"),
         "image": abs_url("/assets/og-image.png"),
-        "logo": abs_url("/assets/logo-mark.svg"),
+        "logo": abs_url("/assets/logo.svg"),
         "areaServed": {"@type": "Country", "name": "Israel"},
         "availableLanguage": ["he", "en"],
         "knowsAbout": [
@@ -1360,7 +1360,9 @@ def page_document(lang, page_id, path, alt_path, title, description, body_html, 
   <meta name="twitter:description" content="%s">
   <meta name="twitter:image" content="%s">
   <link rel="icon" href="%s" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="%s">
+  <link rel="icon" href="%s" type="image/png" sizes="32x32">
+  <link rel="icon" href="%s" type="image/png" sizes="16x16">
+  <link rel="apple-touch-icon" href="%s" sizes="180x180">
 %s
 %s
   <script type="application/ld+json">
@@ -1387,7 +1389,7 @@ def page_document(lang, page_id, path, alt_path, title, description, body_html, 
         "en_US" if lang == "he" else "he_IL",
         e(title), e(description), e(canonical), e(og),
         e(title), e(description), e(og),
-        asset("/assets/favicon.svg"), asset("/assets/apple-touch-icon.png"),
+        asset("/assets/favicon.svg"), asset("/assets/favicon-32.png"), asset("/assets/favicon-16.png"), asset("/assets/apple-touch-icon.png"),
         font_preloads(lang),
         stylesheets(page_id),
         schema_json,
