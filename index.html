@@ -34,6 +34,7 @@
   <link rel="stylesheet" href="/droneatlas/css/home-hero.css">
   <link rel="stylesheet" href="/droneatlas/css/home-flow.css">
   <link rel="stylesheet" href="/droneatlas/css/theme.css">
+  <link rel="stylesheet" href="/droneatlas/css/hero-video.css">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -160,6 +161,11 @@
       <a href="/droneatlas/terrain-follow-mapping/">מיפוי עוקב קרקע</a>
       <a href="/droneatlas/3d-modeling-point-cloud/">מידול תלת מימד וענן נקודות</a>
       <a href="/droneatlas/industrial-drone-photography/">צילומי רחפן לתעשייה</a>
+      <a href="/droneatlas/orthophoto-aerial-mapping/">אורתופוטו</a>
+      <a href="/droneatlas/drone-topographic-survey/">מדידה טופוגרפית</a>
+      <a href="/droneatlas/agricultural-mapping-ndvi/">מיפוי חקלאי</a>
+      <a href="/droneatlas/infrastructure-municipalities/">תשתיות ורשויות</a>
+      <a href="/droneatlas/drone-ndt-inspection/">בדיקות NDT</a>
             </div>
           </div>
         </div>
@@ -195,6 +201,11 @@
       <a href="/droneatlas/terrain-follow-mapping/">מיפוי עוקב קרקע</a>
       <a href="/droneatlas/3d-modeling-point-cloud/">מידול תלת מימד וענן נקודות</a>
       <a href="/droneatlas/industrial-drone-photography/">צילומי רחפן לתעשייה</a>
+      <a href="/droneatlas/orthophoto-aerial-mapping/">אורתופוטו</a>
+      <a href="/droneatlas/drone-topographic-survey/">מדידה טופוגרפית</a>
+      <a href="/droneatlas/agricultural-mapping-ndvi/">מיפוי חקלאי</a>
+      <a href="/droneatlas/infrastructure-municipalities/">תשתיות ורשויות</a>
+      <a href="/droneatlas/drone-ndt-inspection/">בדיקות NDT</a>
       </div>
     </div>
     <a href="/droneatlas/about/">אודות</a>
@@ -208,7 +219,7 @@
     <a class="btn btn-primary" href="/droneatlas/contact/">צור קשר</a>
   </div>
   <main id="main">
-    <section class="hero">
+    <section class="hero" data-hero-stage>
       <img class="poster" src="/droneatlas/assets/imagery/hero-elevation-hillshade-1920.webp" alt="איור להמחשה: מפת גבהים צבעונית עם הצללת תבליט" width="1920" height="1080" decoding="async" fetchpriority="high" data-slot="home-hero">
       <div class="hero-grid" aria-hidden="true"></div>
       <div class="wrap">
@@ -311,7 +322,7 @@
             <span class="more">לפרטים <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span>
           </span>
         </a>
-        <a class="industry-card" href="/droneatlas/services/">
+        <a class="industry-card" href="/droneatlas/infrastructure-municipalities/">
           <span class="pic"><img class="card-photo" src="/droneatlas/assets/imagery/card-geodetic.webp" alt="איור להמחשה: מפת תבליט עם רשת קואורדינטות ונקודות בקרה" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-geodetic"></span>
           <span class="body">
             <h3>תשתיות ורשויות מקומיות</h3>
@@ -361,11 +372,33 @@
     <img class="card-photo" src="/droneatlas/assets/imagery/card-industrial.webp" alt="איור להמחשה: צילום אווירי לתעשייה" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-industrial">
     <span class="svc-photo-cap"><span>צילומי רחפן לתעשייה</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
    </a>
+   <a class="svc-photo" href="/droneatlas/orthophoto-aerial-mapping/">
+    <img class="card-photo" src="/droneatlas/assets/imagery/card-contours-hillshade.webp" alt="איור להמחשה: קווי גובה על הצללת תבליט" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-orthophoto">
+    <span class="svc-photo-cap"><span>אורתופוטו ומיפוי אווירי</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+   </a>
+   <a class="svc-photo" href="/droneatlas/drone-topographic-survey/">
+    <img class="card-photo" src="/droneatlas/assets/imagery/card-geodetic.webp" alt="איור להמחשה: מפת תבליט עם רשת קואורדינטות ונקודות בקרה" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-topo">
+    <span class="svc-photo-cap"><span>מדידה טופוגרפית ברחפן</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+   </a>
+   <a class="svc-photo" href="/droneatlas/agricultural-mapping-ndvi/">
+    <img class="card-photo" src="/droneatlas/assets/imagery/home-panel.webp" alt="איור להמחשה: השוואה בין תבליט פני השטח לבין מפת גבהים צבעונית" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-agri">
+    <span class="svc-photo-cap"><span>מיפוי חקלאי ו-NDVI</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+   </a>
+   <a class="svc-photo" href="/droneatlas/infrastructure-municipalities/">
+    <img class="card-photo" src="/droneatlas/assets/imagery/card-terrain.webp" alt="איור להמחשה: חתך פני שטח ומסלול טיסה עוקב קרקע" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-infra">
+    <span class="svc-photo-cap"><span>תשתיות ורשויות מקומיות</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+   </a>
+   <a class="svc-photo" href="/droneatlas/drone-ndt-inspection/">
+    <img class="card-photo" src="/droneatlas/assets/imagery/card-roof-overlay-dimension-grid.webp" alt="איור להמחשה: רשת מידות על גבי מבנה" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-ndt">
+    <span class="svc-photo-cap"><span>בדיקה ויזואלית ותרמית</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+   </a>
 </div>
         <div class="article" style="margin-top:48px"><p><strong>לקבלנים וליזמים: סט מיפוי התקדמות בנייה.</strong> טיסה חוזרת באותו מסלול בכל ביקור, ובכל סבב אורתופוטו של האתר או מודל תלת מימד, השוואה לתכנון וכמויות עפר. <a href="/droneatlas/construction-progress-monitoring/">למיפוי התקדמות בנייה</a></p>
 <p><strong>למחצבות ולקבלני עפר: סקר נפחים חודשי.</strong> אותה שיטה ואותו משטח בסיס בכל חודש, ודוח נפחים לכל ערימה ואזור. <a href="/droneatlas/volume-calculation-earthworks/">לחישוב כמויות עפר ונפחים</a></p>
 <p>חמשת השירותים שלנו:</p>
 <ul><li><strong><a href="/droneatlas/geodetic-mapping-rtk/">מיפוי שטחים גאודטי ב-RTK</a></strong>: אורתופוטו, DSM ו-DTM, קווי גובה, ענן נקודות ומדידות נפח, ברשת ישראל.</li><li><strong><a href="/droneatlas/ground-control-points-gcp/">נקודות בקרה קרקעיות (GCP)</a></strong>: תכנון, סימון ומדידה ב-GNSS, עם נקודות ביקורת ודוח שגיאות.</li><li><strong><a href="/droneatlas/terrain-follow-mapping/">מיפוי עוקב קרקע</a></strong>: גובה טיסה קבוע מעל הקרקע במדרונות ובמחצבות.</li><li><strong><a href="/droneatlas/3d-modeling-point-cloud/">מידול תלת מימד וענן נקודות</a></strong>: מודל מרקם של מבנה או אתר, שאפשר לסובב ולמדוד.</li><li><strong><a href="/droneatlas/industrial-drone-photography/">צילומי רחפן לתעשייה</a></strong>: סטילס ווידאו 4K עם עריכה מקצועית.</li></ul>
+<p>עמודים ייעודיים נוספים:</p>
+<ul><li><strong><a href="/droneatlas/orthophoto-aerial-mapping/">אורתופוטו ומיפוי אווירי</a></strong>: מפה מיושרת שאפשר למדוד עליה ולהניח עליה תוכניות.</li><li><strong><a href="/droneatlas/drone-topographic-survey/">מדידה טופוגרפית ברחפן</a></strong>: מודל קרקע, קווי גובה וענן נקודות. תוכנית סטטוטורית נחתמת בידי מודד מוסמך שותף.</li><li><strong><a href="/droneatlas/agricultural-mapping-ndvi/">מיפוי חקלאי</a></strong>: אורתופוטו של חלקה, ומפת מדד צומח כגון NDVI כשהחיישן מתאים.</li><li><strong><a href="/droneatlas/infrastructure-municipalities/">תשתיות ורשויות מקומיות</a></strong>: מיפוי כבישים, קווים ומצב קיים, בכפוף לאישורי טיסה.</li><li><strong><a href="/droneatlas/drone-ndt-inspection/">בדיקה ויזואלית ותרמית</a></strong>: צילום ברזולוציה גבוהה וצילום תרמי של גגות, חזיתות ומתקנים.</li></ul>
 <p>ולמודדים: <a href="/droneatlas/aerial-data-for-surveyors/">נתוני רחפן למודדים</a>. אנחנו מטיסים ומעבדים, המודד מודד וחותם.</p></div>
       </div>
     </section>
@@ -456,6 +489,12 @@
           <option value="industrial">צילומי רחפן לתעשייה</option>
           <option value="construction">מיפוי התקדמות בנייה</option>
           <option value="volumes">חישוב נפחים</option>
+          
+          <option value="orthophoto">אורתופוטו</option>
+          <option value="topo">מדידה טופוגרפית</option>
+          <option value="agriculture">מיפוי חקלאי</option>
+          <option value="infrastructure">תשתיות ורשויות</option>
+          <option value="ndt">בדיקה ויזואלית ותרמית</option>
           <option value="surveyors">נתוני רחפן למודדים</option>
   </select></div>
   <div class="field"><label for="area">גודל שטח משוער (רשות)</label><input id="area" name="area" type="text"></div>
@@ -502,6 +541,11 @@
        <li><a href="/droneatlas/terrain-follow-mapping/">מיפוי עוקב קרקע</a></li>
        <li><a href="/droneatlas/3d-modeling-point-cloud/">מידול תלת מימד וענן נקודות</a></li>
        <li><a href="/droneatlas/industrial-drone-photography/">צילומי רחפן לתעשייה</a></li>
+       <li><a href="/droneatlas/orthophoto-aerial-mapping/">אורתופוטו</a></li>
+       <li><a href="/droneatlas/drone-topographic-survey/">מדידה טופוגרפית</a></li>
+       <li><a href="/droneatlas/agricultural-mapping-ndvi/">מיפוי חקלאי</a></li>
+       <li><a href="/droneatlas/infrastructure-municipalities/">תשתיות ורשויות</a></li>
+       <li><a href="/droneatlas/drone-ndt-inspection/">בדיקות NDT</a></li>
           </ul>
         </div>
         <div>
@@ -522,5 +566,6 @@
   <script src="/droneatlas/js/config.js"></script>
   <script src="/droneatlas/js/home-nav.js"></script>
   <script src="/droneatlas/js/main.js"></script>
+  <script src="/droneatlas/js/hero-video.js"></script>
 </body>
 </html>

@@ -81,7 +81,12 @@
       [
         "surveyors",
         "נתוני רחפן למודדים"
-      ]
+      ],
+      ["orthophoto", "אורתופוטו"],
+      ["topo", "מדידה טופוגרפית"],
+      ["agriculture", "מיפוי חקלאי"],
+      ["infrastructure", "תשתיות ורשויות"],
+      ["ndt", "בדיקה ויזואלית ותרמית"]
     ],
     "waHref": "https://wa.me/[להשלמה: מספר וואטסאפ בפורמט 972XXXXXXXXX]",
     "legalNote": "תבנית בלבד — לסקירת עורך דין לפני פרסום.",
@@ -179,7 +184,12 @@
       [
         "surveyors",
         "Data for surveyors"
-      ]
+      ],
+      ["orthophoto", "Orthophoto"],
+      ["topo", "Topographic survey"],
+      ["agriculture", "Agricultural mapping"],
+      ["infrastructure", "Infrastructure"],
+      ["ndt", "Visual and thermal inspection"]
     ],
     "waHref": "https://wa.me/[TO FILL: WhatsApp number in 972XXXXXXXXX format]",
     "legalNote": "Template only — must be reviewed by a lawyer before publishing.",

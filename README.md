@@ -8,14 +8,14 @@ This project is a standalone DroneAtlas site. Do not copy assets or config from 
 
 ## Build
 
-Official copy lives in `/workspace/droneatlas/copy/{he,en}/`. The contour-peak logo shape comes from `/workspace/droneatlas/brand/`. Site colour and font tokens live in `css/styles.css` and override the desk brand-brief at the owner's request.
+Service-page copy for this checkout lives in `copy/{he,en}/`. If `/workspace/droneatlas/copy/` is present, a file there is used only when the same name is not already in `copy/`. Imagery is taken from `/workspace/droneatlas/brand/imagery/` when that folder exists, and otherwise from the WebP files already in `assets/imagery/`. Colour and font tokens live in `css/styles.css` and `css/theme.css`.
 
 ```bash
-python3 /workspace/droneatlas-site/scripts/build.py
-python3 -m http.server 8891 --bind 127.0.0.1 --directory /workspace/droneatlas-site
+python3 scripts/emit_service_copy.py
+python3 scripts/build.py
 ```
 
-Relative URLs throughout, so a later origin can be set in `config.json` (`siteOrigin`).
+`scripts/build.py` prefixes root-relative links with `/droneatlas/` so GitHub Pages project hosting resolves them. Canonical URLs stay on `https://droneatlas.co.il`. To preview with those prefixes, serve a parent directory that contains this folder as `droneatlas/`.
 
 ## Imagery
 
@@ -43,14 +43,39 @@ Fonts (self-hosted woff2, `font-display: swap`; no Inter): Heebo, Rubik, IBM Ple
 
 ## Pages
 
-See the built routes after `scripts/build.py`. Menu: Home, Construction progress, Quarries & volumes, Services (five core services), For surveyors, Process, About, FAQ, Contact, plus the language switch. Construction and volume pages stay featured as client solutions. Removed pages (orthophoto, topographic survey, agri, industries, the old 3D slug) are static noindex redirects and are excluded from the sitemap.
+Hebrew (RTL) at `/`, English (LTR) at `/en/`. Menu: Home, the service list, About, Magazine, Contact, plus the language switch. Construction progress and quarry volumes stay featured as client solutions. Every service page uses the same template (`css/service-depth.css`): who it is for, numbered steps, deliverables, accuracy and checks, when to choose it, limits and approvals, what to prepare, an FAQ (`FAQPage` schema), related services, and a WhatsApp / contact close. Staging `noindex, nofollow` matches the other pages.
+
+Service URLs (Hebrew, with an `/en/…` pair; volumes use `/en/stockpile-volume-calculation/`):
+
+- `/construction-progress-monitoring/`
+- `/volume-calculation-earthworks/`
+- `/aerial-data-for-surveyors/`
+- `/geodetic-mapping-rtk/`
+- `/ground-control-points-gcp/`
+- `/terrain-follow-mapping/`
+- `/3d-modeling-point-cloud/`
+- `/industrial-drone-photography/`
+- `/orthophoto-aerial-mapping/`
+- `/drone-topographic-survey/`
+- `/agricultural-mapping-ndvi/`
+- `/infrastructure-municipalities/`
+- `/drone-ndt-inspection/` (high-resolution visual inspection and thermal imaging; a certified sign-off, where required, is a partner placeholder)
+
+DroneAtlas is not a licensed surveyor. Statutory survey plans are signed by a partner licensed surveyor. Missing facts stay in `[להשלמה]` / `[TO FILL]`. Processing is WebODM. Coordinates default to the Israeli grid EPSG:2039. Inspection is visual and thermal only.
+
+## Hero video
+
+The homepage and every service hero can play three background clips in order, crossfading from one to the next and then repeating the set. The next file is loaded only when the current clip starts. Each clip prefers WebM and falls back to MP4:
+
+- `assets/video/hero-1.webm` and `assets/video/hero-1.mp4`
+- `assets/video/hero-2.webm` and `assets/video/hero-2.mp4`
+- `assets/video/hero-3.webm` and `assets/video/hero-3.mp4`
+
+No footage is in the repository. Do not add stock or third-party video. Drop the owner's clips on those paths. Until a file exists it is skipped. If none exist, the existing hero poster image stays and no player is shown. `prefers-reduced-motion`, a narrow screen, and data-saver also keep the poster. The poster remains underneath the video, and the dark hero gradient stays over it so the type keeps contrast.
 
 ## Removed-page redirects
 
 Static redirect pages (meta refresh + canonical, `noindex, nofollow`, excluded from the sitemap) stand in for archived URLs:
 
 - `/3d-models-digital-twin/` → `/3d-modeling-point-cloud/` (and `/en/…`)
-- `/orthophoto-aerial-mapping/` → `/geodetic-mapping-rtk/`
-- `/drone-topographic-survey/` → `/geodetic-mapping-rtk/`
-- `/agricultural-mapping-ndvi/` → `/services/`
 - `/industries/` → `/services/`

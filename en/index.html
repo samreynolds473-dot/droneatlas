@@ -34,6 +34,7 @@
   <link rel="stylesheet" href="/droneatlas/css/home-hero.css">
   <link rel="stylesheet" href="/droneatlas/css/home-flow.css">
   <link rel="stylesheet" href="/droneatlas/css/theme.css">
+  <link rel="stylesheet" href="/droneatlas/css/hero-video.css">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -160,6 +161,11 @@
       <a href="/droneatlas/en/terrain-follow-mapping/">Terrain-follow mapping</a>
       <a href="/droneatlas/en/3d-modeling-point-cloud/">3D models &amp; point clouds</a>
       <a href="/droneatlas/en/industrial-drone-photography/">Industrial photography</a>
+      <a href="/droneatlas/en/orthophoto-aerial-mapping/">Orthophoto</a>
+      <a href="/droneatlas/en/drone-topographic-survey/">Topographic survey</a>
+      <a href="/droneatlas/en/agricultural-mapping-ndvi/">Agricultural mapping</a>
+      <a href="/droneatlas/en/infrastructure-municipalities/">Infrastructure</a>
+      <a href="/droneatlas/en/drone-ndt-inspection/">NDT inspection</a>
             </div>
           </div>
         </div>
@@ -195,6 +201,11 @@
       <a href="/droneatlas/en/terrain-follow-mapping/">Terrain-follow mapping</a>
       <a href="/droneatlas/en/3d-modeling-point-cloud/">3D models &amp; point clouds</a>
       <a href="/droneatlas/en/industrial-drone-photography/">Industrial photography</a>
+      <a href="/droneatlas/en/orthophoto-aerial-mapping/">Orthophoto</a>
+      <a href="/droneatlas/en/drone-topographic-survey/">Topographic survey</a>
+      <a href="/droneatlas/en/agricultural-mapping-ndvi/">Agricultural mapping</a>
+      <a href="/droneatlas/en/infrastructure-municipalities/">Infrastructure</a>
+      <a href="/droneatlas/en/drone-ndt-inspection/">NDT inspection</a>
       </div>
     </div>
     <a href="/droneatlas/en/about/">About</a>
@@ -208,7 +219,7 @@
     <a class="btn btn-primary" href="/droneatlas/en/contact/">Contact us</a>
   </div>
   <main id="main">
-    <section class="hero">
+    <section class="hero" data-hero-stage>
       <img class="poster" src="/droneatlas/assets/imagery/hero-elevation-hillshade-1920.webp" alt="Illustrative colourful elevation map with hillshade" width="1920" height="1080" decoding="async" fetchpriority="high" data-slot="home-hero">
       <div class="hero-grid" aria-hidden="true"></div>
       <div class="wrap">
@@ -311,7 +322,7 @@
             <span class="more">Learn more <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span>
           </span>
         </a>
-        <a class="industry-card" href="/droneatlas/en/services/">
+        <a class="industry-card" href="/droneatlas/en/infrastructure-municipalities/">
           <span class="pic"><img class="card-photo" src="/droneatlas/assets/imagery/card-geodetic.webp" alt="Illustrative relief map with a coordinate grid and control points" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-geodetic"></span>
           <span class="body">
             <h3>Infrastructure and local authorities</h3>
@@ -361,11 +372,33 @@
     <img class="card-photo" src="/droneatlas/assets/imagery/card-industrial.webp" alt="Illustrative industrial aerial photograph" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-industrial">
     <span class="svc-photo-cap"><span>Industrial drone photography</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
    </a>
+   <a class="svc-photo" href="/droneatlas/en/orthophoto-aerial-mapping/">
+    <img class="card-photo" src="/droneatlas/assets/imagery/card-contours-hillshade.webp" alt="Illustrative contours over hillshade" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-orthophoto">
+    <span class="svc-photo-cap"><span>Orthophoto and aerial mapping</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+   </a>
+   <a class="svc-photo" href="/droneatlas/en/drone-topographic-survey/">
+    <img class="card-photo" src="/droneatlas/assets/imagery/card-geodetic.webp" alt="Illustrative relief map with a coordinate grid and control points" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-topo">
+    <span class="svc-photo-cap"><span>Drone topographic survey</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+   </a>
+   <a class="svc-photo" href="/droneatlas/en/agricultural-mapping-ndvi/">
+    <img class="card-photo" src="/droneatlas/assets/imagery/home-panel.webp" alt="Illustrative split view of a surface model and a colourful elevation map" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-agri">
+    <span class="svc-photo-cap"><span>Agricultural mapping and NDVI</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+   </a>
+   <a class="svc-photo" href="/droneatlas/en/infrastructure-municipalities/">
+    <img class="card-photo" src="/droneatlas/assets/imagery/card-terrain.webp" alt="Illustrative terrain profile with a terrain-follow flight path" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-infra">
+    <span class="svc-photo-cap"><span>Infrastructure and municipalities</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+   </a>
+   <a class="svc-photo" href="/droneatlas/en/drone-ndt-inspection/">
+    <img class="card-photo" src="/droneatlas/assets/imagery/card-roof-overlay-dimension-grid.webp" alt="Illustrative dimension grid over a structure" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-ndt">
+    <span class="svc-photo-cap"><span>Visual and thermal inspection</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+   </a>
 </div>
         <div class="article" style="margin-top:48px"><p><strong>For contractors and developers: construction progress mapping sets.</strong> The same flight route on every visit, and each round an orthophoto of the site or a 3D model, a design check and earthwork quantities. <a href="/droneatlas/en/construction-progress-monitoring/">Construction progress mapping</a></p>
 <p><strong>For quarries and earthworks: monthly volume surveys.</strong> The same method and base surface every month, and a volume report per pile and zone. <a href="/droneatlas/en/stockpile-volume-calculation/">Stockpile and earthwork volumes</a></p>
 <p>Our five services:</p>
 <ul><li><strong><a href="/droneatlas/en/geodetic-mapping-rtk/">RTK geodetic mapping</a></strong>: orthophoto, DSM and DTM, contours, point cloud and volume measurements on the Israeli Grid.</li><li><strong><a href="/droneatlas/en/ground-control-points-gcp/">Ground control points (GCP)</a></strong>: layout, marking and GNSS measurement, with check points and an error report.</li><li><strong><a href="/droneatlas/en/terrain-follow-mapping/">Terrain-follow mapping</a></strong>: a constant height above ground over slopes and quarries.</li><li><strong><a href="/droneatlas/en/3d-modeling-point-cloud/">3D modelling and point clouds</a></strong>: textured models of buildings or sites you can rotate and measure.</li><li><strong><a href="/droneatlas/en/industrial-drone-photography/">Industrial drone photography</a></strong>: stills and 4K video with professional editing.</li></ul>
+<p>Further service pages:</p>
+<ul><li><strong><a href="/droneatlas/en/orthophoto-aerial-mapping/">Orthophoto and aerial mapping</a></strong>: a corrected map you can measure on and overlay plans on.</li><li><strong><a href="/droneatlas/en/drone-topographic-survey/">Drone topographic survey</a></strong>: a ground model, contours and a point cloud. A statutory plan is signed by a partner licensed surveyor.</li><li><strong><a href="/droneatlas/en/agricultural-mapping-ndvi/">Agricultural mapping</a></strong>: a field orthophoto, and a vegetation-index map such as NDVI when the sensor fits.</li><li><strong><a href="/droneatlas/en/infrastructure-municipalities/">Infrastructure and municipalities</a></strong>: mapping of roads, lines and existing conditions, subject to flight approvals.</li><li><strong><a href="/droneatlas/en/drone-ndt-inspection/">Visual and thermal inspection</a></strong>: high-resolution and thermal imagery of roofs, facades and plant.</li></ul>
 <p>And for surveyors: <a href="/droneatlas/en/aerial-data-for-surveyors/">drone data for surveyors</a>. We fly and process; the surveyor surveys and signs.</p></div>
       </div>
     </section>
@@ -456,6 +489,12 @@
           <option value="industrial">Industrial photography</option>
           <option value="construction">Construction progress</option>
           <option value="volumes">Volume calculation</option>
+          
+          <option value="orthophoto">Orthophoto</option>
+          <option value="topo">Topographic survey</option>
+          <option value="agriculture">Agricultural mapping</option>
+          <option value="infrastructure">Infrastructure</option>
+          <option value="ndt">Visual and thermal inspection</option>
           <option value="surveyors">Data for surveyors</option>
   </select></div>
   <div class="field"><label for="area">Approximate area (optional)</label><input id="area" name="area" type="text"></div>
@@ -502,6 +541,11 @@
        <li><a href="/droneatlas/en/terrain-follow-mapping/">Terrain-follow mapping</a></li>
        <li><a href="/droneatlas/en/3d-modeling-point-cloud/">3D models &amp; point clouds</a></li>
        <li><a href="/droneatlas/en/industrial-drone-photography/">Industrial photography</a></li>
+       <li><a href="/droneatlas/en/orthophoto-aerial-mapping/">Orthophoto</a></li>
+       <li><a href="/droneatlas/en/drone-topographic-survey/">Topographic survey</a></li>
+       <li><a href="/droneatlas/en/agricultural-mapping-ndvi/">Agricultural mapping</a></li>
+       <li><a href="/droneatlas/en/infrastructure-municipalities/">Infrastructure</a></li>
+       <li><a href="/droneatlas/en/drone-ndt-inspection/">NDT inspection</a></li>
           </ul>
         </div>
         <div>
@@ -522,5 +566,6 @@
   <script src="/droneatlas/js/config.js"></script>
   <script src="/droneatlas/js/home-nav.js"></script>
   <script src="/droneatlas/js/main.js"></script>
+  <script src="/droneatlas/js/hero-video.js"></script>
 </body>
 </html>

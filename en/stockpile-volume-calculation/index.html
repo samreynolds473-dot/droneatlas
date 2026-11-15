@@ -34,6 +34,8 @@
   <link rel="stylesheet" href="/droneatlas/css/service-page.css">
   <link rel="stylesheet" href="/droneatlas/css/home-flow.css">
   <link rel="stylesheet" href="/droneatlas/css/theme.css">
+  <link rel="stylesheet" href="/droneatlas/css/hero-video.css">
+  <link rel="stylesheet" href="/droneatlas/css/service-depth.css">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -128,7 +130,7 @@
           "name": "How accurate is a drone stockpile survey?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "It depends on ground control, positioning, flight height and how the base surface is defined. We set the required accuracy and check method in the proposal and state them in the report."
+            "text": "It depends on ground control, positioning, flight height and how the base surface is defined. We set the required accuracy and the check method in the proposal and state them in the report. There is no general accuracy figure here."
           }
         },
         {
@@ -136,7 +138,7 @@
           "name": "What is a base surface and why does it matter?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "It is the surface the volume is measured from, for example the ground under a pile. A different base surface gives a different number, so we define it up front and document it in the report."
+            "text": "It is the surface the volume is measured from, for example the ground under a pile. A different choice gives a different number, so we define it up front and document it in the report."
           }
         },
         {
@@ -144,7 +146,7 @@
           "name": "How often should we measure?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "It depends on the pace of work and billing needs. Some sites measure monthly and others more often. We will match the frequency to your site."
+            "text": "It depends on the pace of work and on billing. Some sites measure monthly and others more often. We match the frequency to the site. The proposal is quoted by site size and survey frequency."
           }
         },
         {
@@ -191,6 +193,11 @@
       <a href="/droneatlas/en/terrain-follow-mapping/">Terrain-follow mapping</a>
       <a href="/droneatlas/en/3d-modeling-point-cloud/">3D models &amp; point clouds</a>
       <a href="/droneatlas/en/industrial-drone-photography/">Industrial photography</a>
+      <a href="/droneatlas/en/orthophoto-aerial-mapping/">Orthophoto</a>
+      <a href="/droneatlas/en/drone-topographic-survey/">Topographic survey</a>
+      <a href="/droneatlas/en/agricultural-mapping-ndvi/">Agricultural mapping</a>
+      <a href="/droneatlas/en/infrastructure-municipalities/">Infrastructure</a>
+      <a href="/droneatlas/en/drone-ndt-inspection/">NDT inspection</a>
             </div>
           </div>
         </div>
@@ -226,6 +233,11 @@
       <a href="/droneatlas/en/terrain-follow-mapping/">Terrain-follow mapping</a>
       <a href="/droneatlas/en/3d-modeling-point-cloud/">3D models &amp; point clouds</a>
       <a href="/droneatlas/en/industrial-drone-photography/">Industrial photography</a>
+      <a href="/droneatlas/en/orthophoto-aerial-mapping/">Orthophoto</a>
+      <a href="/droneatlas/en/drone-topographic-survey/">Topographic survey</a>
+      <a href="/droneatlas/en/agricultural-mapping-ndvi/">Agricultural mapping</a>
+      <a href="/droneatlas/en/infrastructure-municipalities/">Infrastructure</a>
+      <a href="/droneatlas/en/drone-ndt-inspection/">NDT inspection</a>
       </div>
     </div>
     <a href="/droneatlas/en/about/">About</a>
@@ -240,11 +252,21 @@
   </div>
   <main id="main">
     <section class="page-hero">
-      <img class="bg" src="/droneatlas/assets/imagery/hero-quarry-stockpiles-1920.webp" alt="Illustrative quarry stockpiles and volume heatmap" width="1920" height="1080" decoding="async" fetchpriority="high" data-slot="volumes-hero">
+      <div class="hero-stage" data-hero-stage>
+        <img class="bg" src="/droneatlas/assets/imagery/hero-quarry-stockpiles-1920.webp" alt="Illustrative quarry stockpiles and volume heatmap" width="1920" height="1080" decoding="async" fetchpriority="high" data-slot="volumes-hero">
+      </div>
       <div class="wrap">
         <nav class="crumbs" aria-label="Breadcrumb"><a href="/droneatlas/en/">Home</a><span aria-hidden="true">/</span><a href="/droneatlas/en/services/">Services</a><span aria-hidden="true">/</span><span aria-current="page">Stockpile volume and earthwork calculation by drone</span></nav>
+        <p class="eyebrow">DSM · Base surface · Same method</p>
         <h1>Stockpile volume and earthwork calculation by drone</h1>
-        <p class="dek"><strong>Drone stockpile and earthwork volume calculation</strong> uses an accurate elevation model of the site, computed from drone imagery. From it we calculate the volume of each pile, cut and fill against a reference surface, and the change between two dates. DroneAtlas provides volume surveys for contractors, quarries, plants and construction sites across Israel.</p>
+        <p class="dek">Drone earthwork and stockpile volumes start from an elevation model of the site, computed from drone imagery. From it we calculate the volume of each pile, cut and fill against a reference surface, and the change between two dates.</p>
+        <ul class="hero-chips"><li>PDF</li><li>XLSX</li><li>GeoTIFF</li><li>LAS</li></ul>
+      </div>
+    </section>
+    <section class="light pad svc-block svc-prose">
+      <div class="wrap article">
+        
+<p>DroneAtlas does this for contractors, quarries, plants and construction sites across Israel. For a quarry, an earthworks site or a materials yard, the value is consistency: the first visit builds a baseline and defines pile boundaries and base surfaces. From the next round the method stays the same, so the difference between dates can be compared.</p>
       </div>
     </section>
     <section class="dark pad">
@@ -252,50 +274,69 @@
         <div class="air-media"><img class="air-photo" src="/droneatlas/assets/imagery/card-stockpile-cut-fill.webp" alt="Illustrative cut-and-fill heatmap of stockpiles" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-volumes"></div>
       </div>
     </section>
-    <section class="light pad"><div class="wrap article">
-<h2>Monthly volume contracts for quarries</h2>
-<p>For a quarry, earthworks site or materials yard, the real value is consistency. On the first visit we build a baseline model and define the pile boundaries and base surfaces. From month two, every survey uses the same method, so month-to-month change is reliable. It suits inventory reconciliation, extraction tracking and checking against invoices. Each proposal is quoted by site size and survey frequency.</p>
-
-    </div></section>
-    <section class="dark pad"><div class="wrap article">
-<h2>How drone volumes are calculated</h2>
-<figure class="media-slot media-slot-body has-photo" data-slot="card-volumes" data-expects="/workspace/droneatlas/brand/imagery/card-stockpile-cut-fill.webp"><img class="card-photo" src="/droneatlas/assets/imagery/card-stockpile-cut-fill.webp" alt="Illustrative cut-and-fill heatmap of stockpiles" width="1200" height="800" decoding="async" loading="lazy"><span class="media-badge">Illustrative example</span></figure>
-<ol><li>The drone photographs the site on a planned route with high overlap.</li><li>A point cloud and surface model (DSM) are computed from the images.</li><li>For each pile or zone we define a base surface: the ground beneath the pile, a design surface, or a previous survey.</li><li>Volume is the difference between the surface and the base surface.</li><li>We deliver a report with the volume per pile and zone, a map of the boundaries, and the files.</li></ol>
-
-    </div></section>
-    <section class="light pad"><div class="wrap article">
-<h2>What you receive</h2>
-<ul><li>A <strong>volume report</strong> (PDF and XLSX) per pile and zone, stating the calculation method.</li><li><strong>Cut and fill</strong> against design or the previous round.</li><li>An <strong>orthophoto</strong> of the site with pile boundaries. See <a href="/droneatlas/en/geodetic-mapping-rtk/">orthophoto</a>.</li><li>The <strong>elevation model and point cloud</strong> (GeoTIFF, LAS) for independent checking.</li><li><strong>Periodic tracking</strong>: the same method and route each round, so comparisons stay consistent.</li></ul>
-
-    </div></section>
-    <section class="dark pad"><div class="wrap article">
-<h2>Why measuring from the air suits stockpiles and earthworks</h2>
-<ul><li><strong>Safety:</strong> nobody climbs piles or walks into heavy-plant areas.</li><li><strong>Full coverage:</strong> the whole pile surface is measured, not a few points around the edge.</li><li><strong>Consistency:</strong> the survey can be repeated exactly, so month-to-month comparisons hold up.</li><li><strong>Transparency:</strong> the report, map and model let every party see how the number was reached.</li></ul>
-
-    </div></section>
-    <section class="light pad"><div class="wrap article">
-<h2>When volumes are used for billing</h2>
-<p>When a volume figure is used for an interim payment, a claim or a submission to an authority, agree the calculation method and base surface with all parties up front. Where a signed quantity is required, it is signed by a partner licensed surveyor. Without that signature, the report is a professional volume estimate with the method and uncertainty stated, not a certified quantity.</p>
-
-    </div></section>
-    <section class="dark pad"><div class="wrap article">
+    <section class="light pad svc-block svc-who"><div class="wrap article">
+          <p class="svc-kicker">01</p>
 <h2>Who it is for</h2>
-<p>Earthworks and infrastructure contractors, construction sites, quarries, concrete and asphalt plants, waste and recycling sites, and ports and bulk-material yards. See also <a href="/droneatlas/en/construction-progress-monitoring/">construction progress monitoring</a> and <a href="/droneatlas/en/geodetic-mapping-rtk/">topographic survey</a>.</p>
+<ul><li><strong>Quarries</strong> extraction and inventory, with the same method every round.</li><li><strong>Earthworks and infrastructure contractors</strong> cut and fill against design or a previous round.</li><li><strong>Concrete and asphalt plants, waste and recycling sites</strong> piles in the open.</li><li><strong>Ports and bulk yards</strong> piles that can be seen from the air. A closed shed is a different case.</li></ul>
 
     </div></section>
-    <section class="light pad"><div class="wrap article">
-<h2>Volume calculation FAQ</h2>
+    <section class="dark pad svc-block svc-steps"><div class="wrap article">
+          <p class="svc-kicker">02</p>
+<h2>How it works</h2>
+<figure class="media-slot media-slot-body has-photo" data-slot="card-volumes" data-expects="/workspace/droneatlas/brand/imagery/card-stockpile-cut-fill.webp"><img class="card-photo" src="/droneatlas/assets/imagery/card-stockpile-cut-fill.webp" alt="Illustrative cut-and-fill heatmap of stockpiles" width="1200" height="800" decoding="async" loading="lazy"><span class="media-badge">Illustrative example</span></figure>
+<ol><li><strong>Photograph</strong> on a planned route with high overlap. In a quarry with faces, sometimes with <a href="/droneatlas/en/terrain-follow-mapping/">terrain-follow mapping</a>.</li><li><strong>Compute</strong> a point cloud and a surface model (DSM) in WebODM.</li><li><strong>Define a base surface</strong> for each pile or zone: the ground beneath, a design, or a previous survey.</li><li><strong>Calculate volume</strong> as the difference between the surface and the base surface.</li><li><strong>Deliver a report</strong> with the volume per pile and zone, a map of the boundaries, and the files.</li></ol>
+
+    </div></section>
+    <section class="light pad svc-block svc-deliver"><div class="wrap article">
+          <p class="svc-kicker">03</p>
+<h2>What you receive</h2>
+<div class="table-wrap"><table><thead><tr><th>Deliverable</th><th>What it is</th><th>Format</th></tr></thead><tbody><tr><td>Volume report</td><td>Volume per pile and zone, and the calculation method</td><td>PDF, XLSX</td></tr><tr><td>Cut and fill</td><td>Against design or the previous round</td><td>PDF, XLSX</td></tr><tr><td>Orthophoto</td><td>The site with pile boundaries</td><td>GeoTIFF, JPG</td></tr><tr><td>Elevation model and point cloud</td><td>For an independent check</td><td>GeoTIFF, LAS</td></tr><tr><td>Quality report</td><td>The accuracy set in the proposal, and the check method</td><td>PDF</td></tr></tbody></table></div>
+<p>See also <a href="/droneatlas/en/orthophoto-aerial-mapping/">orthophoto</a> and <a href="/droneatlas/en/drone-topographic-survey/">topographic survey</a>.</p>
+
+    </div></section>
+    <section class="dark pad svc-block svc-accuracy"><div class="wrap article">
+          <p class="svc-kicker">04</p>
+<h2>Accuracy and quality control</h2>
+<p>Accuracy depends on ground control, positioning, flight height and how the base surface is defined. A different base surface gives a different number, so we define it up front and document it in the report.</p>
+<p>RTK gives every image a position at capture. <a href="/droneatlas/en/ground-control-points-gcp/">Ground control points</a> tie the model to the site, and separate check points, kept out of processing, test it. The accuracy and the check method are set in the proposal for the purpose of the job and written into the quality-control report. Where check points were surveyed, the report includes the error against them (RMS). Typical accuracy: <span class="dev-placeholder">[TO FILL: horizontal and vertical accuracy actually measured with DroneAtlas&#x27;s setup. Do not publish a figure before testing]</span>.</p>
+<p>Resolution (GSD) is the ground area one pixel represents. Accuracy is how close a map position is to the true position. High resolution does not guarantee high accuracy, so the two are defined separately. Processing is done in WebODM (OpenDroneMap). The default coordinate system is the Israeli Grid (EPSG:2039), or another system on request.</p>
+
+    </div></section>
+    <section class="light pad svc-block svc-choose"><div class="wrap article">
+          <p class="svc-kicker">05</p>
+<h2>When to use it, and when to choose something else</h2>
+<ul><li><strong>When the figure is used for a payment, a claim or a submission</strong> agree the method and the base surface with every party first. Where a signed quantity is required, it is signed by a partner licensed surveyor. Without that signature the report is a professional volume estimate with the method and the uncertainty stated, not a certified quantity.</li><li><strong>A few points measured from the ground</strong> cover less of the pile surface, and someone has to climb it. From the air the visible surface is measured without walking into the plant.</li><li><strong>A closed warehouse</strong> standard photogrammetry is for open sites. We will look at that case separately, without promising a method.</li></ul>
+
+    </div></section>
+    <section class="dark pad svc-block svc-limits"><div class="wrap article">
+          <p class="svc-kicker">06</p>
+<h2>Limits and approvals</h2>
+<p>The service covers all of Israel, subject to flight approvals and airspace limits at the site. Commercial operation of a small drone requires a small-UAS pilot licence from the Civil Aviation Authority <span class="dev-placeholder">[TO FILL: licence number]</span> and a registered aircraft <span class="dev-placeholder">[TO FILL: registration numbers]</span>. We carry third-party insurance <span class="dev-placeholder">[TO FILL: policy details]</span>. In a built-up area, or when flying over people, vehicles or infrastructure, we need the site owner&#x27;s written consent and sometimes a special authorisation. We coordinate in advance with the person in charge on site.</p>
+<p>Strong wind, rain or fog delays the flight, and we set a nearby alternative date. Capture is planned to stay on the commissioned area, and we do not publish material that identifies people or third-party property. Turnaround depends on area, deliverables and approvals, and is set in the proposal <span class="dev-placeholder">[TO FILL: typical turnaround]</span>.</p>
+<p>DroneAtlas is not a licensed surveyor. The deliverables are for design, control and quantities. A statutory survey plan, such as a permit map, a registration plan or a boundary determination, is signed by a partner licensed surveyor. Photogrammetry is not used to reconstruct registered boundaries. If a map shows boundaries and is not for registration, the surveyor marks it &quot;not for registration purposes&quot;.</p>
+
+    </div></section>
+    <section class="light pad svc-block svc-prepare"><div class="wrap article">
+          <p class="svc-kicker">07</p>
+<h2>What to prepare</h2>
+<ul><li>The site location, a map pin or a boundary file (KML, KMZ, DWG, DXF, SHP or GeoJSON).</li><li>Approximate size, the purpose, the deliverables you want and a preferred date.</li><li>An on-site contact, and access on the flight day.</li><li>If you have them: a georeferenced design file (DWG or SHP) or a previous survey.</li><li>A list of piles or zones, and whether the base surface is ground, design or a previous survey.</li></ul>
+
+    </div></section>
+    <section class="dark pad svc-block svc-faq"><div class="wrap article">
+          <p class="svc-kicker">08</p>
+<h2>FAQ</h2>
 <div class="faq-list">
-<div class="faq-item"><p class="q">How accurate is a drone stockpile survey?</p><div class="a"><p>It depends on ground control, positioning, flight height and how the base surface is defined. We set the required accuracy and check method in the proposal and state them in the report.</p></div></div>
-<div class="faq-item"><p class="q">What is a base surface and why does it matter?</p><div class="a"><p>It is the surface the volume is measured from, for example the ground under a pile. A different base surface gives a different number, so we define it up front and document it in the report.</p></div></div>
-<div class="faq-item"><p class="q">How often should we measure?</p><div class="a"><p>It depends on the pace of work and billing needs. Some sites measure monthly and others more often. We will match the frequency to your site.</p></div></div>
-<div class="faq-item"><p class="q">Can you measure stockpiles inside a closed building?</p><div class="a"><p>Standard photogrammetry is for open-air sites. A closed warehouse needs a different approach, which we assess case by case.</p></div></div>
+<details class="faq-item"><summary class="q">How accurate is a drone stockpile survey?</summary><div class="a"><p>It depends on ground control, positioning, flight height and how the base surface is defined. We set the required accuracy and the check method in the proposal and state them in the report. There is no general accuracy figure here.</p></div></details>
+<details class="faq-item"><summary class="q">What is a base surface and why does it matter?</summary><div class="a"><p>It is the surface the volume is measured from, for example the ground under a pile. A different choice gives a different number, so we define it up front and document it in the report.</p></div></details>
+<details class="faq-item"><summary class="q">How often should we measure?</summary><div class="a"><p>It depends on the pace of work and on billing. Some sites measure monthly and others more often. We match the frequency to the site. The proposal is quoted by site size and survey frequency.</p></div></details>
+<details class="faq-item"><summary class="q">Can you measure stockpiles inside a closed building?</summary><div class="a"><p>Standard photogrammetry is for open-air sites. A closed warehouse needs a different approach, which we assess case by case.</p></div></details>
 </div>
 
     </div></section>
-    <section class="dark pad related-services">
+    <section class="dark pad related-services svc-related">
       <div class="wrap">
-        <h2 class="h2">Services</h2>
+        <p class="eyebrow">Continue</p>
+        <h2 class="h2">Related services</h2>
         <div class="svc-cards">
    <a class="svc-photo" href="/droneatlas/en/construction-progress-monitoring/">
     <img class="card-photo" src="/droneatlas/assets/imagery/card-construction-bim-overlay.webp" alt="Illustrative construction model with a measurement overlay" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-construction">
@@ -325,11 +366,31 @@
     <img class="card-photo" src="/droneatlas/assets/imagery/card-industrial.webp" alt="Illustrative industrial aerial photograph" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-industrial">
     <span class="svc-photo-cap"><span>Industrial drone photography</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
    </a>
+   <a class="svc-photo" href="/droneatlas/en/orthophoto-aerial-mapping/">
+    <img class="card-photo" src="/droneatlas/assets/imagery/card-contours-hillshade.webp" alt="Illustrative contours over hillshade" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-orthophoto">
+    <span class="svc-photo-cap"><span>Orthophoto and aerial mapping</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+   </a>
+   <a class="svc-photo" href="/droneatlas/en/drone-topographic-survey/">
+    <img class="card-photo" src="/droneatlas/assets/imagery/card-geodetic.webp" alt="Illustrative relief map with a coordinate grid and control points" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-topo">
+    <span class="svc-photo-cap"><span>Drone topographic survey</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+   </a>
+   <a class="svc-photo" href="/droneatlas/en/agricultural-mapping-ndvi/">
+    <img class="card-photo" src="/droneatlas/assets/imagery/home-panel.webp" alt="Illustrative split view of a surface model and a colourful elevation map" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-agri">
+    <span class="svc-photo-cap"><span>Agricultural mapping and NDVI</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+   </a>
+   <a class="svc-photo" href="/droneatlas/en/infrastructure-municipalities/">
+    <img class="card-photo" src="/droneatlas/assets/imagery/card-terrain.webp" alt="Illustrative terrain profile with a terrain-follow flight path" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-infra">
+    <span class="svc-photo-cap"><span>Infrastructure and municipalities</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+   </a>
+   <a class="svc-photo" href="/droneatlas/en/drone-ndt-inspection/">
+    <img class="card-photo" src="/droneatlas/assets/imagery/card-roof-overlay-dimension-grid.webp" alt="Illustrative dimension grid over a structure" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-ndt">
+    <span class="svc-photo-cap"><span>Visual and thermal inspection</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+   </a>
 </div>
       </div>
     </section>
     <section class="cta-banner pad" id="cta"><div class="wrap"><h2 class="cta-heading">Not sure what your project needs?</h2>
-<p>Send us the site location, rough area, what the mapping is for and your preferred date on WhatsApp. We will recommend the right deliverables and send you a clear proposal.</p>
+<p>Send us the site location, rough area, what the work is for and your preferred date on WhatsApp. We will recommend the deliverables and send a clear proposal. There is no fixed price list: every proposal is quoted by scope.</p>
 <p class="btn-row"><strong><a href="https://wa.me/[TO FILL: WhatsApp number in 972XXXXXXXXX format]" data-whatsapp class="btn btn-primary">Message us on WhatsApp</a></strong> · <a href="/droneatlas/en/contact/" class="btn btn-secondary">Contact form</a></p></div></section>
 
   </main>
@@ -366,6 +427,11 @@
        <li><a href="/droneatlas/en/terrain-follow-mapping/">Terrain-follow mapping</a></li>
        <li><a href="/droneatlas/en/3d-modeling-point-cloud/">3D models &amp; point clouds</a></li>
        <li><a href="/droneatlas/en/industrial-drone-photography/">Industrial photography</a></li>
+       <li><a href="/droneatlas/en/orthophoto-aerial-mapping/">Orthophoto</a></li>
+       <li><a href="/droneatlas/en/drone-topographic-survey/">Topographic survey</a></li>
+       <li><a href="/droneatlas/en/agricultural-mapping-ndvi/">Agricultural mapping</a></li>
+       <li><a href="/droneatlas/en/infrastructure-municipalities/">Infrastructure</a></li>
+       <li><a href="/droneatlas/en/drone-ndt-inspection/">NDT inspection</a></li>
           </ul>
         </div>
         <div>
@@ -386,5 +452,6 @@
   <script src="/droneatlas/js/config.js"></script>
   <script src="/droneatlas/js/home-nav.js"></script>
   <script src="/droneatlas/js/main.js"></script>
+  <script src="/droneatlas/js/hero-video.js"></script>
 </body>
 </html>

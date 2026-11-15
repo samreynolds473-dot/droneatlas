@@ -439,6 +439,86 @@
       "alt_he": "איור להמחשה: מפת גבהים צבעונית",
       "alt_en": "Illustrative colourful elevation map"
     },
+    "orthophoto-hero": {
+      "files": ["hero-elevation-hillshade-1920.webp", "hero-elevation-hillshade-1920.png"],
+      "size": [1920, 1080],
+      "standin": "elevation",
+      "uses": ["Orthophoto page hero"],
+      "alt_he": "איור להמחשה: מפת גבהים צבעונית עם הצללת תבליט",
+      "alt_en": "Illustrative colourful elevation map with hillshade"
+    },
+    "card-orthophoto": {
+      "files": ["card-contours-hillshade.webp", "card-contours-hillshade.png"],
+      "size": [1200, 800],
+      "standin": "elevation",
+      "uses": ["Orthophoto card"],
+      "alt_he": "איור להמחשה: קווי גובה על הצללת תבליט",
+      "alt_en": "Illustrative contours over hillshade"
+    },
+    "topo-hero": {
+      "files": ["hero-geodetic-1920.webp", "hero-geodetic-1920.png"],
+      "size": [1920, 1080],
+      "standin": "elevation",
+      "uses": ["Topographic survey hero"],
+      "alt_he": "איור להמחשה: מפת תבליט עם רשת קואורדינטות ונקודות בקרה",
+      "alt_en": "Illustrative relief map with a coordinate grid and control points"
+    },
+    "card-topo": {
+      "files": ["card-geodetic.webp", "card-geodetic.png"],
+      "size": [1200, 800],
+      "standin": "elevation",
+      "uses": ["Topographic survey card"],
+      "alt_he": "איור להמחשה: מפת תבליט עם רשת קואורדינטות ונקודות בקרה",
+      "alt_en": "Illustrative relief map with a coordinate grid and control points"
+    },
+    "agri-hero": {
+      "files": ["hero-services-1920.webp", "hero-services-1920.png"],
+      "size": [1920, 1080],
+      "standin": "elevation",
+      "uses": ["Agricultural mapping hero"],
+      "alt_he": "איור להמחשה: מפת גבהים צבעונית",
+      "alt_en": "Illustrative colourful elevation map"
+    },
+    "card-agri": {
+      "files": ["home-panel.webp", "home-panel.png"],
+      "size": [1200, 800],
+      "standin": "elevation",
+      "uses": ["Agricultural mapping card"],
+      "alt_he": "איור להמחשה: השוואה בין תבליט פני השטח לבין מפת גבהים צבעונית",
+      "alt_en": "Illustrative split view of a surface model and a colourful elevation map"
+    },
+    "infra-hero": {
+      "files": ["hero-terrain-follow-1920.webp", "hero-terrain-follow-1920.png"],
+      "size": [1920, 1080],
+      "standin": "terrain",
+      "uses": ["Infrastructure page hero"],
+      "alt_he": "איור להמחשה: חתך פני שטח ומסלול טיסה בגובה קבוע מעל הקרקע",
+      "alt_en": "Illustrative terrain profile with a constant-height-above-ground flight path"
+    },
+    "card-infra": {
+      "files": ["card-terrain.webp", "card-terrain.png"],
+      "size": [1200, 800],
+      "standin": "terrain",
+      "uses": ["Infrastructure card"],
+      "alt_he": "איור להמחשה: חתך פני שטח ומסלול טיסה עוקב קרקע",
+      "alt_en": "Illustrative terrain profile with a terrain-follow flight path"
+    },
+    "ndt-hero": {
+      "files": ["hero-industrial-1920.webp", "hero-industrial-1920.png"],
+      "size": [1920, 1080],
+      "standin": "ortho",
+      "uses": ["NDT inspection hero"],
+      "alt_he": "איור להמחשה: צילום אווירי לתעשייה",
+      "alt_en": "Illustrative industrial aerial photograph"
+    },
+    "card-ndt": {
+      "files": ["card-roof-overlay-dimension-grid.webp", "card-roof-overlay-dimension-grid.jpg"],
+      "size": [1200, 800],
+      "standin": "ortho",
+      "uses": ["NDT inspection card, illustrative only"],
+      "alt_he": "איור להמחשה: רשת מידות על גבי מבנה",
+      "alt_en": "Illustrative dimension grid over a structure"
+    },
     "blog-hero": {
       "files": [
         "hero-blog-1920.webp",

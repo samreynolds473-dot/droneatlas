@@ -34,6 +34,8 @@
   <link rel="stylesheet" href="/droneatlas/css/service-page.css">
   <link rel="stylesheet" href="/droneatlas/css/home-flow.css">
   <link rel="stylesheet" href="/droneatlas/css/theme.css">
+  <link rel="stylesheet" href="/droneatlas/css/hero-video.css">
+  <link rel="stylesheet" href="/droneatlas/css/service-depth.css">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -128,7 +130,7 @@
           "name": "כמה מדויק חישוב נפחים ברחפן?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "הדיוק תלוי בנקודות הבקרה, בטכנולוגיית המיקום, בגובה הטיסה ובהגדרת משטח הבסיס. אנחנו מגדירים בהצעה את הדיוק הנדרש ואת שיטת הבדיקה, ומפרטים אותם בדוח."
+            "text": "הדיוק תלוי בנקודות הבקרה, בטכנולוגיית המיקום, בגובה הטיסה ובהגדרת משטח הבסיס. אנחנו מגדירים בהצעה את הדיוק הנדרש ואת שיטת הבדיקה, ומפרטים אותם בדוח. אין כאן מספר דיוק כללי."
           }
         },
         {
@@ -136,7 +138,7 @@
           "name": "מה זה משטח בסיס, ולמה הוא חשוב?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "זה המשטח שממנו מודדים את הנפח, למשל הקרקע שמתחת לערימה. בחירה שונה של משטח בסיס נותנת מספר שונה, ולכן מגדירים אותו מראש ומתעדים אותו בדוח."
+            "text": "זה המשטח שממנו מודדים את הנפח, למשל הקרקע שמתחת לערימה. בחירה שונה נותנת מספר שונה, ולכן מגדירים אותו מראש ומתעדים אותו בדוח."
           }
         },
         {
@@ -144,7 +146,7 @@
           "name": "כל כמה זמן כדאי למדוד?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "זה תלוי בקצב העבודה ובצורך בהתחשבנות. יש אתרים שמודדים פעם בחודש ויש שבתדירות גבוהה יותר. נתאים את התדירות לאתר."
+            "text": "זה תלוי בקצב העבודה ובצורך בהתחשבנות. יש אתרים שמודדים פעם בחודש ויש בתדירות גבוהה יותר. נתאים את התדירות לאתר. ההצעה נבנית לפי היקף האתר ותדירות הסקרים."
           }
         },
         {
@@ -191,6 +193,11 @@
       <a href="/droneatlas/terrain-follow-mapping/">מיפוי עוקב קרקע</a>
       <a href="/droneatlas/3d-modeling-point-cloud/">מידול תלת מימד וענן נקודות</a>
       <a href="/droneatlas/industrial-drone-photography/">צילומי רחפן לתעשייה</a>
+      <a href="/droneatlas/orthophoto-aerial-mapping/">אורתופוטו</a>
+      <a href="/droneatlas/drone-topographic-survey/">מדידה טופוגרפית</a>
+      <a href="/droneatlas/agricultural-mapping-ndvi/">מיפוי חקלאי</a>
+      <a href="/droneatlas/infrastructure-municipalities/">תשתיות ורשויות</a>
+      <a href="/droneatlas/drone-ndt-inspection/">בדיקות NDT</a>
             </div>
           </div>
         </div>
@@ -226,6 +233,11 @@
       <a href="/droneatlas/terrain-follow-mapping/">מיפוי עוקב קרקע</a>
       <a href="/droneatlas/3d-modeling-point-cloud/">מידול תלת מימד וענן נקודות</a>
       <a href="/droneatlas/industrial-drone-photography/">צילומי רחפן לתעשייה</a>
+      <a href="/droneatlas/orthophoto-aerial-mapping/">אורתופוטו</a>
+      <a href="/droneatlas/drone-topographic-survey/">מדידה טופוגרפית</a>
+      <a href="/droneatlas/agricultural-mapping-ndvi/">מיפוי חקלאי</a>
+      <a href="/droneatlas/infrastructure-municipalities/">תשתיות ורשויות</a>
+      <a href="/droneatlas/drone-ndt-inspection/">בדיקות NDT</a>
       </div>
     </div>
     <a href="/droneatlas/about/">אודות</a>
@@ -240,11 +252,21 @@
   </div>
   <main id="main">
     <section class="page-hero">
-      <img class="bg" src="/droneatlas/assets/imagery/hero-quarry-stockpiles-1920.webp" alt="איור להמחשה: ערימות חומר במחצבה ומפת חום לנפחים" width="1920" height="1080" decoding="async" fetchpriority="high" data-slot="volumes-hero">
+      <div class="hero-stage" data-hero-stage>
+        <img class="bg" src="/droneatlas/assets/imagery/hero-quarry-stockpiles-1920.webp" alt="איור להמחשה: ערימות חומר במחצבה ומפת חום לנפחים" width="1920" height="1080" decoding="async" fetchpriority="high" data-slot="volumes-hero">
+      </div>
       <div class="wrap">
         <nav class="crumbs" aria-label="מיקום בעמוד"><a href="/droneatlas/">בית</a><span aria-hidden="true">/</span><a href="/droneatlas/services/">שירותים</a><span aria-hidden="true">/</span><span aria-current="page">חישוב נפחים וכמויות עבודות עפר ברחפן</span></nav>
+        <p class="eyebrow">DSM · Base surface · Same method</p>
         <h1>חישוב נפחים וכמויות עבודות עפר ברחפן</h1>
-        <p class="dek"><strong>חישוב כמויות עפר ברחפן</strong> מבוסס על מודל גבהים מדויק של האתר, שמחושב מצילומי רחפן. ממנו מחשבים את נפח כל ערימה, את כמות החפירה והמילוי מול משטח ייחוס, ואת השינוי בין שני תאריכים. דרון אטלס מבצעת חישוב נפחים וכמויות עבודות עפר לקבלנים, למחצבות, למפעלים ולאתרי בנייה בכל הארץ.</p>
+        <p class="dek">חישוב כמויות עפר ברחפן מבוסס על מודל גבהים של האתר, שמחושב מצילומי רחפן. ממנו מחשבים את נפח כל ערימה, את החפירה והמילוי מול משטח ייחוס, ואת השינוי בין שני תאריכים.</p>
+        <ul class="hero-chips"><li>PDF</li><li>XLSX</li><li>GeoTIFF</li><li>LAS</li></ul>
+      </div>
+    </section>
+    <section class="light pad svc-block svc-prose">
+      <div class="wrap article">
+        
+<p>דרון אטלס מבצעת את זה לקבלנים, למחצבות, למפעלים ולאתרי בנייה בכל הארץ. למחצבה, לאתר עפר או למגרש חומרי גלם, הערך הוא בעקביות: בביקור הראשון נבנה מודל בסיס ומוגדרים גבולות הערימות ומשטחי הבסיס. מהסבב הבא אותה שיטה, כדי שההפרש בין מועדים יהיה בר השוואה.</p>
       </div>
     </section>
     <section class="dark pad">
@@ -252,50 +274,69 @@
         <div class="air-media"><img class="air-photo" src="/droneatlas/assets/imagery/card-stockpile-cut-fill.webp" alt="איור להמחשה: מפת חום של חפירה ומילוי בערימות" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-volumes"></div>
       </div>
     </section>
-    <section class="light pad"><div class="wrap article">
-<h2>חוזה סקר נפחים חודשי למחצבות</h2>
-<p>למחצבה, לאתר עפר או למגרש חומרי גלם, הערך האמיתי הוא בעקביות. בביקור הראשון בונים מודל בסיס ומגדירים את גבולות הערימות ואת משטחי הבסיס. מהחודש השני, כל סקר נעשה באותה שיטה, כך שהשינוי בין חודשים אמין. מתאים לתיאום מלאי, למעקב חציבה ולהשוואה מול חשבונות. ההצעה נבנית לפי היקף האתר ותדירות הסקרים.</p>
-
-    </div></section>
-    <section class="dark pad"><div class="wrap article">
-<h2>איך מחשבים נפחים ברחפן</h2>
-<figure class="media-slot media-slot-body has-photo" data-slot="card-volumes" data-expects="/workspace/droneatlas/brand/imagery/card-stockpile-cut-fill.webp"><img class="card-photo" src="/droneatlas/assets/imagery/card-stockpile-cut-fill.webp" alt="איור להמחשה: מפת חום של חפירה ומילוי בערימות" width="1200" height="800" decoding="async" loading="lazy"><span class="media-badge">איור להמחשה</span></figure>
-<ol><li>הרחפן מצלם את האתר במסלול מתוכנן ובחפיפה גבוהה.</li><li>מהתמונות מחושבים ענן נקודות ומודל גבהים (DSM).</li><li>לכל ערימה או אזור מגדירים משטח בסיס: הקרקע שמתחת לערימה, תכנון, או מדידה קודמת.</li><li>הנפח מחושב כהפרש בין פני השטח למשטח הבסיס.</li><li>מוסרים דוח עם נפח לכל ערימה ואזור, מפה עם הסימונים, והקבצים.</li></ol>
-
-    </div></section>
-    <section class="light pad"><div class="wrap article">
-<h2>מה מקבלים</h2>
-<ul><li><strong>דוח נפחים</strong> (PDF ו-XLSX) עם נפח לכל ערימה ואזור, ושיטת החישוב.</li><li><strong>השוואת חפירה ומילוי</strong> מול תכנון או מול סבב קודם.</li><li><strong>מפת אורתופוטו</strong> של האתר עם גבולות הערימות. ראו <a href="/droneatlas/geodetic-mapping-rtk/">אורתופוטו</a>.</li><li><strong>מודל גבהים וענן נקודות</strong> (GeoTIFF, LAS) לבדיקה עצמאית.</li><li><strong>מעקב תקופתי</strong>: אותה שיטה ואותו מסלול בכל סבב, כדי שההשוואה תהיה עקבית.</li></ul>
-
-    </div></section>
-    <section class="dark pad"><div class="wrap article">
-<h2>למה מדידה מהאוויר מתאימה לערימות ולעבודות עפר</h2>
-<ul><li><strong>בטיחות:</strong> לא צריך לטפס על ערימות או להיכנס לאזור עבודה של כלים כבדים.</li><li><strong>כיסוי מלא:</strong> כל פני הערימה נמדדים, לא רק כמה נקודות על השוליים.</li><li><strong>עקביות:</strong> אפשר לחזור על אותה מדידה בדיוק, ולכן ההשוואה בין חודשים אמינה.</li><li><strong>שקיפות:</strong> הדוח, המפה והמודל מאפשרים לכל צד לבדוק איך התקבל המספר.</li></ul>
-
-    </div></section>
-    <section class="light pad"><div class="wrap article">
-<h2>כשהנפח משמש להתחשבנות</h2>
-<p>כשמספר הנפח משמש לחשבון חלקי, לתביעה או להגשה לגורם רשמי, כדאי להסכים מראש עם כל הצדדים על שיטת החישוב ועל משטח הבסיס. כשנדרשת כמות חתומה, היא נחתמת בידי מודד מוסמך שותף. בלי חתימה כזו, הדוח הוא אומדן נפחים מקצועי עם שיטה ואי-ודאות מפורטות, ולא כמות מאושרת.</p>
-
-    </div></section>
-    <section class="dark pad"><div class="wrap article">
+    <section class="light pad svc-block svc-who"><div class="wrap article">
+          <p class="svc-kicker">01</p>
 <h2>למי זה מתאים</h2>
-<p>קבלני עפר ותשתיות, אתרי בנייה, מחצבות, מפעלי בטון ואספלט, אתרי פסולת ומיחזור, ונמלים ומחסני חומרי גלם. ראו גם <a href="/droneatlas/construction-progress-monitoring/">ניטור התקדמות בנייה</a> ו<a href="/droneatlas/geodetic-mapping-rtk/">מדידה טופוגרפית</a>.</p>
+<ul><li><strong>מחצבות</strong> מעקב חציבה ומלאי, באותה שיטה בכל סבב.</li><li><strong>קבלני עפר ותשתיות</strong> חפירה ומילוי מול תכנון או מול סבב קודם.</li><li><strong>מפעלי בטון ואספלט, אתרי פסולת ומיחזור</strong> ערימות בשטח פתוח.</li><li><strong>נמלים ומחסני חומרי גלם</strong> ערימות שאפשר לראות מהאוויר. מחסן סגור הוא מקרה אחר.</li></ul>
 
     </div></section>
-    <section class="light pad"><div class="wrap article">
-<h2>שאלות נפוצות על חישוב כמויות עפר</h2>
+    <section class="dark pad svc-block svc-steps"><div class="wrap article">
+          <p class="svc-kicker">02</p>
+<h2>איך זה עובד</h2>
+<figure class="media-slot media-slot-body has-photo" data-slot="card-volumes" data-expects="/workspace/droneatlas/brand/imagery/card-stockpile-cut-fill.webp"><img class="card-photo" src="/droneatlas/assets/imagery/card-stockpile-cut-fill.webp" alt="איור להמחשה: מפת חום של חפירה ומילוי בערימות" width="1200" height="800" decoding="async" loading="lazy"><span class="media-badge">איור להמחשה</span></figure>
+<ol><li><strong>מצלמים</strong> במסלול מתוכנן ובחפיפה גבוהה. במחצבה עם קירות, לעיתים ב<a href="/droneatlas/terrain-follow-mapping/">מיפוי עוקב קרקע</a>.</li><li><strong>מחשבים</strong> ענן נקודות ומודל פני שטח (DSM) ב-WebODM.</li><li><strong>מגדירים משטח בסיס</strong> לכל ערימה או אזור: הקרקע שמתחת, תכנון, או מדידה קודמת.</li><li><strong>מחשבים נפח</strong> כהפרש בין פני השטח למשטח הבסיס.</li><li><strong>מוסרים דוח</strong> נפח לכל ערימה ואזור, מפה עם הסימונים, והקבצים.</li></ol>
+
+    </div></section>
+    <section class="light pad svc-block svc-deliver"><div class="wrap article">
+          <p class="svc-kicker">03</p>
+<h2>מה מקבלים</h2>
+<div class="table-wrap"><table><thead><tr><th>תוצר</th><th>מה זה</th><th>פורמט</th></tr></thead><tbody><tr><td>דוח נפחים</td><td>נפח לכל ערימה ואזור, ושיטת החישוב</td><td>PDF, XLSX</td></tr><tr><td>חפירה ומילוי</td><td>מול תכנון או מול סבב קודם</td><td>PDF, XLSX</td></tr><tr><td>אורתופוטו</td><td>האתר עם גבולות הערימות</td><td>GeoTIFF, JPG</td></tr><tr><td>מודל גבהים וענן נקודות</td><td>לבדיקה עצמאית</td><td>GeoTIFF, LAS</td></tr><tr><td>דוח איכות</td><td>דיוק שנקבע בהצעה, ושיטת הבדיקה</td><td>PDF</td></tr></tbody></table></div>
+<p>ראו גם <a href="/droneatlas/orthophoto-aerial-mapping/">אורתופוטו</a> ו<a href="/droneatlas/drone-topographic-survey/">מדידה טופוגרפית</a>.</p>
+
+    </div></section>
+    <section class="dark pad svc-block svc-accuracy"><div class="wrap article">
+          <p class="svc-kicker">04</p>
+<h2>דיוק ובקרת איכות</h2>
+<p>הדיוק תלוי בנקודות הבקרה, בטכנולוגיית המיקום, בגובה הטיסה ובהגדרת משטח הבסיס. בחירה אחרת של משטח בסיס נותנת מספר אחר, ולכן מגדירים אותו מראש ומתעדים אותו בדוח.</p>
+<p>RTK נותן לכל תמונה מיקום בזמן הטיסה. <a href="/droneatlas/ground-control-points-gcp/">נקודות בקרה קרקעיות</a> מעגנות את המודל לשטח, ונקודות ביקורת נפרדות, שלא נכנסות לעיבוד, בודקות אותו. את רמת הדיוק ואת שיטת הבדיקה קובעים בהצעה לפי מטרת העבודה, ומתעדים בדוח בקרת איכות. כשיש נקודות ביקורת, הדוח כולל את השגיאה מולן (RMS). דיוק טיפוסי: <span class="dev-placeholder">[להשלמה: דיוק אופקי ואנכי שנמדד בפועל עם המערך של דרון אטלס. לא לפרסם מספר לפני בדיקה]</span>.</p>
+<p>רזולוציה (GSD) היא גודל השטח שמיוצג בפיקסל אחד. דיוק הוא כמה המיקום במפה קרוב למיקום האמיתי. רזולוציה גבוהה לא מבטיחה דיוק גבוה, ולכן מגדירים את שניהם בנפרד. העיבוד נעשה ב-WebODM (OpenDroneMap). ברירת המחדל היא רשת ישראל (EPSG:2039), או מערכת אחרת לפי בקשה.</p>
+
+    </div></section>
+    <section class="light pad svc-block svc-choose"><div class="wrap article">
+          <p class="svc-kicker">05</p>
+<h2>מתי זה מתאים, ומתי לבחור במשהו אחר</h2>
+<ul><li><strong>כשהמספר משמש לחשבון, לתביעה או להגשה</strong> מסכימים מראש עם כל הצדדים על השיטה ועל משטח הבסיס. כשנדרשת כמות חתומה, היא נחתמת בידי מודד מוסמך שותף. בלי החתימה הדוח הוא אומדן נפחים עם שיטה ואי-ודאות מפורטות, לא כמות מאושרת.</li><li><strong>מדידה מהקרקע של כמה נקודות</strong> מכסה פחות מהפני השטח של הערימה, ומחייבת עלייה על הערימה. מהאוויר מודדים את כל הפנים הנראים, בלי להיכנס לאזור הכלים.</li><li><strong>מחסן סגור</strong> מדידה פוטוגרמטרית רגילה מיועדת לשטח פתוח. נבדוק מקרה כזה בנפרד, בלי להבטיח שיטה.</li></ul>
+
+    </div></section>
+    <section class="dark pad svc-block svc-limits"><div class="wrap article">
+          <p class="svc-kicker">06</p>
+<h2>מגבלות ואישורים</h2>
+<p>השירות ניתן בכל הארץ, בכפוף לאישורי טיסה ולמגבלות מרחב אווירי באזור האתר. הפעלה מסחרית של רחפן קטן מחייבת רישיון מטיס כטב&quot;ם מרשות התעופה האזרחית <span class="dev-placeholder">[להשלמה: מספר רישיון]</span> ורישום של כלי הטיס <span class="dev-placeholder">[להשלמה: מספרי רישום]</span>. אנחנו מחזיקים ביטוח צד שלישי <span class="dev-placeholder">[להשלמה: פרטי הפוליסה]</span>. באזור בנוי, או כשטסים מעל אנשים, רכבים או תשתיות, נדרשת הסכמה בכתב של בעל האתר, ולעיתים הרשאה מיוחדת. מתאמים מראש עם האחראי באתר.</p>
+<p>רוח חזקה, גשם או ערפל מעכבים את הטיסה, וקובעים מועד חלופי. מתכננים את הצילום כך שיתמקד בשטח שהוזמן, ולא מפרסמים חומר שמזהה אנשים או נכסים של צד שלישי. זמן המסירה תלוי בגודל השטח, בתוצרים ובאישורים, ונקבע בהצעה <span class="dev-placeholder">[להשלמה: זמני מסירה טיפוסיים]</span>.</p>
+<p>דרון אטלס אינה מודד מוסמך. התוצרים מיועדים לתכנון, לבקרה ולחישובי כמויות. תוכנית מדידה סטטוטורית, כמו מפה להיתר, תשריט לרישום או קביעת גבולות, נחתמת בידי מודד מוסמך שותף. פוטוגרמטריה לא משמשת לשחזור גבולות רשומים. אם יש במפה גבולות והיא לא מיועדת לרישום, המודד מציין עליה &quot;לא לצורכי רישום&quot;.</p>
+
+    </div></section>
+    <section class="light pad svc-block svc-prepare"><div class="wrap article">
+          <p class="svc-kicker">07</p>
+<h2>מה להכין מראש</h2>
+<ul><li>מיקום האתר, נקודה במפה או קובץ גבולות (KML, KMZ, DWG, DXF, SHP או GeoJSON).</li><li>גודל משוער, מטרת העבודה, התוצרים הרצויים ומועד רצוי.</li><li>איש קשר באתר, וגישה לשטח ביום הטיסה.</li><li>אם יש: קובץ תכנון מעוגן (DWG או SHP) או מדידה קודמת.</li><li>רשימת ערימות או אזורים, ואם משטח הבסיס הוא קרקע, תכנון או סקר קודם.</li></ul>
+
+    </div></section>
+    <section class="dark pad svc-block svc-faq"><div class="wrap article">
+          <p class="svc-kicker">08</p>
+<h2>שאלות נפוצות</h2>
 <div class="faq-list">
-<div class="faq-item"><p class="q">כמה מדויק חישוב נפחים ברחפן?</p><div class="a"><p>הדיוק תלוי בנקודות הבקרה, בטכנולוגיית המיקום, בגובה הטיסה ובהגדרת משטח הבסיס. אנחנו מגדירים בהצעה את הדיוק הנדרש ואת שיטת הבדיקה, ומפרטים אותם בדוח.</p></div></div>
-<div class="faq-item"><p class="q">מה זה משטח בסיס, ולמה הוא חשוב?</p><div class="a"><p>זה המשטח שממנו מודדים את הנפח, למשל הקרקע שמתחת לערימה. בחירה שונה של משטח בסיס נותנת מספר שונה, ולכן מגדירים אותו מראש ומתעדים אותו בדוח.</p></div></div>
-<div class="faq-item"><p class="q">כל כמה זמן כדאי למדוד?</p><div class="a"><p>זה תלוי בקצב העבודה ובצורך בהתחשבנות. יש אתרים שמודדים פעם בחודש ויש שבתדירות גבוהה יותר. נתאים את התדירות לאתר.</p></div></div>
-<div class="faq-item"><p class="q">אפשר למדוד ערימות בתוך מבנה סגור?</p><div class="a"><p>מדידה פוטוגרמטרית רגילה מיועדת לשטח פתוח. מחסן סגור דורש פתרון אחר, ונבדוק אותו לפי המקרה.</p></div></div>
+<details class="faq-item"><summary class="q">כמה מדויק חישוב נפחים ברחפן?</summary><div class="a"><p>הדיוק תלוי בנקודות הבקרה, בטכנולוגיית המיקום, בגובה הטיסה ובהגדרת משטח הבסיס. אנחנו מגדירים בהצעה את הדיוק הנדרש ואת שיטת הבדיקה, ומפרטים אותם בדוח. אין כאן מספר דיוק כללי.</p></div></details>
+<details class="faq-item"><summary class="q">מה זה משטח בסיס, ולמה הוא חשוב?</summary><div class="a"><p>זה המשטח שממנו מודדים את הנפח, למשל הקרקע שמתחת לערימה. בחירה שונה נותנת מספר שונה, ולכן מגדירים אותו מראש ומתעדים אותו בדוח.</p></div></details>
+<details class="faq-item"><summary class="q">כל כמה זמן כדאי למדוד?</summary><div class="a"><p>זה תלוי בקצב העבודה ובצורך בהתחשבנות. יש אתרים שמודדים פעם בחודש ויש בתדירות גבוהה יותר. נתאים את התדירות לאתר. ההצעה נבנית לפי היקף האתר ותדירות הסקרים.</p></div></details>
+<details class="faq-item"><summary class="q">אפשר למדוד ערימות בתוך מבנה סגור?</summary><div class="a"><p>מדידה פוטוגרמטרית רגילה מיועדת לשטח פתוח. מחסן סגור דורש פתרון אחר, ונבדוק אותו לפי המקרה.</p></div></details>
 </div>
 
     </div></section>
-    <section class="dark pad related-services">
+    <section class="dark pad related-services svc-related">
       <div class="wrap">
-        <h2 class="h2">שירותים</h2>
+        <p class="eyebrow">המשך</p>
+        <h2 class="h2">שירותים קרובים</h2>
         <div class="svc-cards">
    <a class="svc-photo" href="/droneatlas/construction-progress-monitoring/">
     <img class="card-photo" src="/droneatlas/assets/imagery/card-construction-bim-overlay.webp" alt="איור להמחשה: מודל אתר בנייה עם שכבת מדידה" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-construction">
@@ -325,11 +366,31 @@
     <img class="card-photo" src="/droneatlas/assets/imagery/card-industrial.webp" alt="איור להמחשה: צילום אווירי לתעשייה" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-industrial">
     <span class="svc-photo-cap"><span>צילומי רחפן לתעשייה</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
    </a>
+   <a class="svc-photo" href="/droneatlas/orthophoto-aerial-mapping/">
+    <img class="card-photo" src="/droneatlas/assets/imagery/card-contours-hillshade.webp" alt="איור להמחשה: קווי גובה על הצללת תבליט" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-orthophoto">
+    <span class="svc-photo-cap"><span>אורתופוטו ומיפוי אווירי</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+   </a>
+   <a class="svc-photo" href="/droneatlas/drone-topographic-survey/">
+    <img class="card-photo" src="/droneatlas/assets/imagery/card-geodetic.webp" alt="איור להמחשה: מפת תבליט עם רשת קואורדינטות ונקודות בקרה" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-topo">
+    <span class="svc-photo-cap"><span>מדידה טופוגרפית ברחפן</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+   </a>
+   <a class="svc-photo" href="/droneatlas/agricultural-mapping-ndvi/">
+    <img class="card-photo" src="/droneatlas/assets/imagery/home-panel.webp" alt="איור להמחשה: השוואה בין תבליט פני השטח לבין מפת גבהים צבעונית" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-agri">
+    <span class="svc-photo-cap"><span>מיפוי חקלאי ו-NDVI</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+   </a>
+   <a class="svc-photo" href="/droneatlas/infrastructure-municipalities/">
+    <img class="card-photo" src="/droneatlas/assets/imagery/card-terrain.webp" alt="איור להמחשה: חתך פני שטח ומסלול טיסה עוקב קרקע" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-infra">
+    <span class="svc-photo-cap"><span>תשתיות ורשויות מקומיות</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+   </a>
+   <a class="svc-photo" href="/droneatlas/drone-ndt-inspection/">
+    <img class="card-photo" src="/droneatlas/assets/imagery/card-roof-overlay-dimension-grid.webp" alt="איור להמחשה: רשת מידות על גבי מבנה" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-ndt">
+    <span class="svc-photo-cap"><span>בדיקה ויזואלית ותרמית</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+   </a>
 </div>
       </div>
     </section>
     <section class="cta-banner pad" id="cta"><div class="wrap"><h2 class="cta-heading">רוצים לדעת מה מתאים לפרויקט שלכם?</h2>
-<p>שלחו לנו בוואטסאפ את מיקום האתר, גודל השטח בערך, מטרת המיפוי ומועד רצוי. נחזור אליכם עם המלצה על התוצרים ועם הצעה מסודרת.</p>
+<p>שלחו לנו בוואטסאפ את מיקום האתר, גודל השטח בערך, מטרת העבודה ומועד רצוי. נחזור אליכם עם המלצה על התוצרים ועם הצעה מסודרת. אין מחירון קבוע: ההצעה נבנית לפי היקף.</p>
 <p class="btn-row"><strong><a href="https://wa.me/[להשלמה: מספר וואטסאפ בפורמט 972XXXXXXXXX]" data-whatsapp class="btn btn-primary">שלחו הודעה בוואטסאפ</a></strong> · <a href="/droneatlas/contact/" class="btn btn-secondary">לטופס יצירת קשר</a></p></div></section>
 
   </main>
@@ -366,6 +427,11 @@
        <li><a href="/droneatlas/terrain-follow-mapping/">מיפוי עוקב קרקע</a></li>
        <li><a href="/droneatlas/3d-modeling-point-cloud/">מידול תלת מימד וענן נקודות</a></li>
        <li><a href="/droneatlas/industrial-drone-photography/">צילומי רחפן לתעשייה</a></li>
+       <li><a href="/droneatlas/orthophoto-aerial-mapping/">אורתופוטו</a></li>
+       <li><a href="/droneatlas/drone-topographic-survey/">מדידה טופוגרפית</a></li>
+       <li><a href="/droneatlas/agricultural-mapping-ndvi/">מיפוי חקלאי</a></li>
+       <li><a href="/droneatlas/infrastructure-municipalities/">תשתיות ורשויות</a></li>
+       <li><a href="/droneatlas/drone-ndt-inspection/">בדיקות NDT</a></li>
           </ul>
         </div>
         <div>
@@ -386,5 +452,6 @@
   <script src="/droneatlas/js/config.js"></script>
   <script src="/droneatlas/js/home-nav.js"></script>
   <script src="/droneatlas/js/main.js"></script>
+  <script src="/droneatlas/js/hero-video.js"></script>
 </body>
 </html>

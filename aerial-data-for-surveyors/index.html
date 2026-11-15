@@ -34,6 +34,8 @@
   <link rel="stylesheet" href="/droneatlas/css/service-page.css">
   <link rel="stylesheet" href="/droneatlas/css/home-flow.css">
   <link rel="stylesheet" href="/droneatlas/css/theme.css">
+  <link rel="stylesheet" href="/droneatlas/css/hero-video.css">
+  <link rel="stylesheet" href="/droneatlas/css/service-depth.css">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -183,6 +185,11 @@
       <a href="/droneatlas/terrain-follow-mapping/">מיפוי עוקב קרקע</a>
       <a href="/droneatlas/3d-modeling-point-cloud/">מידול תלת מימד וענן נקודות</a>
       <a href="/droneatlas/industrial-drone-photography/">צילומי רחפן לתעשייה</a>
+      <a href="/droneatlas/orthophoto-aerial-mapping/">אורתופוטו</a>
+      <a href="/droneatlas/drone-topographic-survey/">מדידה טופוגרפית</a>
+      <a href="/droneatlas/agricultural-mapping-ndvi/">מיפוי חקלאי</a>
+      <a href="/droneatlas/infrastructure-municipalities/">תשתיות ורשויות</a>
+      <a href="/droneatlas/drone-ndt-inspection/">בדיקות NDT</a>
             </div>
           </div>
         </div>
@@ -218,6 +225,11 @@
       <a href="/droneatlas/terrain-follow-mapping/">מיפוי עוקב קרקע</a>
       <a href="/droneatlas/3d-modeling-point-cloud/">מידול תלת מימד וענן נקודות</a>
       <a href="/droneatlas/industrial-drone-photography/">צילומי רחפן לתעשייה</a>
+      <a href="/droneatlas/orthophoto-aerial-mapping/">אורתופוטו</a>
+      <a href="/droneatlas/drone-topographic-survey/">מדידה טופוגרפית</a>
+      <a href="/droneatlas/agricultural-mapping-ndvi/">מיפוי חקלאי</a>
+      <a href="/droneatlas/infrastructure-municipalities/">תשתיות ורשויות</a>
+      <a href="/droneatlas/drone-ndt-inspection/">בדיקות NDT</a>
       </div>
     </div>
     <a href="/droneatlas/about/">אודות</a>
@@ -232,11 +244,21 @@
   </div>
   <main id="main">
     <section class="page-hero">
-      <img class="bg" src="/droneatlas/assets/imagery/hero-surveyors-1920.webp" alt="איור להמחשה: ענן נקודות עם נקודות בקרה מסומנות" width="1920" height="1080" decoding="async" fetchpriority="high" data-slot="surveyors-hero">
+      <div class="hero-stage" data-hero-stage>
+        <img class="bg" src="/droneatlas/assets/imagery/hero-surveyors-1920.webp" alt="איור להמחשה: ענן נקודות עם נקודות בקרה מסומנות" width="1920" height="1080" decoding="async" fetchpriority="high" data-slot="surveyors-hero">
+      </div>
       <div class="wrap">
         <nav class="crumbs" aria-label="מיקום בעמוד"><a href="/droneatlas/">בית</a><span aria-hidden="true">/</span><a href="/droneatlas/services/">שירותים</a><span aria-hidden="true">/</span><span aria-current="page">נתוני רחפן למודדים ולמשרדי מדידה</span></nav>
+        <p class="eyebrow">We fly · You sign</p>
         <h1>נתוני רחפן למודדים ולמשרדי מדידה</h1>
-        <p class="dek"><strong>דרון אטלס עובדת עם מודדים מוסמכים כספק של צילום אווירי ונתונים מעובדים.</strong> אנחנו מתכננים ומבצעים את הטיסה, ולפי בקשתכם מעבדים את הנתונים. אתם נשארים אנשי המקצוע שמודדים, בודקים וחותמים. דרון אטלס אינה מודד מוסמך, ולא מציגה את התוצרים שלה כמסמכי מדידה רשמיים.</p>
+        <p class="dek">דרון אטלס עובדת עם מודדים מוסמכים כספק של צילום אווירי ונתונים מעובדים. אנחנו מתכננים ומבצעים את הטיסה, ולפי בקשתכם מעבדים.</p>
+        <ul class="hero-chips"><li>EPSG:2039</li><li>WebODM</li><li>מסירה נקייה</li></ul>
+      </div>
+    </section>
+    <section class="light pad svc-block svc-prose">
+      <div class="wrap article">
+        
+<p>אתם נשארים אנשי המקצוע שמודדים, בודקים וחותמים. דרון אטלס אינה מודד מוסמך, ולא מציגה את התוצרים שלה כמסמכי מדידה רשמיים.</p>
       </div>
     </section>
     <section class="dark pad">
@@ -244,33 +266,66 @@
         <div class="air-media"><img class="air-photo" src="/droneatlas/assets/imagery/card-surveyors.webp" alt="איור להמחשה: ענן נקודות עם נקודות בקרה מסומנות" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-surveyors"></div>
       </div>
     </section>
-    <section class="light pad"><div class="wrap article">
-<h2>מה אפשר להזמין</h2>
-<div class="table-wrap"><table><thead><tr><th>אפשרות</th><th>מה מקבלים</th></tr></thead><tbody><tr><td>טיסה בלבד</td><td>תמונות גולמיות עם נתוני מיקום, לוג טיסה ותוכנית הטיסה</td></tr><tr><td>טיסה + עיבוד</td><td>אורתופוטו (GeoTIFF/ECW), ענן נקודות (LAS/LAZ) ו-DSM ברשת ישראל (EPSG:2039)</td></tr><tr><td>עם נקודות בקרה</td><td>עיגון לנקודות הבקרה שאתם מסמנים ומודדים, ודוח RMS מול נקודות ביקורת</td></tr><tr><td>סבבים חוזרים</td><td>אותה תוכנית טיסה בכל ביקור, להשוואה עקבית</td></tr></tbody></table></div>
+    <section class="light pad svc-block svc-who"><div class="wrap article">
+          <p class="svc-kicker">01</p>
+<h2>למי זה מתאים</h2>
+<ul><li><strong>משרד מדידה שרוצה כיסוי אווירי</strong> בלי להפעיל מערך טיסה משלו.</li><li><strong>מודד שמעבד בעצמו</strong> טיסה בלבד: תמונות עם מיקום, לוג ותוכנית טיסה.</li><li><strong>מודד שרוצה קבצים מוכנים</strong> אורתופוטו, ענן נקודות ו-DSM, קשורים לנקודות שלו.</li><li><strong>פרויקט עם סבבים</strong> אותה תוכנית טיסה בכל ביקור.</li></ul>
 
     </div></section>
-    <section class="dark pad"><div class="wrap article">
+    <section class="dark pad svc-block svc-steps"><div class="wrap article">
+          <p class="svc-kicker">02</p>
 <h2>איך זה עובד</h2>
-<ol><li>אתם שולחים פוליגון, רזולוציה (GSD) נדרשת, שיטת עיגון ותוצרים.</li><li>אנחנו בודקים מרחב אווירי, מתאמים ומטיסים.</li><li>מוסרים את הנתונים במבנה תיקיות קבוע, עם מטא-דאטה שמפרטת שיטה (RTK, נקודות בקרה או שניהם) ומטרת שימוש.</li><li>אתם ממשיכים מכאן: מדידה, השלמות שדה, שרטוט וחתימה.</li></ol>
+<ol><li><strong>אתם שולחים</strong> פוליגון, רזולוציה (GSD) נדרשת, שיטת עיגון ותוצרים.</li><li><strong>אנחנו בודקים</strong> מרחב אווירי, מתאמים ומטיסים.</li><li><strong>מסירה</strong> במבנה תיקיות קבוע, עם מטא-דאטה: RTK, נקודות בקרה או שניהם, ומטרת השימוש.</li><li><strong>אתם ממשיכים</strong> מדידה, השלמות שדה, שרטוט וחתימה.</li><li><strong>שקיפות</strong> בכל מסירה מצוינים המצלמה ושיטת העיגון <span class="dev-placeholder">[להשלמה: דגם מצלמה, והאם היא מאושרת בידי המרכז למיפוי ישראל]</span>.</li></ol>
 
     </div></section>
-    <section class="light pad"><div class="wrap article">
-<h2>למה לעבוד איתנו</h2>
-<ul><li><strong>תוכנית טיסה שמותאמת לעבודה שלכם</strong>: חפיפה, גובה וזוויות לפי התוצר שאתם מפיקים.</li><li><strong>מסירה נקייה</strong>: שמות קבצים, מערכת קואורדינטות ומטא-דאטה עקביים בכל פרויקט.</li><li><strong>שקיפות</strong>: מציינים בכל מסירה אילו מצלמה ושיטת עיגון שימשו <span class="dev-placeholder">[להשלמה: דגם מצלמה, והאם היא מאושרת בידי מרכז למיפוי ישראל]</span>.</li><li><strong>בלי תחרות על הלקוח שלכם</strong>: הפרויקט שלכם נשאר שלכם <span class="dev-placeholder">[להשלמה: מדיניות עבודה מול לקוחות של מודדים]</span>.</li></ul>
+    <section class="light pad svc-block svc-deliver"><div class="wrap article">
+          <p class="svc-kicker">03</p>
+<h2>מה מקבלים</h2>
+<div class="table-wrap"><table><thead><tr><th>אפשרות</th><th>מה מקבלים</th></tr></thead><tbody><tr><td>טיסה בלבד</td><td>תמונות גולמיות עם נתוני מיקום, לוג טיסה ותוכנית הטיסה</td></tr><tr><td>טיסה ועיבוד</td><td>אורתופוטו (GeoTIFF/ECW), ענן נקודות (LAS/LAZ) ו-DSM ברשת ישראל (EPSG:2039)</td></tr><tr><td>עם נקודות בקרה</td><td>עיגון לנקודות שאתם מסמנים ומודדים, ודוח RMS מול נקודות ביקורת</td></tr><tr><td>סבבים חוזרים</td><td>אותה תוכנית טיסה בכל ביקור</td></tr></tbody></table></div>
+<p>הפרויקט שלכם נשאר שלכם <span class="dev-placeholder">[להשלמה: מדיניות עבודה מול לקוחות של מודדים]</span>.</p>
 
     </div></section>
-    <section class="dark pad"><div class="wrap article">
-<h2>שאלות נפוצות למודדים</h2>
+    <section class="dark pad svc-block svc-accuracy"><div class="wrap article">
+          <p class="svc-kicker">04</p>
+<h2>דיוק ובקרת איכות</h2>
+<p>RTK נותן לכל תמונה מיקום בזמן הטיסה. <a href="/droneatlas/ground-control-points-gcp/">נקודות בקרה קרקעיות</a> מעגנות את המודל לשטח, ונקודות ביקורת נפרדות, שלא נכנסות לעיבוד, בודקות אותו. את רמת הדיוק ואת שיטת הבדיקה קובעים בהצעה לפי מטרת העבודה, ומתעדים בדוח בקרת איכות. כשיש נקודות ביקורת, הדוח כולל את השגיאה מולן (RMS). דיוק טיפוסי: <span class="dev-placeholder">[להשלמה: דיוק אופקי ואנכי שנמדד בפועל עם המערך של דרון אטלס. לא לפרסם מספר לפני בדיקה]</span>.</p>
+<p>רזולוציה (GSD) היא גודל השטח שמיוצג בפיקסל אחד. דיוק הוא כמה המיקום במפה קרוב למיקום האמיתי. רזולוציה גבוהה לא מבטיחה דיוק גבוה, ולכן מגדירים את שניהם בנפרד. העיבוד נעשה ב-WebODM (OpenDroneMap). ברירת המחדל היא רשת ישראל (EPSG:2039), או מערכת אחרת לפי בקשה.</p>
+
+    </div></section>
+    <section class="light pad svc-block svc-choose"><div class="wrap article">
+          <p class="svc-kicker">05</p>
+<h2>מתי זה מתאים, ומתי לבחור במשהו אחר</h2>
+<ul><li><strong>הלקוח רוצה שדרון אטלס תחתום על מפה</strong> אנחנו לא חותמים. אפשר להפנות למודד מוסמך שותף כשצריך חתימה, והחתימה שלו.</li><li><strong>תוצר לפי תקנות המדידות</strong> תלוי במטרה, בשיטה ובמצלמה. תוצרים פוטוגרמטריים לפי התקנות דורשים מערכת מצלמה מאושרת ותעודת כיול בתוקף. נציין מראש איזה ציוד ישמש, ואתם תחליטו אם הוא מתאים.</li><li><strong>רק סרט שיווקי</strong> זה לא העמוד הזה.</li></ul>
+
+    </div></section>
+    <section class="dark pad svc-block svc-limits"><div class="wrap article">
+          <p class="svc-kicker">06</p>
+<h2>מגבלות ואישורים</h2>
+<p>השירות ניתן בכל הארץ, בכפוף לאישורי טיסה ולמגבלות מרחב אווירי באזור האתר. הפעלה מסחרית של רחפן קטן מחייבת רישיון מטיס כטב&quot;ם מרשות התעופה האזרחית <span class="dev-placeholder">[להשלמה: מספר רישיון]</span> ורישום של כלי הטיס <span class="dev-placeholder">[להשלמה: מספרי רישום]</span>. אנחנו מחזיקים ביטוח צד שלישי <span class="dev-placeholder">[להשלמה: פרטי הפוליסה]</span>. באזור בנוי, או כשטסים מעל אנשים, רכבים או תשתיות, נדרשת הסכמה בכתב של בעל האתר, ולעיתים הרשאה מיוחדת. מתאמים מראש עם האחראי באתר.</p>
+<p>רוח חזקה, גשם או ערפל מעכבים את הטיסה, וקובעים מועד חלופי. מתכננים את הצילום כך שיתמקד בשטח שהוזמן, ולא מפרסמים חומר שמזהה אנשים או נכסים של צד שלישי. זמן המסירה תלוי בגודל השטח, בתוצרים ובאישורים, ונקבע בהצעה <span class="dev-placeholder">[להשלמה: זמני מסירה טיפוסיים]</span>.</p>
+<p>דרון אטלס אינה מודד מוסמך. התוצרים מיועדים לתכנון, לבקרה ולחישובי כמויות. תוכנית מדידה סטטוטורית, כמו מפה להיתר, תשריט לרישום או קביעת גבולות, נחתמת בידי מודד מוסמך שותף. פוטוגרמטריה לא משמשת לשחזור גבולות רשומים. אם יש במפה גבולות והיא לא מיועדת לרישום, המודד מציין עליה &quot;לא לצורכי רישום&quot;.</p>
+
+    </div></section>
+    <section class="light pad svc-block svc-prepare"><div class="wrap article">
+          <p class="svc-kicker">07</p>
+<h2>מה להכין מראש</h2>
+<ul><li>מיקום האתר, נקודה במפה או קובץ גבולות (KML, KMZ, DWG, DXF, SHP או GeoJSON).</li><li>גודל משוער, מטרת העבודה, התוצרים הרצויים ומועד רצוי.</li><li>איש קשר באתר, וגישה לשטח ביום הטיסה.</li><li>אם יש: קובץ תכנון מעוגן (DWG או SHP) או מדידה קודמת.</li><li>GSD נדרש, מי מודד את נקודות הבקרה, ומה אסור למסור הלאה.</li></ul>
+
+    </div></section>
+    <section class="dark pad svc-block svc-faq"><div class="wrap article">
+          <p class="svc-kicker">08</p>
+<h2>שאלות נפוצות</h2>
 <div class="faq-list">
-<div class="faq-item"><p class="q">האם התוצרים מתאימים להפקת מפה לפי תקנות המדידות?</p><div class="a"><p>זה תלוי במטרה, בשיטה ובמצלמה. תוצרים פוטוגרמטריים לפי התקנות דורשים מערכת מצלמה מאושרת ותעודת כיול בתוקף. נציין מראש איזה ציוד ישמש, ואתם תחליטו אם הוא מתאים למוצר שלכם.</p></div></div>
-<div class="faq-item"><p class="q">מי חותם על המפה?</p><div class="a"><p>אתם. דרון אטלס מספקת נתונים בלבד, ואינה חותמת על מסמכי מדידה.</p></div></div>
-<div class="faq-item"><p class="q">באיזו מערכת קואורדינטות מקבלים?</p><div class="a"><p>רשת ישראל (EPSG:2039) כברירת מחדל, או מערכת אחרת לפי בקשה.</p></div></div>
+<details class="faq-item"><summary class="q">האם התוצרים מתאימים להפקת מפה לפי תקנות המדידות?</summary><div class="a"><p>זה תלוי במטרה, בשיטה ובמצלמה. תוצרים פוטוגרמטריים לפי התקנות דורשים מערכת מצלמה מאושרת ותעודת כיול בתוקף. נציין מראש איזה ציוד ישמש, ואתם תחליטו אם הוא מתאים למוצר שלכם.</p></div></details>
+<details class="faq-item"><summary class="q">מי חותם על המפה?</summary><div class="a"><p>אתם. דרון אטלס מספקת נתונים בלבד, ואינה חותמת על מסמכי מדידה.</p></div></details>
+<details class="faq-item"><summary class="q">באיזו מערכת קואורדינטות מקבלים?</summary><div class="a"><p>רשת ישראל (EPSG:2039) כברירת מחדל, או מערכת אחרת לפי בקשה.</p></div></details>
 </div>
 
     </div></section>
-    <section class="dark pad related-services">
+    <section class="dark pad related-services svc-related">
       <div class="wrap">
-        <h2 class="h2">שירותים</h2>
+        <p class="eyebrow">המשך</p>
+        <h2 class="h2">שירותים קרובים</h2>
         <div class="svc-cards">
    <a class="svc-photo" href="/droneatlas/construction-progress-monitoring/">
     <img class="card-photo" src="/droneatlas/assets/imagery/card-construction-bim-overlay.webp" alt="איור להמחשה: מודל אתר בנייה עם שכבת מדידה" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-construction">
@@ -300,11 +355,31 @@
     <img class="card-photo" src="/droneatlas/assets/imagery/card-industrial.webp" alt="איור להמחשה: צילום אווירי לתעשייה" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-industrial">
     <span class="svc-photo-cap"><span>צילומי רחפן לתעשייה</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
    </a>
+   <a class="svc-photo" href="/droneatlas/orthophoto-aerial-mapping/">
+    <img class="card-photo" src="/droneatlas/assets/imagery/card-contours-hillshade.webp" alt="איור להמחשה: קווי גובה על הצללת תבליט" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-orthophoto">
+    <span class="svc-photo-cap"><span>אורתופוטו ומיפוי אווירי</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+   </a>
+   <a class="svc-photo" href="/droneatlas/drone-topographic-survey/">
+    <img class="card-photo" src="/droneatlas/assets/imagery/card-geodetic.webp" alt="איור להמחשה: מפת תבליט עם רשת קואורדינטות ונקודות בקרה" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-topo">
+    <span class="svc-photo-cap"><span>מדידה טופוגרפית ברחפן</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+   </a>
+   <a class="svc-photo" href="/droneatlas/agricultural-mapping-ndvi/">
+    <img class="card-photo" src="/droneatlas/assets/imagery/home-panel.webp" alt="איור להמחשה: השוואה בין תבליט פני השטח לבין מפת גבהים צבעונית" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-agri">
+    <span class="svc-photo-cap"><span>מיפוי חקלאי ו-NDVI</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+   </a>
+   <a class="svc-photo" href="/droneatlas/infrastructure-municipalities/">
+    <img class="card-photo" src="/droneatlas/assets/imagery/card-terrain.webp" alt="איור להמחשה: חתך פני שטח ומסלול טיסה עוקב קרקע" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-infra">
+    <span class="svc-photo-cap"><span>תשתיות ורשויות מקומיות</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+   </a>
+   <a class="svc-photo" href="/droneatlas/drone-ndt-inspection/">
+    <img class="card-photo" src="/droneatlas/assets/imagery/card-roof-overlay-dimension-grid.webp" alt="איור להמחשה: רשת מידות על גבי מבנה" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-ndt">
+    <span class="svc-photo-cap"><span>בדיקה ויזואלית ותרמית</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+   </a>
 </div>
       </div>
     </section>
     <section class="cta-banner pad" id="cta"><div class="wrap"><h2 class="cta-heading">רוצים לדעת מה מתאים לפרויקט שלכם?</h2>
-<p>שלחו לנו בוואטסאפ את מיקום האתר, גודל השטח בערך, מטרת המיפוי ומועד רצוי. נחזור אליכם עם המלצה על התוצרים ועם הצעה מסודרת.</p>
+<p>שלחו לנו בוואטסאפ את מיקום האתר, גודל השטח בערך, מטרת העבודה ומועד רצוי. נחזור אליכם עם המלצה על התוצרים ועם הצעה מסודרת. אין מחירון קבוע: ההצעה נבנית לפי היקף.</p>
 <p class="btn-row"><strong><a href="https://wa.me/[להשלמה: מספר וואטסאפ בפורמט 972XXXXXXXXX]" data-whatsapp class="btn btn-primary">שלחו הודעה בוואטסאפ</a></strong> · <a href="/droneatlas/contact/" class="btn btn-secondary">לטופס יצירת קשר</a></p></div></section>
 
   </main>
@@ -341,6 +416,11 @@
        <li><a href="/droneatlas/terrain-follow-mapping/">מיפוי עוקב קרקע</a></li>
        <li><a href="/droneatlas/3d-modeling-point-cloud/">מידול תלת מימד וענן נקודות</a></li>
        <li><a href="/droneatlas/industrial-drone-photography/">צילומי רחפן לתעשייה</a></li>
+       <li><a href="/droneatlas/orthophoto-aerial-mapping/">אורתופוטו</a></li>
+       <li><a href="/droneatlas/drone-topographic-survey/">מדידה טופוגרפית</a></li>
+       <li><a href="/droneatlas/agricultural-mapping-ndvi/">מיפוי חקלאי</a></li>
+       <li><a href="/droneatlas/infrastructure-municipalities/">תשתיות ורשויות</a></li>
+       <li><a href="/droneatlas/drone-ndt-inspection/">בדיקות NDT</a></li>
           </ul>
         </div>
         <div>
@@ -361,5 +441,6 @@
   <script src="/droneatlas/js/config.js"></script>
   <script src="/droneatlas/js/home-nav.js"></script>
   <script src="/droneatlas/js/main.js"></script>
+  <script src="/droneatlas/js/hero-video.js"></script>
 </body>
 </html>
