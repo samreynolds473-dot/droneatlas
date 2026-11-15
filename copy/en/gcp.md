@@ -67,6 +67,12 @@ Strong wind, rain or fog delays the flight, and we set a nearby alternative date
 - If you have them: a georeferenced design file (DWG or SHP) or a previous survey.
 - If you have already surveyed the points: the file, the coordinate system, and a photo or description of each target.
 
+<!-- map-depth -->
+
+The layout follows the shape of the site, not a fixed template. A long site needs points at the ends as well. A site with a height range needs points both high and low, otherwise the model can sit well in the middle and shift at the edge.
+
+A check point is kept out of processing. It stays out so the report can say how close the model is to the survey, not only that processing finished. The file includes name, X, Y and Z on the Israeli Grid, and a mark of what was used for control and what for the check. The number of points is set in the proposal. There is no general recommended count here.
+
 ## FAQ
 
 **What is the difference between a control point and a check point?**

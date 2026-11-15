@@ -67,6 +67,14 @@ DroneAtlas is not a licensed surveyor. The deliverables are for design, control 
 - An on-site contact, and access on the flight day.
 - If you have them: a georeferenced design file (DWG or SHP) or a previous survey.
 
+<!-- map-depth -->
+
+The map is built from overlapping images. Overlap between neighbouring frames is what lets the processing produce one surface without holes. Flight height and overlap are set for the resolution agreed in the proposal, not from a fixed number on the website. After the flight we check that coverage is complete, and we repeat a gap when weather and approvals allow.
+
+On a return visit we keep the same boundary and the same coordinate system, so one round can sit on the next and change is visible. The file opens in QGIS, ArcGIS, AutoCAD and Civil 3D. Distance and area are measured on the map. The height of a building or the volume of a pile does not come from the orthophoto alone.
+
+No resolution in centimetres is published here. GSD and positional accuracy are two different things, and accuracy is checked against check points only when that check was ordered.
+
 ## FAQ
 
 **What can I measure on an orthophoto?**

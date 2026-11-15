@@ -75,6 +75,7 @@
       if (video.dataset.src === src) return;
       video.dataset.src = src;
       video.preload = "metadata";
+      video.poster = src.replace(/hero-(\d+)\.(webm|mp4)(\?.*)?$/, "hero-$1-poster.jpg");
       video.src = src;
     }
 

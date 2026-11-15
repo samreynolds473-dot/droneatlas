@@ -71,6 +71,14 @@ DroneAtlas is not a licensed surveyor. The deliverables are for design, control 
 - An on-site contact, and access on the flight day.
 - If you have them: a georeferenced design file (DWG or SHP) or a previous survey.
 
+<!-- map-depth -->
+
+One mapping job can include a map, an elevation model and contours, because they come from the same images. What was not ordered is not produced for its own sake: if only an orthophoto is needed, volumes are not required. The list of deliverables, the formats and the coordinate system are written in the proposal before the flight.
+
+A repeat round keeps the same route and the same control points, otherwise a comparison between dates does not sit. On an active site the flight is coordinated with the site manager so it does not pass over people and plant. After processing in WebODM we check that coverage is complete and, if check points were surveyed, the error against them.
+
+The files are for CAD and GIS. They do not replace a signed survey plan.
+
 ## FAQ
 
 **What is an orthophoto?**

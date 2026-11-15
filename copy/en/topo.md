@@ -70,6 +70,14 @@ Strong wind, rain or fog delays the flight, and we set a nearby alternative date
 - If you have them: a georeferenced design file (DWG or SHP) or a previous survey.
 - Whether a surveyor's signature is required, and who the surveyor is if one is already involved.
 
+<!-- map-depth -->
+
+The terrain model and the contours are for design and for measuring the shape, not for a signature. A contour is taken from the DTM at the interval agreed up front. The point cloud stays in the delivery so the surface can be checked in design software, not only the drawn line.
+
+On a long site, such as a road corridor, coverage is planned as a run of segments with overlap between them, so the model does not break at the join. On a slope we switch to terrain-follow so resolution does not change from the top to the bottom.
+
+What cannot be seen from the air does not enter the model. Dense vegetation, sheds and heavy shade are named as limits in the proposal, not hidden after delivery.
+
 ## FAQ
 
 **Is this a permit map?**

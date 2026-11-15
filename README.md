@@ -65,13 +65,17 @@ DroneAtlas is not a licensed surveyor. Statutory survey plans are signed by a pa
 
 ## Hero video
 
-The homepage and every service hero can play three background clips in order, crossfading from one to the next and then repeating the set. The next file is loaded only when the current clip starts. Each clip prefers WebM and falls back to MP4:
+The homepage and every service hero play the clips that exist, in order, crossfading from one to the next and then repeating the set. The next file loads only after the current clip starts. Each slot prefers WebM and falls back to MP4. A missing file is skipped, so one or two clips still rotate. If none exist, the page poster stays and no player is inserted. `prefers-reduced-motion`, a narrow screen, and data-saver also keep the poster. A dark gradient stays over the picture so the type keeps contrast.
 
-- `assets/video/hero-1.webm` and `assets/video/hero-1.mp4`
-- `assets/video/hero-2.webm` and `assets/video/hero-2.mp4`
-- `assets/video/hero-3.webm` and `assets/video/hero-3.mp4`
+The three clips are short, muted cuts of Pexels footage, encoded at 1600×900 with no audio. Each has an H.264 MP4 (`+faststart`), a VP9 WebM, and a JPEG poster (`hero-N-poster.jpg`). They are used under the [Pexels License](https://www.pexels.com/license/): free to use and modify, including commercially, with no attribution required. Do not resell the unaltered files as stock.
 
-No footage is in the repository. Do not add stock or third-party video. Drop the owner's clips on those paths. Until a file exists it is skipped. If none exist, the existing hero poster image stays and no player is shown. `prefers-reduced-motion`, a narrow screen, and data-saver also keep the poster. The poster remains underneath the video, and the dark hero gradient stays over it so the type keeps contrast.
+| Slot | File | Source | Creator | Segment |
+| --- | --- | --- | --- | --- |
+| hero-1 | `assets/video/hero-1.webm`, `hero-1.mp4` | [Aerial Footage of Trucks on a Construction Site](https://www.pexels.com/video/aerial-footage-of-trucks-on-a-construction-site-7518602/) (Pexels 7518602) | Tom Fisk | 12s, from 0:02, excavator beside the trucks |
+| hero-2 | `assets/video/hero-2.webm`, `hero-2.mp4` | [Aerial view of coastal construction in Netanya](https://www.pexels.com/video/aerial-view-of-coastal-construction-in-netanya-31383776/) (Pexels 31383776) | Rasmus Carlin | 12s, from 0:08, breakwater and shore works |
+| hero-3 | `assets/video/hero-3.webm`, `hero-3.mp4` | [Solar panel in rows used for energy production](https://www.pexels.com/video/solar-panel-in-rows-used-for-energy-production-2804595/) (Pexels 2804595) | K (name as published on the Pexels page) | 11.6s, from 0:00.4, rows of panels |
+
+No Mixkit footage is used.
 
 ## Removed-page redirects
 

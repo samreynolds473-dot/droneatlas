@@ -68,6 +68,12 @@ Strong wind, rain or fog delays the flight, and we set a nearby alternative date
 - If you have them: a georeferenced design file (DWG or SHP) or a previous survey.
 - A description of the height range: slope, wadi, quarry face or road corridor.
 
+<!-- map-depth -->
+
+On a slope, a constant height above the take-off point brings the drone close to the ground at the top and far from it at the bottom. Overlap and resolution change, and the model gets thin patches. A flight at a constant height above the surface keeps the same distance to the ground, and so a more even GSD along the corridor.
+
+That suits a mountain road, a quarry face and a wadi. On flat ground it is not needed. Control points on this kind of site have to cover both the high ground and the low ground, or the check does not represent the full range. The follow method the equipment supports is still [TO FILL: terrain-follow method].
+
 ## FAQ
 
 **Does every site need terrain following?**

@@ -71,6 +71,14 @@ DroneAtlas is not a licensed surveyor. The deliverables are for design, control 
 - If you have them: a georeferenced design file (DWG or SHP) or a previous survey.
 - A list of piles or zones, and whether the base surface is ground, design or a previous survey.
 
+<!-- map-depth -->
+
+A volume is the difference between two surfaces: the pile or the excavation, and the base surface that was agreed. Without a written base surface there is no figure that can be compared with the next round. The first visit therefore defines the pile boundaries and the base, and later visits repeat the same method and the same route.
+
+The report gives a volume per pile or zone, and it includes the map of the boundaries and the DSM, so each party can see where the figure came from. If the figure is used for a payment or a submission, the method is agreed first. A signed quantity, when one is required, is signed by a partner licensed surveyor. Without that signature it is an estimate with the method stated, not a certified quantity.
+
+There is no general accuracy percentage here. What affects the figure is written in the proposal: ground control, flight height, and the base surface.
+
 ## FAQ
 
 **How accurate is a drone stockpile survey?**
