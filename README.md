@@ -86,12 +86,12 @@ Illustrated cards and heroes are replaced with real photographs under the [Pexel
 | Construction, home poster | [3525541](https://www.pexels.com/photo/3525541/) |
 | Quarries and stockpiles | [33122152](https://www.pexels.com/photo/33122152/) |
 | Excavation / ground | [11467684](https://www.pexels.com/photo/11467684/) |
-| Forest road (survey, terrain, point cloud) | [1438761](https://www.pexels.com/photo/1438761/) |
-| Rolling fields (geodetic, 3D surface) | [259280](https://www.pexels.com/photo/259280/) |
-| Vineyards and hills (orthophoto card, home panel, blog) | [325944](https://www.pexels.com/photo/325944/) |
+| Sand dunes (survey, terrain, orthophoto card, home panel) | [1001435](https://www.pexels.com/photo/1001435/) |
+| Dune ridge (geodetic, 3D surface) | [1731660](https://www.pexels.com/photo/1731660/) |
+| Field harvest (agriculture only) | [2255801](https://www.pexels.com/photo/2255801/) |
 | Highway interchange (infrastructure, services) | [681335](https://www.pexels.com/photo/681335/) |
-| Rooftops and a village (industrial card, inspection) | [280221](https://www.pexels.com/photo/280221/) |
-| Solar field (FAQ hero still, from the hero-3 clip) | [2804595](https://www.pexels.com/video/solar-panel-in-rows-used-for-energy-production-2804595/) |
+| Industrial plant at night | [236722](https://www.pexels.com/photo/236722/) |
+| Solar panels (inspection card, FAQ hero) | [356036](https://www.pexels.com/photo/356036/) |
 
 ## Clients
 
