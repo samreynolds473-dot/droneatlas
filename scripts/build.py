@@ -10,7 +10,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 COPY_ROOT = Path("/workspace/droneatlas/copy")
+LOCAL_COPY = ROOT / "copy"
 OUT = ROOT
+# GitHub Pages project site. Canonicals stay on droneatlas.co.il.
+BASE_PATH = "/droneatlas"
 e = html.escape
 
 SITE_ORIGIN = "https://droneatlas.co.il"
@@ -43,6 +46,31 @@ SERVICES = [
      "en_path": "/en/industrial-drone-photography/",
      "he_nav": "צילומי רחפן לתעשייה", "en_nav": "Industrial photography",
      "he_card": "צילומי רחפן לתעשייה", "en_card": "Industrial drone photography"},
+    {"id": "orthophoto", "icon": "orthophoto.svg", "card_slot": "card-orthophoto",
+     "he_path": "/orthophoto-aerial-mapping/",
+     "en_path": "/en/orthophoto-aerial-mapping/",
+     "he_nav": "אורתופוטו", "en_nav": "Orthophoto",
+     "he_card": "אורתופוטו ומיפוי אווירי", "en_card": "Orthophoto and aerial mapping"},
+    {"id": "topo", "icon": "topo.svg", "card_slot": "card-topo",
+     "he_path": "/drone-topographic-survey/",
+     "en_path": "/en/drone-topographic-survey/",
+     "he_nav": "מדידה טופוגרפית", "en_nav": "Topographic survey",
+     "he_card": "מדידה טופוגרפית ברחפן", "en_card": "Drone topographic survey"},
+    {"id": "agriculture", "icon": "agriculture.svg", "card_slot": "card-agri",
+     "he_path": "/agricultural-mapping-ndvi/",
+     "en_path": "/en/agricultural-mapping-ndvi/",
+     "he_nav": "מיפוי חקלאי", "en_nav": "Agricultural mapping",
+     "he_card": "מיפוי חקלאי ו-NDVI", "en_card": "Agricultural mapping and NDVI"},
+    {"id": "infrastructure", "icon": "terrain.svg", "card_slot": "card-infra",
+     "he_path": "/infrastructure-municipalities/",
+     "en_path": "/en/infrastructure-municipalities/",
+     "he_nav": "תשתיות ורשויות", "en_nav": "Infrastructure",
+     "he_card": "תשתיות ורשויות מקומיות", "en_card": "Infrastructure and municipalities"},
+    {"id": "ndt", "icon": "industrial.svg", "card_slot": "card-ndt",
+     "he_path": "/drone-ndt-inspection/",
+     "en_path": "/en/drone-ndt-inspection/",
+     "he_nav": "בדיקות NDT", "en_nav": "NDT inspection",
+     "he_card": "בדיקה ויזואלית ותרמית", "en_card": "Visual and thermal inspection"},
 ]
 SOLUTIONS = [
     {"id": "construction", "icon": "construction.svg", "card_slot": "card-construction",
@@ -117,6 +145,11 @@ PAGE_HERO_SLOT = {
     "3d": "3d-hero",
     "industrial": "industrial-hero",
     "surveyors": "surveyors-hero",
+    "orthophoto": "orthophoto-hero",
+    "topo": "topo-hero",
+    "agriculture": "agri-hero",
+    "infrastructure": "infra-hero",
+    "ndt": "ndt-hero",
     "process": "process-hero",
     "about": "about-hero",
     "faq": "faq-hero",
@@ -133,15 +166,20 @@ def resolve_slot(slot_id: str) -> tuple[dict, Path | None, str]:
         candidate = IMAGERY_SRC / name
         if candidate.is_file() and candidate.parent.resolve() == IMAGERY_SRC.resolve():
             return slot, candidate, expected
+        # Official brand folder is not in this checkout; published WebP already lives here.
+        published = IMAGERY_OUT / name
+        if published.is_file():
+            return slot, published, expected
     return slot, None, expected
 
 
 def publish_image(src_path: Path) -> str:
     IMAGERY_OUT.mkdir(parents=True, exist_ok=True)
     dest = IMAGERY_OUT / src_path.name
-    data = src_path.read_bytes()
-    if not dest.is_file() or dest.stat().st_size != len(data):
-        dest.write_bytes(data)
+    if src_path.resolve() != dest.resolve():
+        data = src_path.read_bytes()
+        if not dest.is_file() or dest.stat().st_size != len(data):
+            dest.write_bytes(data)
     return asset("/assets/imagery/" + dest.name)
 
 
@@ -151,13 +189,18 @@ IMAGE_COMMENT_RE = re.compile(
 
 
 def load_copy_alts() -> dict[str, dict[str, dict[str, str]]]:
-    """alts[lang][page_id][slot_id] = alt text from official copy IMAGE comments."""
+    """alts[lang][page_id][slot_id] = alt text from copy IMAGE comments."""
     out: dict[str, dict[str, dict[str, str]]] = {"he": {}, "en": {}}
     for lang in ("he", "en"):
-        folder = COPY_ROOT / lang
-        if not folder.is_dir():
-            continue
-        for md in folder.glob("*.md"):
+        for folder in (LOCAL_COPY / lang, COPY_ROOT / lang):
+            if not folder.is_dir():
+                continue
+            _read_alt_folder(out, lang, folder)
+    return out
+
+
+def _read_alt_folder(out, lang, folder: Path) -> None:
+    for md in folder.glob("*.md"):
             page_id = md.stem
             text = md.read_text(encoding="utf-8")
             found: dict[str, str] = {}
@@ -165,7 +208,6 @@ def load_copy_alts() -> dict[str, dict[str, dict[str, str]]]:
                 found[slot_id] = alt
             if found:
                 out[lang][page_id] = found
-    return out
 
 
 COPY_ALTS = load_copy_alts()
@@ -186,14 +228,23 @@ def media_slot_html(slot_id: str, lang: str, kind: str = "hero", page_id: str | 
     slot, found, expected = resolve_slot(slot_id)
     alt = slot_alt(slot_id, lang, page_id)
     w, h = slot.get("size") or [1200, 800]
-    badge = '<span class="media-badge">%s</span>' % e(ui["illustrative"])
+    real_photo = slot_id in {"card-construction", "card-volumes"}
+    badge = "" if real_photo else '<span class="media-badge">%s</span>' % e(ui["illustrative"])
     if found:
         href = publish_image(found)
         priority = ' fetchpriority="high"' if kind == "hero" and slot_id == "home-hero" else ' loading="lazy"'
+        cls = "hero-photo" if kind == "hero" else "card-photo"
         img = (
             '<img class="%s" src="%s" alt="%s" width="%d" height="%d" decoding="async"%s>'
-            % ("hero-photo" if kind == "hero" else "card-photo", e(href), e(alt), w, h, priority)
+            % (cls, e(href), e(alt), w, h, priority)
         )
+        jpg = found.with_suffix(".jpg")
+        if found.suffix == ".webp" and jpg.exists():
+            img = (
+                '<picture><source srcset="%s" type="image/webp">'
+                '<img class="%s" src="%s" alt="%s" width="%d" height="%d" decoding="async"%s></picture>'
+                % (e(href), cls, e(publish_image(jpg)), e(alt), w, h, priority)
+            )
         body = img + badge
         has = " has-photo"
     else:
@@ -227,16 +278,39 @@ def hero_layers(slot_id: str, lang: str, page_id: str | None = None) -> str:
 
 
 
-def wrap_sections(html: str, start: int = 0) -> str:
+def section_modifier(chunk: str) -> str:
+    match = re.search(r"<h2[^>]*>(.*?)</h2>", chunk, re.S)
+    title = re.sub(r"<[^>]+>", "", match.group(1) if match else "")
+    pairs = (
+        ("svc-faq", ("שאלות", "FAQ")),
+        ("svc-steps", ("איך זה עובד", "How it works")),
+        ("svc-who", ("למי זה מתאים", "Who it is for")),
+        ("svc-deliver", ("מה מקבלים", "What you receive")),
+        ("svc-accuracy", ("דיוק ובקרת", "Accuracy and quality")),
+        ("svc-choose", ("מתי זה מתאים", "When to use it")),
+        ("svc-limits", ("מגבלות ואישורים", "Limits and approvals")),
+        ("svc-prepare", ("מה להכין", "What to prepare")),
+    )
+    for cls, keys in pairs:
+        if any(key in title for key in keys):
+            return cls
+    return "svc-prose"
+
+
+def wrap_sections(html: str, start: int = 0, rich: bool = False) -> str:
     chunks = [c for c in re.split(r"(?=<h2\b)", html or "") if c.strip()]
     if not chunks:
         return ""
     tones = ("light pad", "dark pad")
     out = []
     for i, chunk in enumerate(chunks):
+        extra = (" svc-block " + section_modifier(chunk)) if rich else ""
+        kicker = ""
+        if rich:
+            kicker = '          <p class="svc-kicker">%02d</p>\n' % (i + 1)
         out.append(
-            '    <section class="%s"><div class="wrap article">\n%s\n    </div></section>\n'
-            % (tones[(i + start) % 2], chunk)
+            '    <section class="%s%s"><div class="wrap article">\n%s%s\n    </div></section>\n'
+            % (tones[(i + start) % 2], extra, kicker, chunk)
         )
     return "".join(out)
 
@@ -273,22 +347,22 @@ def data_panel(lang: str) -> str:
 
 BODY_IMAGES = {
     "geodetic": [
-        {"slot": "card-survey", "h2": {"he": "מה מקבלים ממיפוי אחד", "en": "What one mapping job delivers"}},
-        {"slot": "home-panel", "h2": {"he": "מה מקבלים ממיפוי אחד", "en": "What one mapping job delivers"}},
+        {"slot": "card-survey", "h2": {"he": "מה מקבלים", "en": "What you receive"}},
+        {"slot": "home-panel", "h2": {"he": "מה מקבלים", "en": "What you receive"}},
     ],
     "gcp": [
-        {"slot": "card-gcp", "h2": {"he": "מה כולל השירות", "en": "What the service includes"}},
+        {"slot": "card-gcp", "h2": {"he": "מה מקבלים", "en": "What you receive"}},
     ],
     "3d": [
         {"slot": "card-point-cloud", "h2": {"he": "מה מקבלים", "en": "What you receive"}},
-        {"slot": "card-dimension-grid", "h2": {"he": "שימושים נפוצים", "en": "Common uses"}},
+        {"slot": "card-dimension-grid", "h2": {"he": "למי זה מתאים", "en": "Who it is for"}},
     ],
     "construction": [
-        {"slot": "card-site-walkthrough", "h2": {"he": "מה מקבלים בכל סבב", "en": "What you receive each round"}},
-        {"slot": "card-construction", "h2": {"he": "למה זה עוזר לפרויקט", "en": "How it helps the project"}},
+        {"slot": "card-site-walkthrough", "h2": {"he": "מה מקבלים", "en": "What you receive"}},
+        {"slot": "card-construction", "h2": {"he": "למי זה מתאים", "en": "Who it is for"}},
     ],
     "volumes": [
-        {"slot": "card-volumes", "h2": {"he": "איך מחשבים נפחים ברחפן", "en": "How drone volumes are calculated"}},
+        {"slot": "card-volumes", "h2": {"he": "איך זה עובד", "en": "How it works"}},
     ],
     "process": [
         {"slot": "card-site-walkthrough", "h2": {"he": "6. עיבוד ובקרת איכות", "en": "6. Processing and quality control"}},
@@ -300,14 +374,9 @@ BODY_IMAGES = {
 
 REDIRECTS = [
     # (old HE, old EN, new HE, new EN)
+    # Orthophoto, topographic survey and agricultural mapping are real pages again.
     ("/3d-models-digital-twin/", "/en/3d-models-digital-twin/",
      "/3d-modeling-point-cloud/", "/en/3d-modeling-point-cloud/"),
-    ("/orthophoto-aerial-mapping/", "/en/orthophoto-aerial-mapping/",
-     "/geodetic-mapping-rtk/", "/en/geodetic-mapping-rtk/"),
-    ("/drone-topographic-survey/", "/en/drone-topographic-survey/",
-     "/geodetic-mapping-rtk/", "/en/geodetic-mapping-rtk/"),
-    ("/agricultural-mapping-ndvi/", "/en/agricultural-mapping-ndvi/",
-     "/services/", "/en/services/"),
     ("/industries/", "/en/industries/",
      "/services/", "/en/services/"),
 ]
@@ -377,6 +446,10 @@ def stylesheets(page_id: str) -> str:
     if page_id == "contact":
         files.append("/css/contact.css")
     files.append("/css/theme.css")
+    if page_id == "home" or page_id in SERVICE_IDS:
+        files.append("/css/hero-video.css")
+    if page_id in SERVICE_IDS:
+        files.append("/css/service-depth.css")
     return "\n".join('  <link rel="stylesheet" href="%s">' % asset(href) for href in files)
 
 
@@ -387,10 +460,18 @@ def slot_img(slot_id: str, lang: str, page_id: str | None, cls: str, lazy: bool 
     if found:
         href = publish_image(found)
         extra = ' fetchpriority="high"' if fetchpriority else (' loading="lazy"' if lazy else "")
-        return (
+        img = (
             '<img class="%s" src="%s" alt="%s" width="%d" height="%d" decoding="async"%s data-slot="%s">'
             % (e(cls), e(href), e(alt), w, h, extra, e(slot_id))
         )
+        jpg = found.with_suffix(".jpg")
+        if found.suffix == ".webp" and jpg.exists():
+            img = (
+                '<picture><source srcset="%s" type="image/webp">'
+                '<img class="%s" src="%s" alt="%s" width="%d" height="%d" decoding="async"%s data-slot="%s"></picture>'
+                % (e(href), e(cls), e(publish_image(jpg)), e(alt), w, h, extra, e(slot_id))
+            )
+        return img
     standin = STANDIN_SRC.get(slot.get("standin") or "elevation", STANDIN_SRC["elevation"])
     return (
         '<img class="%s" src="%s" alt="%s" width="%d" height="%d" decoding="async" loading="lazy" data-slot="%s" data-pending="true">'
@@ -398,8 +479,11 @@ def slot_img(slot_id: str, lang: str, page_id: str | None, cls: str, lazy: bool 
     )
 
 
-def page_hero_media(slot_id: str, lang: str, page_id: str | None = None) -> str:
-    return "      %s\n" % slot_img(slot_id, lang, page_id, "bg", lazy=False, fetchpriority=True)
+def page_hero_media(slot_id: str, lang: str, page_id: str | None = None, video: bool = False) -> str:
+    img = slot_img(slot_id, lang, page_id, "bg", lazy=False, fetchpriority=True)
+    if not video:
+        return "      %s\n" % img
+    return '      <div class="hero-stage" data-hero-stage>\n        %s\n      </div>\n' % img
 
 
 def all_offerings() -> list[dict]:
@@ -530,7 +614,7 @@ def write_redirects() -> list[str]:
         for lang, old, new in (("he", he_old, he_new), ("en", en_old, en_new)):
             dest = OUT / url_to_file(old)
             dest.parent.mkdir(parents=True, exist_ok=True)
-            dest.write_text(render_redirect(lang, old, new), encoding="utf-8")
+            dest.write_text(with_base(render_redirect(lang, old, new)), encoding="utf-8")
             written.append(old)
     return written
 
@@ -561,12 +645,39 @@ def parse_front_matter(text: str) -> tuple[dict, str]:
     return meta, parts[2].strip()
 
 
-def load_copy(lang: str, name: str) -> tuple[dict, str]:
-    return parse_front_matter((COPY_ROOT / lang / name).read_text(encoding="utf-8"))
+def copy_file(lang: str, name: str) -> Path | None:
+    local = LOCAL_COPY / lang / name
+    if local.is_file():
+        return local
+    official = COPY_ROOT / lang / name
+    if official.is_file():
+        return official
+    return None
+
+
+def load_copy(lang: str, name: str):
+    path = copy_file(lang, name)
+    if path is None:
+        return None
+    return parse_front_matter(path.read_text(encoding="utf-8"))
 
 
 def asset(path: str) -> str:
     return path if path.startswith("/") else "/" + path
+
+
+def with_base(html: str) -> str:
+    """Prefix root-relative links so GitHub Pages project hosting resolves them."""
+    if not BASE_PATH:
+        return html
+
+    def repl(match: re.Match) -> str:
+        attr, quote, url = match.group(1), match.group(2), match.group(3)
+        if not url.startswith("/") or url.startswith("//") or url.startswith(BASE_PATH + "/"):
+            return match.group(0)
+        return "%s=%s%s%s" % (attr, quote, BASE_PATH, url)
+
+    return re.sub(r'\b(href|src)=(["\'])([^"\']*)', repl, html)
 
 
 def abs_url(path: str) -> str:
@@ -1351,7 +1462,7 @@ def page_document(lang, page_id, path, alt_path, title, description, body_html, 
   <script src="%s"></script>
   <script src="%s"></script>
   <script src="%s"></script>
-</body>
+%s</body>
 </html>
 """ % (
         code, direction,
@@ -1370,6 +1481,8 @@ def page_document(lang, page_id, path, alt_path, title, description, body_html, 
         body_html,
         render_footer(lang),
         asset("/js/config.js"), asset("/js/home-nav.js"), asset("/js/main.js"),
+        ('  <script src="%s"></script>\n' % asset("/js/hero-video.js"))
+        if (page_id == "home" or page_id in SERVICE_IDS) else "",
     )
 
 
@@ -1396,7 +1509,7 @@ def font_preloads(lang):
 def write_page(lang, page_id, path, alt_path, title, description, body_html, schema):
     dest = OUT / url_to_file(path)
     dest.parent.mkdir(parents=True, exist_ok=True)
-    dest.write_text(page_document(lang, page_id, path, alt_path, title, description, body_html, schema), encoding="utf-8")
+    dest.write_text(with_base(page_document(lang, page_id, path, alt_path, title, description, body_html, schema)), encoding="utf-8")
     return dest
 
 
@@ -1409,18 +1522,22 @@ def split_cta(html_body: str) -> tuple[str, str]:
 
 
 
-def render_page_hero(lang, page_id, h1, dek: str = "", compact: bool = False, eyebrow: str = "") -> str:
+def render_page_hero(lang, page_id, h1, dek: str = "", compact: bool = False, eyebrow: str = "", chips: str = "", video: bool = False) -> str:
     slot = PAGE_HERO_SLOT.get(page_id, "services-hero")
     klass = "page-hero page-hero-compact" if compact else "page-hero"
     eye = ('        <p class="eyebrow">%s</p>\n' % e(eyebrow)) if eyebrow else ""
     dek_html = ('        <p class="dek">%s</p>\n' % dek) if dek else ""
+    chip_html = ""
+    if chips:
+        items = "".join("<li>%s</li>" % e(part.strip()) for part in chips.split("|") if part.strip())
+        chip_html = '        <ul class="hero-chips">%s</ul>\n' % items
     return """    <section class="%s">
 %s      <div class="wrap">
         %s
 %s        <h1>%s</h1>
-%s      </div>
+%s%s      </div>
     </section>
-""" % (klass, page_hero_media(slot, lang, page_id), breadcrumbs(lang, page_id, h1), eye, e(h1), dek_html)
+""" % (klass, page_hero_media(slot, lang, page_id, video=video), breadcrumbs(lang, page_id, h1), eye, e(h1), dek_html, chip_html)
 
 
 def wrap_article(lang, page_id, h1, article_html, show_cards=False, compact=False, dek="") -> str:
@@ -1523,8 +1640,8 @@ INDUSTRY_CARDS = [
         "en_title": "Infrastructure and local authorities",
         "he_blurb": "מיפוי ומדידות ברחפן לחברות תשתית ולרשויות מקומיות, בכפוף לאישורי טיסה ולמגבלות המרחב האווירי.",
         "en_blurb": "Drone mapping and survey data for infrastructure companies and local authorities, subject to flight approvals and airspace limits.",
-        "he_path": "/services/",
-        "en_path": "/en/services/",
+        "he_path": "/infrastructure-municipalities/",
+        "en_path": "/en/infrastructure-municipalities/",
     },
 ]
 
@@ -2029,7 +2146,10 @@ def render_service_page(lang, page_id, meta, body) -> str:
     intro_html = render_markdown(preamble, lang, page_id, skip_h1=True)
     dek_m = re.search(r"<p>(.*?)</p>", intro_html, re.S)
     dek = dek_m.group(1) if dek_m else ""
-    hero = render_page_hero(lang, page_id, meta["h1"], dek=dek, compact=False)
+    hero = render_page_hero(
+        lang, page_id, meta["h1"], dek=dek, compact=False,
+        eyebrow=meta.get("eyebrow", ""), chips=meta.get("chips", ""), video=True,
+    )
     if dek_m:
         intro_html = intro_html.replace(dek_m.group(0), "", 1)
 
@@ -2052,26 +2172,40 @@ def render_service_page(lang, page_id, meta, body) -> str:
     rest_md = "".join("## %s\n\n%s\n\n" % (t, r) for t, r in rest_parts)
     rest_html = render_markdown(rest_md, lang, page_id, skip_h1=False)
     rest_html = inject_body_images(rest_html, page_id, lang)
+    rest_html = faq_details(rest_html)
     main, cta = split_cta(rest_html)
     cta_html = '    <section class="cta-banner pad" id="cta"><div class="wrap">%s</div></section>\n' % cta if cta else ""
 
-    related = """    <section class="dark pad related-services">
+    related_label = "שירותים קרובים" if lang == "he" else "Related services"
+    related_eye = "המשך" if lang == "he" else "Continue"
+    related = """    <section class="dark pad related-services svc-related">
       <div class="wrap">
+        <p class="eyebrow">%s</p>
         <h2 class="h2">%s</h2>
         %s
       </div>
     </section>
-""" % (e(ui["services"]), photo_service_cards(lang, page_id=page_id, exclude=page_id))
+""" % (e(related_eye), e(related_label), photo_service_cards(lang, page_id=page_id, exclude=page_id))
 
     intro_sec = ""
     if intro_html.strip():
-        intro_sec = """    <section class="light pad">
+        intro_sec = """    <section class="light pad svc-block svc-prose">
       <div class="wrap article">
         %s
       </div>
     </section>
 """ % intro_html
-    return hero + intro_sec + media + wrap_sections(main) + related + cta_html
+    return hero + intro_sec + media + wrap_sections(main, rich=True) + related + cta_html
+
+
+def faq_details(html: str) -> str:
+    """Turn FAQ blocks into native disclosure widgets."""
+    return re.sub(
+        r'<div class="faq-item"><p class="q">(.*?)</p><div class="a">(.*?)</div></div>',
+        r'<details class="faq-item"><summary class="q">\1</summary><div class="a">\2</div></details>',
+        html,
+        flags=re.S,
+    )
 
 
 def render_simple_page(lang, page_id, meta, body, show_cards=False) -> str:
@@ -2095,6 +2229,11 @@ COPY_PAGES = [
     ("3d", "3d.md"),
     ("industrial", "industrial.md"),
     ("surveyors", "surveyors.md"),
+    ("orthophoto", "orthophoto.md"),
+    ("topo", "topo.md"),
+    ("agriculture", "agriculture.md"),
+    ("infrastructure", "infrastructure.md"),
+    ("ndt", "ndt.md"),
     ("process", "process.md"),
     ("about", "about.md"),
     ("faq", "faq.md"),
@@ -2119,7 +2258,10 @@ def split_legal(body: str) -> tuple[tuple[str, str], tuple[str, str]]:
 
 def build_legal(lang: str) -> list[str]:
     ui = UI[lang]
-    _meta, body = load_copy(lang, "legal.md")
+    loaded = load_copy(lang, "legal.md")
+    if not loaded:
+        return []
+    _meta, body = loaded
     priv, acc = split_legal(body)
     pfx = "" if lang == "he" else "/en"
     built = []
@@ -2173,12 +2315,40 @@ def build_utility(lang: str, page_id: str) -> str:
     return path
 
 
+STATIC_SITEMAP = [
+    ("/", "/en/"),
+    ("/services/", "/en/services/"),
+    ("/construction-progress-monitoring/", "/en/construction-progress-monitoring/"),
+    ("/volume-calculation-earthworks/", "/en/stockpile-volume-calculation/"),
+    ("/geodetic-mapping-rtk/", "/en/geodetic-mapping-rtk/"),
+    ("/ground-control-points-gcp/", "/en/ground-control-points-gcp/"),
+    ("/terrain-follow-mapping/", "/en/terrain-follow-mapping/"),
+    ("/3d-modeling-point-cloud/", "/en/3d-modeling-point-cloud/"),
+    ("/industrial-drone-photography/", "/en/industrial-drone-photography/"),
+    ("/aerial-data-for-surveyors/", "/en/aerial-data-for-surveyors/"),
+    ("/orthophoto-aerial-mapping/", "/en/orthophoto-aerial-mapping/"),
+    ("/drone-topographic-survey/", "/en/drone-topographic-survey/"),
+    ("/agricultural-mapping-ndvi/", "/en/agricultural-mapping-ndvi/"),
+    ("/infrastructure-municipalities/", "/en/infrastructure-municipalities/"),
+    ("/drone-ndt-inspection/", "/en/drone-ndt-inspection/"),
+    ("/process/", "/en/process/"),
+    ("/about/", "/en/about/"),
+    ("/faq/", "/en/faq/"),
+    ("/contact/", "/en/contact/"),
+    ("/blog/", "/en/blog/"),
+    ("/privacy/", "/en/privacy/"),
+    ("/accessibility/", "/en/accessibility/"),
+]
+
+
 def sitemap_entries() -> list[tuple[str, str]]:
     entries = []
     for _pid, fname in COPY_PAGES:
-        he_meta, _ = load_copy("he", fname)
-        en_meta, _ = load_copy("en", fname)
-        entries.append((he_meta["url"], en_meta["url"]))
+        he = load_copy("he", fname)
+        en = load_copy("en", fname)
+        if not he or not en:
+            return list(STATIC_SITEMAP)
+        entries.append((he[0]["url"], en[0]["url"]))
     entries.append(("/privacy/", "/en/privacy/"))
     entries.append(("/accessibility/", "/en/accessibility/"))
     return entries
@@ -2234,13 +2404,249 @@ def write_config() -> None:
     (OUT / "config.json").write_text(json.dumps(cfg, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
+def patch_existing_pages() -> int:
+    """Add the new service links to pages that were not rebuilt from copy."""
+    extra = {
+        "he": [
+            ("/droneatlas/orthophoto-aerial-mapping/", "אורתופוטו"),
+            ("/droneatlas/drone-topographic-survey/", "מדידה טופוגרפית"),
+            ("/droneatlas/agricultural-mapping-ndvi/", "מיפוי חקלאי"),
+            ("/droneatlas/infrastructure-municipalities/", "תשתיות ורשויות"),
+            ("/droneatlas/drone-ndt-inspection/", "בדיקות NDT"),
+        ],
+        "en": [
+            ("/droneatlas/en/orthophoto-aerial-mapping/", "Orthophoto"),
+            ("/droneatlas/en/drone-topographic-survey/", "Topographic survey"),
+            ("/droneatlas/en/agricultural-mapping-ndvi/", "Agricultural mapping"),
+            ("/droneatlas/en/infrastructure-municipalities/", "Infrastructure"),
+            ("/droneatlas/en/drone-ndt-inspection/", "NDT inspection"),
+        ],
+    }
+    changed = 0
+    for path in OUT.rglob("*.html"):
+        if "option-b" in path.parts:
+            continue
+        rel = path.relative_to(OUT)
+        lang = "en" if rel.parts and rel.parts[0] == "en" else "he"
+        text = path.read_text(encoding="utf-8")
+        orig = text
+        text = _patch_nav(text, extra[lang])
+        key = str(rel)
+        if key in ("index.html", "en/index.html"):
+            text = _patch_home(text, lang)
+        if key in ("services/index.html", "en/services/index.html"):
+            text = _patch_services_hub(text, lang)
+        if key in ("faq/index.html", "en/faq/index.html"):
+            text = _patch_faq(text, lang)
+        if 'value="surveyors"' in text and 'value="ndt"' not in text:
+            text = _patch_form(text, lang)
+        if text != orig:
+            path.write_text(text, encoding="utf-8")
+            changed += 1
+    return changed
+
+
+def _patch_nav(html: str, extras: list[tuple[str, str]]) -> str:
+    if "/drone-ndt-inspection/" in html:
+        return html
+
+    def repl(match: re.Match) -> str:
+        indent = match.group(1)
+        li = match.group(2) or ""
+        lines = [match.group(0).rstrip("\n")]
+        for href, label in extras:
+            anchor = '<a href="%s">%s</a>' % (href, label)
+            if li:
+                lines.append("%s<li>%s</li>" % (indent, anchor))
+            else:
+                lines.append("%s%s" % (indent, anchor))
+        return "\n".join(lines)
+
+    return re.sub(
+        r"^([ \t]*)(<li>)?(<a href=\"/droneatlas(?:/en)?/industrial-drone-photography/\">[^<]+</a>)(</li>)?",
+        repl,
+        html,
+        flags=re.M,
+    )
+
+
+def _cards(lang: str) -> str:
+    if lang == "he":
+        rows = [
+            ("/droneatlas/orthophoto-aerial-mapping/", "card-contours-hillshade.webp", "איור להמחשה: קווי גובה על הצללת תבליט", "card-orthophoto", "אורתופוטו ומיפוי אווירי"),
+            ("/droneatlas/drone-topographic-survey/", "card-geodetic.webp", "איור להמחשה: מפת תבליט עם רשת קואורדינטות ונקודות בקרה", "card-topo", "מדידה טופוגרפית ברחפן"),
+            ("/droneatlas/agricultural-mapping-ndvi/", "home-panel.webp", "איור להמחשה: השוואה בין תבליט פני השטח לבין מפת גבהים צבעונית", "card-agri", "מיפוי חקלאי ו-NDVI"),
+            ("/droneatlas/infrastructure-municipalities/", "card-terrain.webp", "איור להמחשה: חתך פני שטח ומסלול טיסה עוקב קרקע", "card-infra", "תשתיות ורשויות מקומיות"),
+            ("/droneatlas/drone-ndt-inspection/", "card-roof-overlay-dimension-grid.webp", "איור להמחשה: רשת מידות על גבי מבנה", "card-ndt", "בדיקה ויזואלית ותרמית"),
+        ]
+    else:
+        rows = [
+            ("/droneatlas/en/orthophoto-aerial-mapping/", "card-contours-hillshade.webp", "Illustrative contours over hillshade", "card-orthophoto", "Orthophoto and aerial mapping"),
+            ("/droneatlas/en/drone-topographic-survey/", "card-geodetic.webp", "Illustrative relief map with a coordinate grid and control points", "card-topo", "Drone topographic survey"),
+            ("/droneatlas/en/agricultural-mapping-ndvi/", "home-panel.webp", "Illustrative split view of a surface model and a colourful elevation map", "card-agri", "Agricultural mapping and NDVI"),
+            ("/droneatlas/en/infrastructure-municipalities/", "card-terrain.webp", "Illustrative terrain profile with a terrain-follow flight path", "card-infra", "Infrastructure and municipalities"),
+            ("/droneatlas/en/drone-ndt-inspection/", "card-roof-overlay-dimension-grid.webp", "Illustrative dimension grid over a structure", "card-ndt", "Visual and thermal inspection"),
+        ]
+    blocks = []
+    for href, file, alt, slot, label in rows:
+        blocks.append(
+            """   <a class="svc-photo" href="%s">
+    <img class="card-photo" src="/droneatlas/assets/imagery/%s" alt="%s" width="1200" height="800" decoding="async" loading="lazy" data-slot="%s">
+    <span class="svc-photo-cap"><span>%s</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+   </a>""" % (href, file, alt, slot, label)
+        )
+    return "\n".join(blocks)
+
+
+def _patch_home(html: str, lang: str) -> str:
+    if 'data-hero-stage' not in html:
+        html = html.replace('<section class="hero">', '<section class="hero" data-hero-stage>', 1)
+    if "hero-video.css" not in html:
+        html = html.replace(
+            'href="/droneatlas/css/theme.css">',
+            'href="/droneatlas/css/theme.css">\n  <link rel="stylesheet" href="/droneatlas/css/hero-video.css">',
+            1,
+        )
+    if "hero-video.js" not in html:
+        html = html.replace(
+            'src="/droneatlas/js/main.js"></script>',
+            'src="/droneatlas/js/main.js"></script>\n  <script src="/droneatlas/js/hero-video.js"></script>',
+            1,
+        )
+    if lang == "he":
+        html = html.replace(
+            '<a class="industry-card" href="/droneatlas/services/">\n          <span class="pic"><img class="card-photo" src="/droneatlas/assets/imagery/card-geodetic.webp" alt="איור להמחשה: מפת תבליט עם רשת קואורדינטות ונקודות בקרה"',
+            '<a class="industry-card" href="/droneatlas/infrastructure-municipalities/">\n          <span class="pic"><img class="card-photo" src="/droneatlas/assets/imagery/card-geodetic.webp" alt="איור להמחשה: מפת תבליט עם רשת קואורדינטות ונקודות בקרה"',
+            1,
+        )
+        if "עמודים ייעודיים" not in html:
+            html = html.replace(
+                "<p>ולמודדים:",
+                "<p>עמודים ייעודיים נוספים:</p>\n<ul><li><strong><a href=\"/droneatlas/orthophoto-aerial-mapping/\">אורתופוטו ומיפוי אווירי</a></strong>: מפה מיושרת שאפשר למדוד עליה ולהניח עליה תוכניות.</li><li><strong><a href=\"/droneatlas/drone-topographic-survey/\">מדידה טופוגרפית ברחפן</a></strong>: מודל קרקע, קווי גובה וענן נקודות. תוכנית סטטוטורית נחתמת בידי מודד מוסמך שותף.</li><li><strong><a href=\"/droneatlas/agricultural-mapping-ndvi/\">מיפוי חקלאי</a></strong>: אורתופוטו של חלקה, ומפת מדד צומח כגון NDVI כשהחיישן מתאים.</li><li><strong><a href=\"/droneatlas/infrastructure-municipalities/\">תשתיות ורשויות מקומיות</a></strong>: מיפוי כבישים, קווים ומצב קיים, בכפוף לאישורי טיסה.</li><li><strong><a href=\"/droneatlas/drone-ndt-inspection/\">בדיקה ויזואלית ותרמית</a></strong>: צילום ברזולוציה גבוהה וצילום תרמי של גגות, חזיתות ומתקנים.</li></ul>\n<p>ולמודדים:",
+                1,
+            )
+    else:
+        html = html.replace(
+            '<a class="industry-card" href="/droneatlas/en/services/">\n          <span class="pic"><img class="card-photo" src="/droneatlas/assets/imagery/card-geodetic.webp" alt="Illustrative relief map with a coordinate grid and control points"',
+            '<a class="industry-card" href="/droneatlas/en/infrastructure-municipalities/">\n          <span class="pic"><img class="card-photo" src="/droneatlas/assets/imagery/card-geodetic.webp" alt="Illustrative relief map with a coordinate grid and control points"',
+            1,
+        )
+        if "Further service pages" not in html:
+            html = html.replace(
+                "<p>And for surveyors:",
+                "<p>Further service pages:</p>\n<ul><li><strong><a href=\"/droneatlas/en/orthophoto-aerial-mapping/\">Orthophoto and aerial mapping</a></strong>: a corrected map you can measure on and overlay plans on.</li><li><strong><a href=\"/droneatlas/en/drone-topographic-survey/\">Drone topographic survey</a></strong>: a ground model, contours and a point cloud. A statutory plan is signed by a partner licensed surveyor.</li><li><strong><a href=\"/droneatlas/en/agricultural-mapping-ndvi/\">Agricultural mapping</a></strong>: a field orthophoto, and a vegetation-index map such as NDVI when the sensor fits.</li><li><strong><a href=\"/droneatlas/en/infrastructure-municipalities/\">Infrastructure and municipalities</a></strong>: mapping of roads, lines and existing conditions, subject to flight approvals.</li><li><strong><a href=\"/droneatlas/en/drone-ndt-inspection/\">Visual and thermal inspection</a></strong>: high-resolution and thermal imagery of roofs, facades and plant.</li></ul>\n<p>And for surveyors:",
+                1,
+            )
+    if 'data-slot="card-orthophoto"' not in html:
+        html = html.replace(
+            "</div>\n        <div class=\"article\"",
+            _cards(lang) + "\n</div>\n        <div class=\"article\"",
+            1,
+        )
+    return html
+
+
+def _patch_services_hub(html: str, lang: str) -> str:
+    if 'data-slot="card-orthophoto"' not in html:
+        html = html.replace(
+            "</a>\n</div></div>\n    </section>",
+            "</a>\n" + _cards(lang) + "\n</div></div>\n    </section>",
+            1,
+        )
+    if lang == "he" and "עמודים ייעודיים" not in html:
+        html = html.replace(
+            "דרון אטלס מציעה חמישה שירותים.",
+            "דרון אטלס מציעה חמישה שירותי ליבה, ולידם עמודים ייעודיים לאורתופוטו, למדידה טופוגרפית, לחקלאות, לתשתיות ולרשויות ולבדיקה ויזואלית ותרמית.",
+            1,
+        )
+        html = html.replace(
+            "<td>סטילס ברזולוציה גבוהה ווידאו 4K עם עריכה</td></tr></tbody>",
+            "<td>סטילס ברזולוציה גבוהה ווידאו 4K עם עריכה</td></tr>"
+            "<tr><td><a href=\"/droneatlas/orthophoto-aerial-mapping/\">אורתופוטו ומיפוי אווירי</a></td><td>אורתופוטו GeoTIFF / ECW, כיסוי, מוכן ל-CAD ול-GIS</td></tr>"
+            "<tr><td><a href=\"/droneatlas/drone-topographic-survey/\">מדידה טופוגרפית ברחפן</a></td><td>DTM, קווי גובה, ענן נקודות. חתימה סטטוטורית בידי מודד מוסמך שותף</td></tr>"
+            "<tr><td><a href=\"/droneatlas/agricultural-mapping-ndvi/\">מיפוי חקלאי ו-NDVI</a></td><td>אורתופוטו של החלקה, ומפת מדד צומח כשהחיישן מתאים</td></tr>"
+            "<tr><td><a href=\"/droneatlas/infrastructure-municipalities/\">תשתיות ורשויות מקומיות</a></td><td>מיפוי רצועות ומצב קיים, בכפוף לאישורי טיסה</td></tr>"
+            "<tr><td><a href=\"/droneatlas/drone-ndt-inspection/\">בדיקה ויזואלית ותרמית</a></td><td>תמונות ברזולוציה גבוהה, תמונות תרמיות, יומן ממצאים ודוח</td></tr></tbody>",
+            1,
+        )
+    if lang == "en" and "dedicated pages" not in html:
+        html = html.replace(
+            "DroneAtlas offers five services.",
+            "DroneAtlas offers five core services, plus dedicated pages for orthophoto, topographic survey, agriculture, infrastructure and municipalities, and visual and thermal inspection.",
+            1,
+        )
+        html = html.replace(
+            "<td>High-resolution stills and edited 4K video</td></tr></tbody>",
+            "<td>High-resolution stills and edited 4K video</td></tr>"
+            "<tr><td><a href=\"/droneatlas/en/orthophoto-aerial-mapping/\">Orthophoto and aerial mapping</a></td><td>GeoTIFF / ECW orthophoto and coverage, ready for CAD and GIS</td></tr>"
+            "<tr><td><a href=\"/droneatlas/en/drone-topographic-survey/\">Drone topographic survey</a></td><td>DTM, contours, point cloud. Statutory signature by a partner licensed surveyor</td></tr>"
+            "<tr><td><a href=\"/droneatlas/en/agricultural-mapping-ndvi/\">Agricultural mapping and NDVI</a></td><td>Field orthophoto, and a vegetation-index map when the sensor fits</td></tr>"
+            "<tr><td><a href=\"/droneatlas/en/infrastructure-municipalities/\">Infrastructure and municipalities</a></td><td>Corridor and existing-condition mapping, subject to flight approvals</td></tr>"
+            "<tr><td><a href=\"/droneatlas/en/drone-ndt-inspection/\">Visual and thermal inspection</a></td><td>High-resolution images, thermal images, a finding log and a report</td></tr></tbody>",
+            1,
+        )
+    return html
+
+
+def _patch_faq(html: str, lang: str) -> str:
+    if lang == "he":
+        html = html.replace(
+            'href="/droneatlas/geodetic-mapping-rtk/">עוד על אורתופוטו',
+            'href="/droneatlas/orthophoto-aerial-mapping/">עוד על אורתופוטו',
+        )
+        html = html.replace(
+            'href="/droneatlas/geodetic-mapping-rtk/">עוד על מדידות ברחפן',
+            'href="/droneatlas/drone-topographic-survey/">עוד על מדידות ברחפן',
+        )
+    else:
+        html = html.replace(
+            'href="/droneatlas/en/geodetic-mapping-rtk/">More on orthophotos',
+            'href="/droneatlas/en/orthophoto-aerial-mapping/">More on orthophotos',
+        )
+        html = html.replace(
+            'href="/droneatlas/en/geodetic-mapping-rtk/">More on drone surveys',
+            'href="/droneatlas/en/drone-topographic-survey/">More on drone surveys',
+        )
+    return html
+
+
+def _patch_form(html: str, lang: str) -> str:
+    if lang == "he":
+        extra = (
+            '\n          <option value="orthophoto">אורתופוטו</option>'
+            '\n          <option value="topo">מדידה טופוגרפית</option>'
+            '\n          <option value="agriculture">מיפוי חקלאי</option>'
+            '\n          <option value="infrastructure">תשתיות ורשויות</option>'
+            '\n          <option value="ndt">בדיקה ויזואלית ותרמית</option>'
+        )
+    else:
+        extra = (
+            '\n          <option value="orthophoto">Orthophoto</option>'
+            '\n          <option value="topo">Topographic survey</option>'
+            '\n          <option value="agriculture">Agricultural mapping</option>'
+            '\n          <option value="infrastructure">Infrastructure</option>'
+            '\n          <option value="ndt">Visual and thermal inspection</option>'
+        )
+    return html.replace(
+        '<option value="surveyors">',
+        extra + '\n          <option value="surveyors">',
+        1,
+    )
+
+
 def main() -> None:
     built = []
+    partial = copy_file("he", "home.md") is None
     for lang in ("he", "en"):
         for page_id, fname in COPY_PAGES:
-            meta, body = load_copy(lang, fname)
+            loaded = load_copy(lang, fname)
+            if not loaded:
+                print(" skip missing copy", lang, fname)
+                continue
+            meta, body = loaded
             other = "en" if lang == "he" else "he"
-            other_meta, _ = load_copy(other, fname)
+            other_loaded = load_copy(other, fname)
+            other_meta = other_loaded[0] if other_loaded else meta
             path = meta["url"]
             alt = meta.get("hreflang_alternate") or other_meta["url"]
             title = meta["title"]
@@ -2259,18 +2665,21 @@ def main() -> None:
             schema = build_schema(lang, page_id, path, meta, body, schema_hint)
             write_page(lang, page_id, path, alt, title, desc, html_body, schema)
             built.append(path)
-        built.extend(build_legal(lang))
-        built.append(build_utility(lang, "thanks"))
-        built.append(build_utility(lang, "404"))
+        if not partial:
+            built.extend(build_legal(lang))
+            built.append(build_utility(lang, "thanks"))
+            built.append(build_utility(lang, "404"))
     write_robots_and_sitemap()
     write_config()
     redirects = write_redirects()
+    patched = patch_existing_pages()
     print("Built %d routes" % len(built))
     for p in built:
         print(" ", p)
     print("Redirects %d (noindex, not in sitemap)" % len(redirects))
     for p in redirects:
         print(" ", p, "->")
+    print("Patched %d existing files" % patched)
 
 
 if __name__ == "__main__":

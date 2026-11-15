@@ -19,6 +19,7 @@
   --btn:#EDEDED;
   --btn-ink:#000000;
   --focus:#EDEDED;
+  --brand-green:#22c55e;
   --grad:linear-gradient(90deg,#EDEDED 0%,#A8A8A8 100%);
   --he:"Heebo",system-ui,sans-serif;
   --num:"Space Grotesk","Heebo",sans-serif;
@@ -206,6 +207,8 @@ input:focus,select:focus,textarea:focus,
 }
 .hero video{display:none}
 .hero-kicker,.hero-field,.hero-scroll-label{color:rgba(237,237,237,.8);font-family:var(--mono)}
+.hero .hero-kicker b,
+.b-kicker b{color:var(--brand-green);font-weight:650}
 .hero h1 .accent{color:var(--text)}
 .hero-side p{color:rgba(237,237,237,.86)}
 [dir="ltr"] .hero-side p{text-align:left}

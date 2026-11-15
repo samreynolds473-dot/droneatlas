@@ -12,7 +12,7 @@
   background:var(--h-paper);
   color:#fff;
 }
-/* Poster image fills the hero; no video. */
+/* Poster fills the hero until assets/video/hero-1|2|3 exist. See js/hero-video.js. */
 .hero video,
 .hero .poster{
   object-fit:cover;

@@ -1,0 +1,177 @@
+/* Service pages: editorial rhythm inspired by a long-form geospatial layout.
+   Palette, type and imagery stay DroneAtlas. */
+.page-hero .eyebrow{
+  margin:0 0 12px;
+  font-family:var(--mono);
+  font-size:12px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--muted);
+}
+.hero-chips{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin:22px 0 0;
+  padding:0;
+  list-style:none;
+}
+.hero-chips li{
+  font-family:var(--mono);
+  font-size:12px;
+  letter-spacing:.04em;
+  color:var(--text);
+  border:1px solid var(--line-strong);
+  background:rgba(0,0,0,.35);
+  border-radius:999px;
+  padding:6px 10px;
+}
+.svc-block{padding-block:clamp(64px,8vw,104px)}
+.svc-block h2{
+  font-family:var(--display);
+  font-weight:700;
+  font-size:clamp(28px,3.4vw,44px);
+  letter-spacing:-.03em;
+  line-height:1.15;
+  margin:0 0 22px;
+  max-width:16em;
+}
+.svc-kicker{
+  margin:0 0 10px;
+  font-family:var(--mono);
+  font-size:12px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--muted);
+}
+
+.svc-steps ol{
+  list-style:none;
+  margin:8px 0 0;
+  padding:0;
+  counter-reset:step;
+}
+.svc-steps li{
+  counter-increment:step;
+  display:grid;
+  grid-template-columns:auto minmax(0,1fr);
+  gap:18px 22px;
+  align-items:start;
+  padding:22px 0;
+  border-top:1px solid var(--line);
+}
+.svc-steps li::before{
+  content:counter(step, decimal-leading-zero);
+  font-family:var(--mono);
+  font-size:13px;
+  letter-spacing:.12em;
+  color:var(--muted);
+  padding-top:6px;
+}
+.svc-steps li strong{display:block;color:var(--text);font-size:18px;margin-bottom:6px}
+
+.svc-who ul{
+  list-style:none;
+  margin:8px 0 0;
+  padding:0;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+.svc-who li{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:20px 22px 18px;
+  color:var(--muted);
+}
+.svc-who li strong{display:block;color:var(--text);font-size:18px;margin-bottom:6px}
+
+.svc-deliver .table-wrap{
+  border:1px solid var(--line);
+  border-radius:16px;
+  overflow:auto;
+  background:var(--card);
+}
+.svc-deliver table{width:100%;border-collapse:collapse;min-width:520px}
+.svc-deliver th,
+.svc-deliver td{
+  text-align:start;
+  padding:14px 16px;
+  border-bottom:1px solid var(--line);
+  vertical-align:top;
+}
+.svc-deliver th{
+  font-family:var(--mono);
+  font-size:12px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--muted);
+  font-weight:500;
+}
+.svc-deliver tr:last-child td{border-bottom:0}
+
+.svc-prepare ul,
+.svc-choose ul{margin-top:8px}
+.svc-prepare li,
+.svc-choose li{margin:0 0 10px}
+
+.svc-faq .faq-item{
+  border-top:1px solid var(--line);
+  padding:4px 0 8px;
+}
+.svc-faq .faq-item:last-child{border-bottom:1px solid var(--line)}
+.svc-faq summary.q{
+  cursor:pointer;
+  list-style:none;
+  display:flex;
+  justify-content:space-between;
+  gap:16px;
+  align-items:baseline;
+  padding:16px 0;
+  font-weight:650;
+  color:var(--text);
+}
+.svc-faq summary.q::-webkit-details-marker{display:none}
+.svc-faq summary.q::after{
+  content:"+";
+  font-family:var(--mono);
+  font-weight:500;
+  color:var(--muted);
+  flex:none;
+}
+.svc-faq details[open] summary.q::after{content:"–"}
+.svc-faq summary.q:focus-visible{
+  outline:2px solid var(--focus);
+  outline-offset:3px;
+}
+.svc-faq .a{padding:0 0 14px;max-width:68ch}
+.svc-faq .a p{margin:0;color:var(--muted)}
+
+.svc-related .eyebrow{margin-bottom:8px}
+.air-media{
+  border-radius:18px;
+  overflow:hidden;
+  border:1px solid var(--line);
+  background:var(--card);
+}
+.air-media .air-photo{display:block;width:100%;height:auto}
+
+.svc-block,
+.related-services,
+.cta-banner{
+  animation:svc-in .6s ease both;
+}
+@media (prefers-reduced-motion:reduce){
+  .svc-block,.related-services,.cta-banner{animation:none}
+}
+@keyframes svc-in{
+  from{opacity:0;transform:translateY(10px)}
+  to{opacity:1;transform:none}
+}
+
+@media (max-width:800px){
+  .svc-who ul{grid-template-columns:1fr}
+  .svc-steps li{grid-template-columns:1fr;gap:6px}
+  .page-hero{min-height:520px}
+}

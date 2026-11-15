@@ -34,6 +34,8 @@
   <link rel="stylesheet" href="/droneatlas/css/service-page.css">
   <link rel="stylesheet" href="/droneatlas/css/home-flow.css">
   <link rel="stylesheet" href="/droneatlas/css/theme.css">
+  <link rel="stylesheet" href="/droneatlas/css/hero-video.css">
+  <link rel="stylesheet" href="/droneatlas/css/service-depth.css">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -146,6 +148,14 @@
             "@type": "Answer",
             "text": "כן, בתיאום עם מנהל האתר ובמסלול שלא עובר מעל עובדים וכלים בפעולה."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "האם הצילום כולל תרמי?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "לא. צילום תרמי הוא שירות נפרד בעמוד הבדיקה הוויזואלית והתרמית. אפשר לתאם את שניהם לאותה יציאה, אם ההצעה אומרת זאת."
+          }
         }
       ]
     }
@@ -183,6 +193,11 @@
       <a href="/droneatlas/terrain-follow-mapping/">מיפוי עוקב קרקע</a>
       <a href="/droneatlas/3d-modeling-point-cloud/">מידול תלת מימד וענן נקודות</a>
       <a href="/droneatlas/industrial-drone-photography/" aria-current="page">צילומי רחפן לתעשייה</a>
+      <a href="/droneatlas/orthophoto-aerial-mapping/">אורתופוטו</a>
+      <a href="/droneatlas/drone-topographic-survey/">מדידה טופוגרפית</a>
+      <a href="/droneatlas/agricultural-mapping-ndvi/">מיפוי חקלאי</a>
+      <a href="/droneatlas/infrastructure-municipalities/">תשתיות ורשויות</a>
+      <a href="/droneatlas/drone-ndt-inspection/">בדיקות NDT</a>
             </div>
           </div>
         </div>
@@ -218,6 +233,11 @@
       <a href="/droneatlas/terrain-follow-mapping/">מיפוי עוקב קרקע</a>
       <a href="/droneatlas/3d-modeling-point-cloud/">מידול תלת מימד וענן נקודות</a>
       <a href="/droneatlas/industrial-drone-photography/" aria-current="page">צילומי רחפן לתעשייה</a>
+      <a href="/droneatlas/orthophoto-aerial-mapping/">אורתופוטו</a>
+      <a href="/droneatlas/drone-topographic-survey/">מדידה טופוגרפית</a>
+      <a href="/droneatlas/agricultural-mapping-ndvi/">מיפוי חקלאי</a>
+      <a href="/droneatlas/infrastructure-municipalities/">תשתיות ורשויות</a>
+      <a href="/droneatlas/drone-ndt-inspection/">בדיקות NDT</a>
       </div>
     </div>
     <a href="/droneatlas/about/">אודות</a>
@@ -232,11 +252,21 @@
   </div>
   <main id="main">
     <section class="page-hero">
-      <img class="bg" src="/droneatlas/assets/imagery/hero-industrial-1920.webp" alt="איור להמחשה: צילום אווירי של אתר" width="1920" height="1080" decoding="async" fetchpriority="high" data-slot="industrial-hero">
+      <div class="hero-stage" data-hero-stage>
+        <img class="bg" src="/droneatlas/assets/imagery/hero-industrial-1920.webp" alt="איור להמחשה: צילום אווירי של אתר" width="1920" height="1080" decoding="async" fetchpriority="high" data-slot="industrial-hero">
+      </div>
       <div class="wrap">
         <nav class="crumbs" aria-label="מיקום בעמוד"><a href="/droneatlas/">בית</a><span aria-hidden="true">/</span><a href="/droneatlas/services/">שירותים</a><span aria-hidden="true">/</span><span aria-current="page">צילומי רחפן לתעשייה, לתשתיות ולפרויקטים</span></nav>
+        <p class="eyebrow">Stills · 4K · Edit</p>
         <h1>צילומי רחפן לתעשייה, לתשתיות ולפרויקטים</h1>
-        <p class="dek"><strong>צילומי רחפן לתעשייה</strong> הם צילומי סטילס ווידאו מקצועיים של מפעלים, מתקני תשתית ואתרי בנייה, מזוויות שאי אפשר להגיע אליהן מהקרקע. דרון אטלס מצלמת ברזולוציה גבוהה ובווידאו 4K, וכוללת עריכה מקצועית, כך שמקבלים חומר מוכן לתיעוד, למצגות ולשיווק.</p>
+        <p class="dek">צילומי רחפן לתעשייה הם סטילס ווידאו של מפעלים, מתקני תשתית ואתרי בנייה, מזוויות שאי אפשר להגיע אליהן מהקרקע.</p>
+        <ul class="hero-chips"><li>JPG</li><li>MP4 4K</li><li>16:9 ו-9:16</li><li>כל הארץ</li></ul>
+      </div>
+    </section>
+    <section class="light pad svc-block svc-prose">
+      <div class="wrap article">
+        
+<p>דרון אטלס מצלמת ברזולוציה גבוהה ובווידאו 4K, וכוללת עריכה, כך שמקבלים חומר מוכן לתיעוד, למצגות ולשיווק. זה אינו מיפוי מדיד. כשצריך מפה, עוברים ל<a href="/droneatlas/geodetic-mapping-rtk/">מיפוי גאודטי</a>. כשצריך לבדוק חום או מעטפת, עוברים ל<a href="/droneatlas/drone-ndt-inspection/">בדיקה ויזואלית ותרמית</a>.</p>
       </div>
     </section>
     <section class="dark pad">
@@ -244,41 +274,73 @@
         <div class="air-media"><img class="air-photo" src="/droneatlas/assets/imagery/card-industrial.webp" alt="איור להמחשה: צילום אווירי לתעשייה" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-industrial"></div>
       </div>
     </section>
-    <section class="light pad"><div class="wrap article">
+    <section class="light pad svc-block svc-who"><div class="wrap article">
+          <p class="svc-kicker">01</p>
+<h2>למי זה מתאים</h2>
+<ul><li><strong>אתרי בנייה</strong> תיעוד בסבבים לבעלים, ליזמים ולבנקים. ראו גם <a href="/droneatlas/construction-progress-monitoring/">מיפוי התקדמות</a>.</li><li><strong>מפעלים ומתקנים</strong> מצגות, דוחות ותיעוד מצב.</li><li><strong>תשתיות</strong> כבישים, קווים ומתקני אנרגיה, לתיעוד ולהצגה. ראו <a href="/droneatlas/infrastructure-municipalities/">תשתיות ורשויות</a>.</li><li><strong>מחצבות</strong> תמונת מצב של האתר כולו, בלי להיכנס לאזור הכלים.</li></ul>
+
+    </div></section>
+    <section class="dark pad svc-block svc-steps"><div class="wrap article">
+          <p class="svc-kicker">02</p>
+<h2>איך זה עובד</h2>
+<ol><li><strong>בריף</strong> מה הסרט או הסטילס צריכים להראות, ולמי.</li><li><strong>מסלול</strong> גבהים וזוויות, אנכי ואלכסוני, בלי לעבור מעל עובדים וכלים בפעולה.</li><li><strong>צילום</strong> סטילס, ווידאו 4K בתנועות מתוכננות, בפורמט רחב (16:9) ובאנכי (9:16).</li><li><strong>חזרה מאותן נקודות</strong> כשרוצים להראות שינוי לאורך זמן.</li><li><strong>עריכה</strong> בחירת קטעים, תיקון צבע, מעברים ומוזיקה מורשית <span class="dev-placeholder">[להשלמה: מקור המוזיקה ורישוי]</span>.</li></ol>
+
+    </div></section>
+    <section class="light pad svc-block svc-deliver"><div class="wrap article">
+          <p class="svc-kicker">03</p>
 <h2>מה מקבלים</h2>
-<ul><li><strong>סטילס ברזולוציה גבוהה</strong> מכמה גבהים וזוויות, כולל צילום אנכי ואלכסוני.</li><li><strong>וידאו 4K</strong> עם תנועות מצלמה מתוכננות, בפורמט רחב (16:9) ובפורמט אנכי (9:16) לרשתות.</li><li><strong>עריכה מקצועית:</strong> בחירת קטעים, תיקון צבע, מעברים ומוזיקה מורשית <span class="dev-placeholder">[להשלמה: מקור המוזיקה ורישוי]</span>.</li><li><strong>צילומים חוזרים מאותן נקודות</strong>, כדי להראות התקדמות לאורך זמן.</li><li>לפי הצורך: שילוב עם <a href="/droneatlas/3d-modeling-point-cloud/">מודל תלת מימד</a> או <a href="/droneatlas/geodetic-mapping-rtk/">אורתופוטו</a> מאותה טיסה.</li></ul>
-<p>ציוד: <span class="dev-placeholder">[להשלמה: דגם רחפן ומצלמה לצילום 4K]</span></p>
+<div class="table-wrap"><table><thead><tr><th>תוצר</th><th>מה זה</th><th>פורמט</th></tr></thead><tbody><tr><td>סטילס</td><td>כמה גבהים וזוויות</td><td>JPG</td></tr><tr><td>וידאו</td><td>4K, רחב ואנכי</td><td>MP4</td></tr><tr><td>עריכה</td><td>גרסה מוכנה להקרנה</td><td>MP4</td></tr><tr><td>שילוב</td><td>לפי הצורך, מודל תלת מימד או אורתופוטו מאותה יציאה</td><td>לפי ההצעה</td></tr></tbody></table></div>
+<p>ציוד: <span class="dev-placeholder">[להשלמה: דגם רחפן ומצלמה לצילום 4K]</span>. לבדיקה תרמית של גג, לוח סולארי או מתקן חשמל יש עמוד נפרד, <a href="/droneatlas/drone-ndt-inspection/">בדיקות NDT</a>. צילום רגיל לא מחליף אותה.</p>
 
     </div></section>
-    <section class="dark pad"><div class="wrap article">
-<h2>שימושים נפוצים</h2>
-<ul><li><strong>תיעוד אתרי בנייה</strong> בסבבים, לבעלים, ליזמים ולבנקים. ראו <a href="/droneatlas/construction-progress-monitoring/">מיפוי התקדמות בנייה</a>.</li><li><strong>מפעלים ומתקנים:</strong> מצגות, דוחות שנתיים ותיעוד מצב.</li><li><strong>תשתיות:</strong> כבישים, קווים ומתקני אנרגיה, לתיעוד ולהצגה.</li><li><strong>מחצבות ואתרי חומרי גלם:</strong> תמונת מצב של האתר כולו.</li></ul>
+    <section class="dark pad svc-block svc-accuracy"><div class="wrap article">
+          <p class="svc-kicker">04</p>
+<h2>דיוק ובקרת איכות</h2>
+<p>העמוד הזה הוא תיעוד ותקשורת, לא מדידת קואורדינטות. אין כאן דוח RMS. אם התמונות צריכות לשבת על רשת ישראל, מזמינים מיפוי במקביל ומגדירים את זה בהצעה.</p>
+<p>צילום מעל אנשים, רכבים או תשתיות דורש הסכמה בכתב של בעל האתר, ולעיתים הרשאה מיוחדת מרת&quot;א. אנחנו בודקים את זה מראש.</p>
 
     </div></section>
-    <section class="light pad"><div class="wrap article">
-<h2>בטיחות ואישורים</h2>
-<p>טיסה מעל אנשים, רכבים או תשתיות דורשת הסכמה בכתב של בעל האתר, ולעיתים הרשאה מיוחדת מרת&quot;א. אנחנו בודקים את זה מראש, מתאמים עם האחראי באתר ושומרים על פרטיות של צדדים שלישיים.</p>
+    <section class="light pad svc-block svc-choose"><div class="wrap article">
+          <p class="svc-kicker">05</p>
+<h2>מתי זה מתאים, ומתי לבחור במשהו אחר</h2>
+<ul><li><strong>מפה, נפח או קווי גובה</strong> זה <a href="/droneatlas/geodetic-mapping-rtk/">מיפוי גאודטי</a> או <a href="/droneatlas/volume-calculation-earthworks/">נפחים</a>, לא סרט.</li><li><strong>ממצא על מעטפת, רטיבות או נקודה חמה</strong> <a href="/droneatlas/drone-ndt-inspection/">בדיקה ויזואלית ותרמית</a>.</li><li><strong>חתימה על מפה</strong> לא מתקבלת מצילום. דרון אטלס אינה מודד מוסמך. התוצרים מיועדים לתכנון, לבקרה ולחישובי כמויות. תוכנית מדידה סטטוטורית, כמו מפה להיתר, תשריט לרישום או קביעת גבולות, נחתמת בידי מודד מוסמך שותף. פוטוגרמטריה לא משמשת לשחזור גבולות רשומים. אם יש במפה גבולות והיא לא מיועדת לרישום, המודד מציין עליה &quot;לא לצורכי רישום&quot;.</li></ul>
 
     </div></section>
-    <section class="dark pad"><div class="wrap article">
-<h2>שאלות נפוצות על צילומי רחפן לתעשייה</h2>
+    <section class="dark pad svc-block svc-limits"><div class="wrap article">
+          <p class="svc-kicker">06</p>
+<h2>מגבלות ואישורים</h2>
+<p>השירות ניתן בכל הארץ, בכפוף לאישורי טיסה ולמגבלות מרחב אווירי באזור האתר. הפעלה מסחרית של רחפן קטן מחייבת רישיון מטיס כטב&quot;ם מרשות התעופה האזרחית <span class="dev-placeholder">[להשלמה: מספר רישיון]</span> ורישום של כלי הטיס <span class="dev-placeholder">[להשלמה: מספרי רישום]</span>. אנחנו מחזיקים ביטוח צד שלישי <span class="dev-placeholder">[להשלמה: פרטי הפוליסה]</span>. באזור בנוי, או כשטסים מעל אנשים, רכבים או תשתיות, נדרשת הסכמה בכתב של בעל האתר, ולעיתים הרשאה מיוחדת. מתאמים מראש עם האחראי באתר.</p>
+<p>רוח חזקה, גשם או ערפל מעכבים את הטיסה, וקובעים מועד חלופי. מתכננים את הצילום כך שיתמקד בשטח שהוזמן, ולא מפרסמים חומר שמזהה אנשים או נכסים של צד שלישי. זמן המסירה תלוי בגודל השטח, בתוצרים ובאישורים, ונקבע בהצעה <span class="dev-placeholder">[להשלמה: זמני מסירה טיפוסיים]</span>.</p>
+
+    </div></section>
+    <section class="light pad svc-block svc-prepare"><div class="wrap article">
+          <p class="svc-kicker">07</p>
+<h2>מה להכין מראש</h2>
+<ul><li>מיקום האתר, נקודה במפה או קובץ גבולות (KML, KMZ, DWG, DXF, SHP או GeoJSON).</li><li>גודל משוער, מטרת העבודה, התוצרים הרצויים ומועד רצוי.</li><li>איש קשר באתר, וגישה לשטח ביום הטיסה.</li><li>אם יש: קובץ תכנון מעוגן (DWG או SHP) או מדידה קודמת.</li><li>רשימת שוטים: מה חייבים לראות, ומה אסור לפרסם.</li></ul>
+
+    </div></section>
+    <section class="dark pad svc-block svc-faq"><div class="wrap article">
+          <p class="svc-kicker">08</p>
+<h2>שאלות נפוצות</h2>
 <div class="faq-list">
-<div class="faq-item"><p class="q">כמה זמן לוקח לקבל את הסרטון הערוך?</p><div class="a"><p>זה תלוי בהיקף הצילום והעריכה, ונקבע בהצעה <span class="dev-placeholder">[להשלמה: זמני מסירה טיפוסיים]</span>.</p></div></div>
-<div class="faq-item"><p class="q">מי מחזיק בזכויות על החומר?</p><div class="a"><p>תנאי השימוש מוגדרים בהצעה <span class="dev-placeholder">[להשלמה: מדיניות זכויות יוצרים ורישוי שימוש]</span>.</p></div></div>
-<div class="faq-item"><p class="q">אפשר לצלם בתוך אתר פעיל?</p><div class="a"><p>כן, בתיאום עם מנהל האתר ובמסלול שלא עובר מעל עובדים וכלים בפעולה.</p></div></div>
+<details class="faq-item"><summary class="q">כמה זמן לוקח לקבל את הסרטון הערוך?</summary><div class="a"><p>זה תלוי בהיקף הצילום והעריכה, ונקבע בהצעה <span class="dev-placeholder">[להשלמה: זמני מסירה טיפוסיים]</span>.</p></div></details>
+<details class="faq-item"><summary class="q">מי מחזיק בזכויות על החומר?</summary><div class="a"><p>תנאי השימוש מוגדרים בהצעה <span class="dev-placeholder">[להשלמה: מדיניות זכויות יוצרים ורישוי שימוש]</span>.</p></div></details>
+<details class="faq-item"><summary class="q">אפשר לצלם בתוך אתר פעיל?</summary><div class="a"><p>כן, בתיאום עם מנהל האתר ובמסלול שלא עובר מעל עובדים וכלים בפעולה.</p></div></details>
+<details class="faq-item"><summary class="q">האם הצילום כולל תרמי?</summary><div class="a"><p>לא. צילום תרמי הוא שירות נפרד בעמוד הבדיקה הוויזואלית והתרמית. אפשר לתאם את שניהם לאותה יציאה, אם ההצעה אומרת זאת.</p></div></details>
 </div>
 
     </div></section>
-    <section class="dark pad related-services">
+    <section class="dark pad related-services svc-related">
       <div class="wrap">
-        <h2 class="h2">שירותים</h2>
+        <p class="eyebrow">המשך</p>
+        <h2 class="h2">שירותים קרובים</h2>
         <div class="svc-cards">
    <a class="svc-photo" href="/droneatlas/construction-progress-monitoring/">
-    <img class="card-photo" src="/droneatlas/assets/imagery/card-construction-bim-overlay.webp" alt="איור להמחשה: מודל אתר בנייה עם שכבת מדידה" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-construction">
+    <picture><source srcset="/assets/imagery/card-construction-bim-overlay.webp" type="image/webp"><img class="card-photo" src="/droneatlas/assets/imagery/card-construction-bim-overlay.jpg" alt="צילום אוויר של בניין בבנייה, מלמעלה" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-construction"></picture>
     <span class="svc-photo-cap"><span>מיפוי התקדמות בנייה</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
    </a>
    <a class="svc-photo" href="/droneatlas/volume-calculation-earthworks/">
-    <img class="card-photo" src="/droneatlas/assets/imagery/card-stockpile-cut-fill.webp" alt="איור להמחשה: מפת חום של חפירה ומילוי בערימות" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-volumes">
+    <picture><source srcset="/assets/imagery/card-stockpile-cut-fill.webp" type="image/webp"><img class="card-photo" src="/droneatlas/assets/imagery/card-stockpile-cut-fill.jpg" alt="צילום אוויר של ערימות חול ועפר ומתקן מיון" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-volumes"></picture>
     <span class="svc-photo-cap"><span>חישוב נפחים וכמויות עפר</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
    </a>
    <a class="svc-photo" href="/droneatlas/aerial-data-for-surveyors/">
@@ -301,11 +363,31 @@
     <img class="card-photo" src="/droneatlas/assets/imagery/card-3d-terrain-surface.webp" alt="איור להמחשה: משטח תלת־ממדי של פני השטח" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-3d">
     <span class="svc-photo-cap"><span>מידול תלת מימד וענן נקודות</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
    </a>
+   <a class="svc-photo" href="/droneatlas/orthophoto-aerial-mapping/">
+    <img class="card-photo" src="/droneatlas/assets/imagery/card-contours-hillshade.webp" alt="איור להמחשה: קווי גובה על הצללת תבליט" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-orthophoto">
+    <span class="svc-photo-cap"><span>אורתופוטו ומיפוי אווירי</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+   </a>
+   <a class="svc-photo" href="/droneatlas/drone-topographic-survey/">
+    <img class="card-photo" src="/droneatlas/assets/imagery/card-geodetic.webp" alt="איור להמחשה: מפת תבליט עם רשת קואורדינטות ונקודות בקרה" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-topo">
+    <span class="svc-photo-cap"><span>מדידה טופוגרפית ברחפן</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+   </a>
+   <a class="svc-photo" href="/droneatlas/agricultural-mapping-ndvi/">
+    <img class="card-photo" src="/droneatlas/assets/imagery/home-panel.webp" alt="איור להמחשה: השוואה בין תבליט פני השטח לבין מפת גבהים צבעונית" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-agri">
+    <span class="svc-photo-cap"><span>מיפוי חקלאי ו-NDVI</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+   </a>
+   <a class="svc-photo" href="/droneatlas/infrastructure-municipalities/">
+    <img class="card-photo" src="/droneatlas/assets/imagery/card-terrain.webp" alt="איור להמחשה: חתך פני שטח ומסלול טיסה עוקב קרקע" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-infra">
+    <span class="svc-photo-cap"><span>תשתיות ורשויות מקומיות</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+   </a>
+   <a class="svc-photo" href="/droneatlas/drone-ndt-inspection/">
+    <img class="card-photo" src="/droneatlas/assets/imagery/card-roof-overlay-dimension-grid.webp" alt="איור להמחשה: רשת מידות על גבי מבנה" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-ndt">
+    <span class="svc-photo-cap"><span>בדיקה ויזואלית ותרמית</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+   </a>
 </div>
       </div>
     </section>
     <section class="cta-banner pad" id="cta"><div class="wrap"><h2 class="cta-heading">רוצים לדעת מה מתאים לפרויקט שלכם?</h2>
-<p>שלחו לנו בוואטסאפ את מיקום האתר, גודל השטח בערך, מטרת המיפוי ומועד רצוי. נחזור אליכם עם המלצה על התוצרים ועם הצעה מסודרת.</p>
+<p>שלחו לנו בוואטסאפ את מיקום האתר, גודל השטח בערך, מטרת העבודה ומועד רצוי. נחזור אליכם עם המלצה על התוצרים ועם הצעה מסודרת. אין מחירון קבוע: ההצעה נבנית לפי היקף.</p>
 <p class="btn-row"><strong><a href="https://wa.me/[להשלמה: מספר וואטסאפ בפורמט 972XXXXXXXXX]" data-whatsapp class="btn btn-primary">שלחו הודעה בוואטסאפ</a></strong> · <a href="/droneatlas/contact/" class="btn btn-secondary">לטופס יצירת קשר</a></p></div></section>
 
   </main>
@@ -342,6 +424,11 @@
        <li><a href="/droneatlas/terrain-follow-mapping/">מיפוי עוקב קרקע</a></li>
        <li><a href="/droneatlas/3d-modeling-point-cloud/">מידול תלת מימד וענן נקודות</a></li>
        <li><a href="/droneatlas/industrial-drone-photography/">צילומי רחפן לתעשייה</a></li>
+       <li><a href="/droneatlas/orthophoto-aerial-mapping/">אורתופוטו</a></li>
+       <li><a href="/droneatlas/drone-topographic-survey/">מדידה טופוגרפית</a></li>
+       <li><a href="/droneatlas/agricultural-mapping-ndvi/">מיפוי חקלאי</a></li>
+       <li><a href="/droneatlas/infrastructure-municipalities/">תשתיות ורשויות</a></li>
+       <li><a href="/droneatlas/drone-ndt-inspection/">בדיקות NDT</a></li>
           </ul>
         </div>
         <div>
@@ -362,5 +449,6 @@
   <script src="/droneatlas/js/config.js"></script>
   <script src="/droneatlas/js/home-nav.js"></script>
   <script src="/droneatlas/js/main.js"></script>
+  <script src="/droneatlas/js/hero-video.js"></script>
 </body>
 </html>

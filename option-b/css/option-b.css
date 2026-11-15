@@ -155,6 +155,7 @@
   color: rgba(237,237,237,.72);
   margin: 0 0 22px;
 }
+.option-b .b-kicker b{color:var(--brand-green,#22c55e);font-weight:650}
 .option-b .b-hero h1{
   font-family: var(--display);
   font-weight: 700;

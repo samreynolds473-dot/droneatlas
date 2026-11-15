@@ -34,6 +34,8 @@
   <link rel="stylesheet" href="/droneatlas/css/service-page.css">
   <link rel="stylesheet" href="/droneatlas/css/home-flow.css">
   <link rel="stylesheet" href="/droneatlas/css/theme.css">
+  <link rel="stylesheet" href="/droneatlas/css/hero-video.css">
+  <link rel="stylesheet" href="/droneatlas/css/service-depth.css">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -128,7 +130,7 @@
           "name": "Are the deliverables suitable for a map under the Survey Regulations?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "That depends on the purpose, method and camera. Photogrammetric products under the regulations require an approved camera system with a valid calibration certificate. We state the equipment up front, and you decide whether it suits your product."
+            "text": "That depends on the purpose, the method and the camera. Photogrammetric products under the regulations require an approved camera system with a valid calibration certificate. We state the equipment up front, and you decide whether it suits your product."
           }
         },
         {
@@ -183,6 +185,11 @@
       <a href="/droneatlas/en/terrain-follow-mapping/">Terrain-follow mapping</a>
       <a href="/droneatlas/en/3d-modeling-point-cloud/">3D models &amp; point clouds</a>
       <a href="/droneatlas/en/industrial-drone-photography/">Industrial photography</a>
+      <a href="/droneatlas/en/orthophoto-aerial-mapping/">Orthophoto</a>
+      <a href="/droneatlas/en/drone-topographic-survey/">Topographic survey</a>
+      <a href="/droneatlas/en/agricultural-mapping-ndvi/">Agricultural mapping</a>
+      <a href="/droneatlas/en/infrastructure-municipalities/">Infrastructure</a>
+      <a href="/droneatlas/en/drone-ndt-inspection/">NDT inspection</a>
             </div>
           </div>
         </div>
@@ -218,6 +225,11 @@
       <a href="/droneatlas/en/terrain-follow-mapping/">Terrain-follow mapping</a>
       <a href="/droneatlas/en/3d-modeling-point-cloud/">3D models &amp; point clouds</a>
       <a href="/droneatlas/en/industrial-drone-photography/">Industrial photography</a>
+      <a href="/droneatlas/en/orthophoto-aerial-mapping/">Orthophoto</a>
+      <a href="/droneatlas/en/drone-topographic-survey/">Topographic survey</a>
+      <a href="/droneatlas/en/agricultural-mapping-ndvi/">Agricultural mapping</a>
+      <a href="/droneatlas/en/infrastructure-municipalities/">Infrastructure</a>
+      <a href="/droneatlas/en/drone-ndt-inspection/">NDT inspection</a>
       </div>
     </div>
     <a href="/droneatlas/en/about/">About</a>
@@ -232,11 +244,21 @@
   </div>
   <main id="main">
     <section class="page-hero">
-      <img class="bg" src="/droneatlas/assets/imagery/hero-surveyors-1920.webp" alt="Illustrative point cloud with marked control points" width="1920" height="1080" decoding="async" fetchpriority="high" data-slot="surveyors-hero">
+      <div class="hero-stage" data-hero-stage>
+        <img class="bg" src="/droneatlas/assets/imagery/hero-surveyors-1920.webp" alt="Illustrative point cloud with marked control points" width="1920" height="1080" decoding="async" fetchpriority="high" data-slot="surveyors-hero">
+      </div>
       <div class="wrap">
         <nav class="crumbs" aria-label="Breadcrumb"><a href="/droneatlas/en/">Home</a><span aria-hidden="true">/</span><a href="/droneatlas/en/services/">Services</a><span aria-hidden="true">/</span><span aria-current="page">Drone capture and processed data for surveyors</span></nav>
+        <p class="eyebrow">We fly · You sign</p>
         <h1>Drone capture and processed data for surveyors</h1>
-        <p class="dek"><strong>DroneAtlas works with licensed surveyors as a supplier of aerial capture and processed data.</strong> We plan and fly the job and, if you ask, process the data. You remain the professional who surveys, checks and signs. DroneAtlas is not a licensed surveyor and does not present its deliverables as official survey documents.</p>
+        <p class="dek">DroneAtlas works with licensed surveyors as a supplier of aerial capture and processed data. We plan and fly, and process if you ask.</p>
+        <ul class="hero-chips"><li>EPSG:2039</li><li>WebODM</li><li>Clean handoff</li></ul>
+      </div>
+    </section>
+    <section class="light pad svc-block svc-prose">
+      <div class="wrap article">
+        
+<p>You remain the professional who surveys, checks and signs. DroneAtlas is not a licensed surveyor and does not present its deliverables as official survey documents.</p>
       </div>
     </section>
     <section class="dark pad">
@@ -244,40 +266,73 @@
         <div class="air-media"><img class="air-photo" src="/droneatlas/assets/imagery/card-surveyors.webp" alt="Illustrative point cloud with marked control points" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-surveyors"></div>
       </div>
     </section>
-    <section class="light pad"><div class="wrap article">
-<h2>What you can order</h2>
-<div class="table-wrap"><table><thead><tr><th>Option</th><th>What you receive</th></tr></thead><tbody><tr><td>Flight only</td><td>Raw geotagged images, flight log and flight plan</td></tr><tr><td>Flight + processing</td><td>Orthophoto (GeoTIFF/ECW), point cloud (LAS/LAZ) and DSM on the Israeli Grid (EPSG:2039)</td></tr><tr><td>With ground control</td><td>Tied to the control points you mark and survey, with an RMS report against check points</td></tr><tr><td>Repeat rounds</td><td>The same flight plan every visit, for consistent comparison</td></tr></tbody></table></div>
+    <section class="light pad svc-block svc-who"><div class="wrap article">
+          <p class="svc-kicker">01</p>
+<h2>Who it is for</h2>
+<ul><li><strong>A survey office that wants aerial coverage</strong> without running its own flight operation.</li><li><strong>A surveyor who processes in-house</strong> flight only: geotagged images, a log and the flight plan.</li><li><strong>A surveyor who wants ready files</strong> orthophoto, point cloud and DSM, tied to their points.</li><li><strong>A job with repeat visits</strong> the same flight plan every time.</li></ul>
 
     </div></section>
-    <section class="dark pad"><div class="wrap article">
+    <section class="dark pad svc-block svc-steps"><div class="wrap article">
+          <p class="svc-kicker">02</p>
 <h2>How it works</h2>
-<ol><li>You send the polygon, required GSD, control method and deliverables.</li><li>We check airspace, coordinate and fly.</li><li>We deliver the data in a fixed folder structure, with metadata stating the method (RTK, ground control or both) and intended use.</li><li>You take it from there: survey, field infill, drafting and signature.</li></ol>
+<ol><li><strong>You send</strong> the polygon, the required GSD, the control method and the deliverables.</li><li><strong>Plan the flight</strong> Route, altitude and camera angles matched to the deliverable, then we fly.</li><li><strong>Handoff</strong> in a fixed folder structure, with metadata: RTK, ground control or both, and the intended use.</li><li><strong>You continue</strong> survey, field infill, drafting and signature.</li><li><strong>Transparency</strong> every delivery states the camera and the control method <span class="dev-placeholder">[TO FILL: camera model, and whether it is approved by the Survey of Israel]</span>.</li></ol>
 
     </div></section>
-    <section class="light pad"><div class="wrap article">
-<h2>Why work with us</h2>
-<ul><li><strong>A flight plan built around your work</strong>: overlap, height and angles to suit the product you produce.</li><li><strong>Clean handoff</strong>: consistent file names, coordinate system and metadata on every job.</li><li><strong>Transparency</strong>: every delivery states the camera and control method used <span class="dev-placeholder">[TO FILL: camera model, and whether it is approved by the Survey of Israel]</span>.</li><li><strong>We do not compete for your client</strong>: your project stays yours <span class="dev-placeholder">[TO FILL: policy on working with surveyors&#x27; clients]</span>.</li></ul>
+    <section class="light pad svc-block svc-deliver"><div class="wrap article">
+          <p class="svc-kicker">03</p>
+<h2>What you receive</h2>
+<div class="table-wrap"><table><thead><tr><th>Option</th><th>What you receive</th></tr></thead><tbody><tr><td>Flight only</td><td>Raw geotagged images, flight log and flight plan</td></tr><tr><td>Flight and processing</td><td>Orthophoto (GeoTIFF/ECW), point cloud (LAS/LAZ) and DSM on the Israeli Grid (EPSG:2039)</td></tr><tr><td>With ground control</td><td>Tied to the points you mark and survey, and an RMS report against check points</td></tr><tr><td>Repeat rounds</td><td>The same flight plan every visit</td></tr></tbody></table></div>
+<p>Your project stays yours <span class="dev-placeholder">[TO FILL: policy on working with surveyors&#x27; clients]</span>.</p>
 
     </div></section>
-    <section class="dark pad"><div class="wrap article">
-<h2>FAQ for surveyors</h2>
+    <section class="dark pad svc-block svc-accuracy"><div class="wrap article">
+          <p class="svc-kicker">04</p>
+<h2>Accuracy and quality control</h2>
+<p>RTK gives every image a position at capture. <a href="/droneatlas/en/ground-control-points-gcp/">Ground control points</a> tie the model to the site, and separate check points, kept out of processing, test it. The accuracy and the check method are set in the proposal for the purpose of the job and written into the quality-control report. Where check points were surveyed, the report includes the error against them (RMS). Typical accuracy: <span class="dev-placeholder">[TO FILL: horizontal and vertical accuracy actually measured with DroneAtlas&#x27;s setup. Do not publish a figure before testing]</span>.</p>
+<p>Resolution (GSD) is the ground area one pixel represents. Accuracy is how close a map position is to the true position. High resolution does not guarantee high accuracy, so the two are defined separately. Processing is done in WebODM (OpenDroneMap). The default coordinate system is the Israeli Grid (EPSG:2039), or another system on request.</p>
+
+    </div></section>
+    <section class="light pad svc-block svc-choose"><div class="wrap article">
+          <p class="svc-kicker">05</p>
+<h2>When to use it, and when to choose something else</h2>
+<ul><li><strong>The client wants DroneAtlas to sign a map</strong> we do not sign. A partner licensed surveyor can sign when a signature is required, and the signature is theirs.</li><li><strong>A product under the Survey Regulations</strong> depends on the purpose, the method and the camera. Photogrammetric products under the regulations require an approved camera system and a valid calibration certificate. We state the equipment up front, and you decide if it fits.</li><li><strong>A marketing film only</strong> that is not this page.</li></ul>
+
+    </div></section>
+    <section class="dark pad svc-block svc-limits"><div class="wrap article">
+          <p class="svc-kicker">06</p>
+<h2>Limits and approvals</h2>
+<p>The service covers all of Israel, subject to flight approvals and airspace limits at the site. Commercial operation of a small drone requires a small-UAS pilot licence from the Civil Aviation Authority <span class="dev-placeholder">[TO FILL: licence number]</span> and a registered aircraft <span class="dev-placeholder">[TO FILL: registration numbers]</span>. We carry third-party insurance <span class="dev-placeholder">[TO FILL: policy details]</span>. In a built-up area, or when flying over people, vehicles or infrastructure, we need the site owner&#x27;s written consent and sometimes a special authorisation. We coordinate in advance with the person in charge on site.</p>
+<p>Strong wind, rain or fog delays the flight, and we set a nearby alternative date. Capture is planned to stay on the commissioned area, and we do not publish material that identifies people or third-party property. Turnaround depends on area, deliverables and approvals, and is set in the proposal <span class="dev-placeholder">[TO FILL: typical turnaround]</span>.</p>
+<p>DroneAtlas is not a licensed surveyor. The deliverables are for design, control and quantities. A statutory survey plan, such as a permit map, a registration plan or a boundary determination, is signed by a partner licensed surveyor. Photogrammetry is not used to reconstruct registered boundaries. If a map shows boundaries and is not for registration, the surveyor marks it &quot;not for registration purposes&quot;.</p>
+
+    </div></section>
+    <section class="light pad svc-block svc-prepare"><div class="wrap article">
+          <p class="svc-kicker">07</p>
+<h2>What to prepare</h2>
+<ul><li>The site location, a map pin or a boundary file (KML, KMZ, DWG, DXF, SHP or GeoJSON).</li><li>Approximate size, the purpose, the deliverables you want and a preferred date.</li><li>An on-site contact, and access on the flight day.</li><li>If you have them: a georeferenced design file (DWG or SHP) or a previous survey.</li><li>The required GSD, who surveys the control, and what must not be passed on.</li></ul>
+
+    </div></section>
+    <section class="dark pad svc-block svc-faq"><div class="wrap article">
+          <p class="svc-kicker">08</p>
+<h2>FAQ</h2>
 <div class="faq-list">
-<div class="faq-item"><p class="q">Are the deliverables suitable for a map under the Survey Regulations?</p><div class="a"><p>That depends on the purpose, method and camera. Photogrammetric products under the regulations require an approved camera system with a valid calibration certificate. We state the equipment up front, and you decide whether it suits your product.</p></div></div>
-<div class="faq-item"><p class="q">Who signs the map?</p><div class="a"><p>You do. DroneAtlas supplies data only and does not sign survey documents.</p></div></div>
-<div class="faq-item"><p class="q">Which coordinate system do I get?</p><div class="a"><p>The Israeli Grid (EPSG:2039) by default, or another system on request.</p></div></div>
+<details class="faq-item"><summary class="q">Are the deliverables suitable for a map under the Survey Regulations?</summary><div class="a"><p>That depends on the purpose, the method and the camera. Photogrammetric products under the regulations require an approved camera system with a valid calibration certificate. We state the equipment up front, and you decide whether it suits your product.</p></div></details>
+<details class="faq-item"><summary class="q">Who signs the map?</summary><div class="a"><p>You do. DroneAtlas supplies data only and does not sign survey documents.</p></div></details>
+<details class="faq-item"><summary class="q">Which coordinate system do I get?</summary><div class="a"><p>The Israeli Grid (EPSG:2039) by default, or another system on request.</p></div></details>
 </div>
 
     </div></section>
-    <section class="dark pad related-services">
+    <section class="dark pad related-services svc-related">
       <div class="wrap">
-        <h2 class="h2">Services</h2>
+        <p class="eyebrow">Continue</p>
+        <h2 class="h2">Related services</h2>
         <div class="svc-cards">
    <a class="svc-photo" href="/droneatlas/en/construction-progress-monitoring/">
-    <img class="card-photo" src="/droneatlas/assets/imagery/card-construction-bim-overlay.webp" alt="Illustrative construction model with a measurement overlay" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-construction">
+    <picture><source srcset="/assets/imagery/card-construction-bim-overlay.webp" type="image/webp"><img class="card-photo" src="/droneatlas/assets/imagery/card-construction-bim-overlay.jpg" alt="Aerial view of a building under construction" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-construction"></picture>
     <span class="svc-photo-cap"><span>Construction progress mapping</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
    </a>
    <a class="svc-photo" href="/droneatlas/en/stockpile-volume-calculation/">
-    <img class="card-photo" src="/droneatlas/assets/imagery/card-stockpile-cut-fill.webp" alt="Illustrative cut-and-fill heatmap of stockpiles" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-volumes">
+    <picture><source srcset="/assets/imagery/card-stockpile-cut-fill.webp" type="image/webp"><img class="card-photo" src="/droneatlas/assets/imagery/card-stockpile-cut-fill.jpg" alt="Aerial view of sand stockpiles and a screening plant" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-volumes"></picture>
     <span class="svc-photo-cap"><span>Stockpile and earthwork volumes</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
    </a>
    <a class="svc-photo" href="/droneatlas/en/geodetic-mapping-rtk/">
@@ -300,11 +355,31 @@
     <img class="card-photo" src="/droneatlas/assets/imagery/card-industrial.webp" alt="Illustrative industrial aerial photograph" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-industrial">
     <span class="svc-photo-cap"><span>Industrial drone photography</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
    </a>
+   <a class="svc-photo" href="/droneatlas/en/orthophoto-aerial-mapping/">
+    <img class="card-photo" src="/droneatlas/assets/imagery/card-contours-hillshade.webp" alt="Illustrative contours over hillshade" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-orthophoto">
+    <span class="svc-photo-cap"><span>Orthophoto and aerial mapping</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+   </a>
+   <a class="svc-photo" href="/droneatlas/en/drone-topographic-survey/">
+    <img class="card-photo" src="/droneatlas/assets/imagery/card-geodetic.webp" alt="Illustrative relief map with a coordinate grid and control points" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-topo">
+    <span class="svc-photo-cap"><span>Drone topographic survey</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+   </a>
+   <a class="svc-photo" href="/droneatlas/en/agricultural-mapping-ndvi/">
+    <img class="card-photo" src="/droneatlas/assets/imagery/home-panel.webp" alt="Illustrative split view of a surface model and a colourful elevation map" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-agri">
+    <span class="svc-photo-cap"><span>Agricultural mapping and NDVI</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+   </a>
+   <a class="svc-photo" href="/droneatlas/en/infrastructure-municipalities/">
+    <img class="card-photo" src="/droneatlas/assets/imagery/card-terrain.webp" alt="Illustrative terrain profile with a terrain-follow flight path" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-infra">
+    <span class="svc-photo-cap"><span>Infrastructure and municipalities</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+   </a>
+   <a class="svc-photo" href="/droneatlas/en/drone-ndt-inspection/">
+    <img class="card-photo" src="/droneatlas/assets/imagery/card-roof-overlay-dimension-grid.webp" alt="Illustrative dimension grid over a structure" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-ndt">
+    <span class="svc-photo-cap"><span>Visual and thermal inspection</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+   </a>
 </div>
       </div>
     </section>
     <section class="cta-banner pad" id="cta"><div class="wrap"><h2 class="cta-heading">Not sure what your project needs?</h2>
-<p>Send us the site location, rough area, what the mapping is for and your preferred date on WhatsApp. We will recommend the right deliverables and send you a clear proposal.</p>
+<p>Send us the site location, rough area, what the work is for and your preferred date on WhatsApp. We will recommend the deliverables and send a clear proposal. There is no fixed price list: every proposal is quoted by scope.</p>
 <p class="btn-row"><strong><a href="https://wa.me/[TO FILL: WhatsApp number in 972XXXXXXXXX format]" data-whatsapp class="btn btn-primary">Message us on WhatsApp</a></strong> · <a href="/droneatlas/en/contact/" class="btn btn-secondary">Contact form</a></p></div></section>
 
   </main>
@@ -341,6 +416,11 @@
        <li><a href="/droneatlas/en/terrain-follow-mapping/">Terrain-follow mapping</a></li>
        <li><a href="/droneatlas/en/3d-modeling-point-cloud/">3D models &amp; point clouds</a></li>
        <li><a href="/droneatlas/en/industrial-drone-photography/">Industrial photography</a></li>
+       <li><a href="/droneatlas/en/orthophoto-aerial-mapping/">Orthophoto</a></li>
+       <li><a href="/droneatlas/en/drone-topographic-survey/">Topographic survey</a></li>
+       <li><a href="/droneatlas/en/agricultural-mapping-ndvi/">Agricultural mapping</a></li>
+       <li><a href="/droneatlas/en/infrastructure-municipalities/">Infrastructure</a></li>
+       <li><a href="/droneatlas/en/drone-ndt-inspection/">NDT inspection</a></li>
           </ul>
         </div>
         <div>
@@ -361,5 +441,6 @@
   <script src="/droneatlas/js/config.js"></script>
   <script src="/droneatlas/js/home-nav.js"></script>
   <script src="/droneatlas/js/main.js"></script>
+  <script src="/droneatlas/js/hero-video.js"></script>
 </body>
 </html>

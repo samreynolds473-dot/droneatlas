@@ -34,6 +34,8 @@
   <link rel="stylesheet" href="/droneatlas/css/service-page.css">
   <link rel="stylesheet" href="/droneatlas/css/home-flow.css">
   <link rel="stylesheet" href="/droneatlas/css/theme.css">
+  <link rel="stylesheet" href="/droneatlas/css/hero-video.css">
+  <link rel="stylesheet" href="/droneatlas/css/service-depth.css">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -183,6 +185,11 @@
       <a href="/droneatlas/en/terrain-follow-mapping/" aria-current="page">Terrain-follow mapping</a>
       <a href="/droneatlas/en/3d-modeling-point-cloud/">3D models &amp; point clouds</a>
       <a href="/droneatlas/en/industrial-drone-photography/">Industrial photography</a>
+      <a href="/droneatlas/en/orthophoto-aerial-mapping/">Orthophoto</a>
+      <a href="/droneatlas/en/drone-topographic-survey/">Topographic survey</a>
+      <a href="/droneatlas/en/agricultural-mapping-ndvi/">Agricultural mapping</a>
+      <a href="/droneatlas/en/infrastructure-municipalities/">Infrastructure</a>
+      <a href="/droneatlas/en/drone-ndt-inspection/">NDT inspection</a>
             </div>
           </div>
         </div>
@@ -218,6 +225,11 @@
       <a href="/droneatlas/en/terrain-follow-mapping/" aria-current="page">Terrain-follow mapping</a>
       <a href="/droneatlas/en/3d-modeling-point-cloud/">3D models &amp; point clouds</a>
       <a href="/droneatlas/en/industrial-drone-photography/">Industrial photography</a>
+      <a href="/droneatlas/en/orthophoto-aerial-mapping/">Orthophoto</a>
+      <a href="/droneatlas/en/drone-topographic-survey/">Topographic survey</a>
+      <a href="/droneatlas/en/agricultural-mapping-ndvi/">Agricultural mapping</a>
+      <a href="/droneatlas/en/infrastructure-municipalities/">Infrastructure</a>
+      <a href="/droneatlas/en/drone-ndt-inspection/">NDT inspection</a>
       </div>
     </div>
     <a href="/droneatlas/en/about/">About</a>
@@ -232,11 +244,21 @@
   </div>
   <main id="main">
     <section class="page-hero">
-      <img class="bg" src="/droneatlas/assets/imagery/hero-terrain-follow-1920.webp" alt="Illustrative terrain profile with a constant-height-above-ground flight path" width="1920" height="1080" decoding="async" fetchpriority="high" data-slot="terrain-hero">
+      <div class="hero-stage" data-hero-stage>
+        <img class="bg" src="/droneatlas/assets/imagery/hero-terrain-follow-1920.webp" alt="Illustrative terrain profile with a constant-height-above-ground flight path" width="1920" height="1080" decoding="async" fetchpriority="high" data-slot="terrain-hero">
+      </div>
       <div class="wrap">
         <nav class="crumbs" aria-label="Breadcrumb"><a href="/droneatlas/en/">Home</a><span aria-hidden="true">/</span><a href="/droneatlas/en/services/">Services</a><span aria-hidden="true">/</span><span aria-current="page">Terrain-follow drone mapping for hilly and steep sites</span></nav>
+        <p class="eyebrow">Terrain follow · GSD</p>
         <h1>Terrain-follow drone mapping for hilly and steep sites</h1>
-        <p class="dek"><strong>Terrain-follow mapping</strong> is a mapping flight in which the drone holds a constant height above the ground rather than above its take-off point. Over slopes, wadis, mountain roads and quarry faces, every image is captured from the same distance to the ground. The result is even resolution, consistent overlap and a cleaner elevation model.</p>
+        <p class="dek">Terrain-follow mapping is a mapping flight in which the drone holds a constant height above the ground rather than above its take-off point.</p>
+        <ul class="hero-chips"><li>Slopes</li><li>Quarries</li><li>WebODM</li><li>EPSG:2039</li></ul>
+      </div>
+    </section>
+    <section class="light pad svc-block svc-prose">
+      <div class="wrap article">
+        
+<p>Over slopes, wadis, mountain roads and quarry faces, every image is captured from the same distance to the ground. The result is even resolution, consistent overlap and a cleaner elevation model.</p>
       </div>
     </section>
     <section class="dark pad">
@@ -244,42 +266,75 @@
         <div class="air-media"><img class="air-photo" src="/droneatlas/assets/imagery/card-terrain.webp" alt="Illustrative terrain profile with a terrain-follow flight path" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-terrain"></div>
       </div>
     </section>
-    <section class="light pad"><div class="wrap article">
-<h2>Why it matters on hilly ground</h2>
-<p>At a fixed height above take-off, the drone is too close to the ground on the hilltop and too far from it in the wadi. That causes:</p>
-<ul><li><strong>Uneven resolution:</strong> some parts of the map are sharp and others blurred.</li><li><strong>Inconsistent overlap:</strong> high areas get less overlap, leaving holes in the model.</li><li><strong>Safety margins:</strong> too little clearance from ground and obstacles at the high points.</li></ul>
-<p>With terrain following, the whole site is captured at the same GSD and the model is more uniform end to end.</p>
+    <section class="light pad svc-block svc-who"><div class="wrap article">
+          <p class="svc-kicker">01</p>
+<h2>Who it is for</h2>
+<ul><li><strong>Quarries and pits</strong> with faces and large height differences. See <a href="/droneatlas/en/stockpile-volume-calculation/">volume surveys</a>.</li><li><strong>Roads and infrastructure in hilly terrain</strong> corridors along a slope. See <a href="/droneatlas/en/infrastructure-municipalities/">infrastructure and municipalities</a>.</li><li><strong>Hillside construction</strong> and earthworks on sloping ground. See <a href="/droneatlas/en/construction-progress-monitoring/">construction progress mapping</a>.</li><li><strong>Open land</strong> with hills and gullies.</li></ul>
 
     </div></section>
-    <section class="dark pad"><div class="wrap article">
+    <section class="dark pad svc-block svc-steps"><div class="wrap article">
+          <p class="svc-kicker">02</p>
 <h2>How it works</h2>
-<ol><li>Plan the flight on an elevation model of the area, or with the drone&#x27;s sensors <span class="dev-placeholder">[TO FILL: terrain-follow method supported by DroneAtlas&#x27;s equipment]</span>.</li><li>Set the height above ground for the required resolution, with a safety margin from obstacles.</li><li>Fly a planned route with high overlap, then process as usual in WebODM (OpenDroneMap).</li><li>Deliver the same outputs as <a href="/droneatlas/en/geodetic-mapping-rtk/">geodetic mapping</a>: orthophoto, DSM and DTM, contours and point cloud.</li></ol>
+<ol><li><strong>Plan on an elevation model</strong> of the area, or with the drone&#x27;s sensors <span class="dev-placeholder">[TO FILL: terrain-follow method supported by DroneAtlas&#x27;s equipment]</span>.</li><li><strong>Set the height above ground</strong> for the required resolution, with a safety margin from obstacles.</li><li><strong>Fly a planned route</strong> with high overlap.</li><li><strong>Process as usual</strong> in WebODM, and deliver the same outputs as <a href="/droneatlas/en/geodetic-mapping-rtk/">geodetic mapping</a>: orthophoto, DSM and DTM, contours and point cloud.</li><li><strong>Control</strong> on hilly ground, place control points on both the high and the low ground.</li></ol>
 
     </div></section>
-    <section class="light pad"><div class="wrap article">
-<h2>When to use it</h2>
-<ul><li><strong>Quarries and pits</strong> with faces and large height differences. See <a href="/droneatlas/en/stockpile-volume-calculation/">volume surveys</a>.</li><li><strong>Roads and infrastructure in hilly terrain</strong>, corridors along slopes.</li><li><strong>Hillside construction sites</strong> and earthworks on sloping ground. See <a href="/droneatlas/en/construction-progress-monitoring/">construction progress mapping</a>.</li><li><strong>Open land</strong> with hills and gullies.</li></ul>
+    <section class="light pad svc-block svc-deliver"><div class="wrap article">
+          <p class="svc-kicker">03</p>
+<h2>What you receive</h2>
+<p>The deliverables match geodetic mapping. The difference is their consistency, not the file list.</p>
+<div class="table-wrap"><table><thead><tr><th>Deliverable</th><th>What it is</th><th>Format</th></tr></thead><tbody><tr><td>Orthophoto</td><td>A map with more even resolution along the slope</td><td>GeoTIFF, ECW, JPG/PNG</td></tr><tr><td>DSM and DTM</td><td>An elevation model without holes from missing overlap on the hilltop</td><td>GeoTIFF</td></tr><tr><td>Contours and point cloud</td><td>The same formats as geodetic mapping</td><td>DXF/DWG, SHP, LAS/LAZ</td></tr><tr><td>Quality report</td><td>Flight method, resolution and the check against check points</td><td>PDF</td></tr></tbody></table></div>
 
     </div></section>
-    <section class="dark pad"><div class="wrap article">
-<h2>Terrain-follow FAQ</h2>
+    <section class="dark pad svc-block svc-accuracy"><div class="wrap article">
+          <p class="svc-kicker">04</p>
+<h2>Accuracy and quality control</h2>
+<p>At a fixed height above take-off, the drone is too close to the ground on the hilltop and too far from it in the wadi. That causes uneven resolution, inconsistent overlap (and holes in the model), and too little clearance at the high points. With terrain following, the whole site is captured at the same GSD.</p>
+<p>RTK gives every image a position at capture. <a href="/droneatlas/en/ground-control-points-gcp/">Ground control points</a> tie the model to the site, and separate check points, kept out of processing, test it. The accuracy and the check method are set in the proposal for the purpose of the job and written into the quality-control report. Where check points were surveyed, the report includes the error against them (RMS). Typical accuracy: <span class="dev-placeholder">[TO FILL: horizontal and vertical accuracy actually measured with DroneAtlas&#x27;s setup. Do not publish a figure before testing]</span>.</p>
+<p>Resolution (GSD) is the ground area one pixel represents. Accuracy is how close a map position is to the true position. High resolution does not guarantee high accuracy, so the two are defined separately. Processing is done in WebODM (OpenDroneMap). The default coordinate system is the Israeli Grid (EPSG:2039), or another system on request.</p>
+
+    </div></section>
+    <section class="light pad svc-block svc-choose"><div class="wrap article">
+          <p class="svc-kicker">05</p>
+<h2>When to use it, and when to choose something else</h2>
+<ul><li><strong>Fairly flat ground</strong> a standard flight is enough. We recommend terrain following when the height range is large relative to the flight height.</li><li><strong>Photography only</strong> without a measurable model, <a href="/droneatlas/en/industrial-drone-photography/">industrial photography</a> is a different job.</li><li><strong>A registered boundary</strong> here too DroneAtlas is not a licensed surveyor. DroneAtlas is not a licensed surveyor. The deliverables are for design, control and quantities. A statutory survey plan, such as a permit map, a registration plan or a boundary determination, is signed by a partner licensed surveyor. Photogrammetry is not used to reconstruct registered boundaries. If a map shows boundaries and is not for registration, the surveyor marks it &quot;not for registration purposes&quot;.</li></ul>
+
+    </div></section>
+    <section class="dark pad svc-block svc-limits"><div class="wrap article">
+          <p class="svc-kicker">06</p>
+<h2>Limits and approvals</h2>
+<p>The service covers all of Israel, subject to flight approvals and airspace limits at the site. Commercial operation of a small drone requires a small-UAS pilot licence from the Civil Aviation Authority <span class="dev-placeholder">[TO FILL: licence number]</span> and a registered aircraft <span class="dev-placeholder">[TO FILL: registration numbers]</span>. We carry third-party insurance <span class="dev-placeholder">[TO FILL: policy details]</span>. In a built-up area, or when flying over people, vehicles or infrastructure, we need the site owner&#x27;s written consent and sometimes a special authorisation. We coordinate in advance with the person in charge on site.</p>
+<p>Strong wind, rain or fog delays the flight, and we set a nearby alternative date. Capture is planned to stay on the commissioned area, and we do not publish material that identifies people or third-party property. Turnaround depends on area, deliverables and approvals, and is set in the proposal <span class="dev-placeholder">[TO FILL: typical turnaround]</span>.</p>
+
+    </div></section>
+    <section class="light pad svc-block svc-prepare"><div class="wrap article">
+          <p class="svc-kicker">07</p>
+<h2>What to prepare</h2>
+<ul><li>The site location, a map pin or a boundary file (KML, KMZ, DWG, DXF, SHP or GeoJSON).</li><li>Approximate size, the purpose, the deliverables you want and a preferred date.</li><li>An on-site contact, and access on the flight day.</li><li>If you have them: a georeferenced design file (DWG or SHP) or a previous survey.</li><li>A description of the height range: slope, wadi, quarry face or road corridor.</li></ul>
+<p>On a slope, a constant height above the take-off point brings the drone close to the ground at the top and far from it at the bottom. Overlap and resolution change, and the model gets thin patches. A flight at a constant height above the surface keeps the same distance to the ground, and so a more even GSD along the corridor.</p>
+<p>That suits a mountain road, a quarry face and a wadi. On flat ground it is not needed. Control points on this kind of site have to cover both the high ground and the low ground, or the check does not represent the full range. The follow method the equipment supports is still <span class="dev-placeholder">[TO FILL: terrain-follow method]</span>.</p>
+
+    </div></section>
+    <section class="dark pad svc-block svc-faq"><div class="wrap article">
+          <p class="svc-kicker">08</p>
+<h2>FAQ</h2>
 <div class="faq-list">
-<div class="faq-item"><p class="q">Does every site need terrain following?</p><div class="a"><p>No. Fairly flat ground is fine with a standard flight. We recommend it when the height range is large relative to the flight height.</p></div></div>
-<div class="faq-item"><p class="q">Are the deliverables different?</p><div class="a"><p>The deliverables are the same: orthophoto, elevation models, contours and point cloud. The difference is their quality and consistency.</p></div></div>
-<div class="faq-item"><p class="q">What about ground control on hilly sites?</p><div class="a"><p>On hilly ground, <a href="/droneatlas/en/ground-control-points-gcp/">ground control points</a> should cover both high and low areas, so the model is anchored across the full height range.</p></div></div>
+<details class="faq-item"><summary class="q">Does every site need terrain following?</summary><div class="a"><p>No. Fairly flat ground is fine with a standard flight. We recommend it when the height range is large relative to the flight height.</p></div></details>
+<details class="faq-item"><summary class="q">Are the deliverables different?</summary><div class="a"><p>The deliverables are the same: orthophoto, elevation models, contours and point cloud. The difference is their quality and consistency.</p></div></details>
+<details class="faq-item"><summary class="q">What about ground control on hilly sites?</summary><div class="a"><p>On hilly ground, ground control points should cover both high and low areas, so the model is anchored across the full height range.</p></div></details>
 </div>
 
     </div></section>
-    <section class="dark pad related-services">
+    <section class="dark pad related-services svc-related">
       <div class="wrap">
-        <h2 class="h2">Services</h2>
+        <p class="eyebrow">Continue</p>
+        <h2 class="h2">Related services</h2>
         <div class="svc-cards">
    <a class="svc-photo" href="/droneatlas/en/construction-progress-monitoring/">
-    <img class="card-photo" src="/droneatlas/assets/imagery/card-construction-bim-overlay.webp" alt="Illustrative construction model with a measurement overlay" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-construction">
+    <picture><source srcset="/assets/imagery/card-construction-bim-overlay.webp" type="image/webp"><img class="card-photo" src="/droneatlas/assets/imagery/card-construction-bim-overlay.jpg" alt="Aerial view of a building under construction" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-construction"></picture>
     <span class="svc-photo-cap"><span>Construction progress mapping</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
    </a>
    <a class="svc-photo" href="/droneatlas/en/stockpile-volume-calculation/">
-    <img class="card-photo" src="/droneatlas/assets/imagery/card-stockpile-cut-fill.webp" alt="Illustrative cut-and-fill heatmap of stockpiles" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-volumes">
+    <picture><source srcset="/assets/imagery/card-stockpile-cut-fill.webp" type="image/webp"><img class="card-photo" src="/droneatlas/assets/imagery/card-stockpile-cut-fill.jpg" alt="Aerial view of sand stockpiles and a screening plant" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-volumes"></picture>
     <span class="svc-photo-cap"><span>Stockpile and earthwork volumes</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
    </a>
    <a class="svc-photo" href="/droneatlas/en/aerial-data-for-surveyors/">
@@ -302,11 +357,31 @@
     <img class="card-photo" src="/droneatlas/assets/imagery/card-industrial.webp" alt="Illustrative industrial aerial photograph" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-industrial">
     <span class="svc-photo-cap"><span>Industrial drone photography</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
    </a>
+   <a class="svc-photo" href="/droneatlas/en/orthophoto-aerial-mapping/">
+    <img class="card-photo" src="/droneatlas/assets/imagery/card-contours-hillshade.webp" alt="Illustrative contours over hillshade" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-orthophoto">
+    <span class="svc-photo-cap"><span>Orthophoto and aerial mapping</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+   </a>
+   <a class="svc-photo" href="/droneatlas/en/drone-topographic-survey/">
+    <img class="card-photo" src="/droneatlas/assets/imagery/card-geodetic.webp" alt="Illustrative relief map with a coordinate grid and control points" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-topo">
+    <span class="svc-photo-cap"><span>Drone topographic survey</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+   </a>
+   <a class="svc-photo" href="/droneatlas/en/agricultural-mapping-ndvi/">
+    <img class="card-photo" src="/droneatlas/assets/imagery/home-panel.webp" alt="Illustrative split view of a surface model and a colourful elevation map" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-agri">
+    <span class="svc-photo-cap"><span>Agricultural mapping and NDVI</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+   </a>
+   <a class="svc-photo" href="/droneatlas/en/infrastructure-municipalities/">
+    <img class="card-photo" src="/droneatlas/assets/imagery/card-terrain.webp" alt="Illustrative terrain profile with a terrain-follow flight path" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-infra">
+    <span class="svc-photo-cap"><span>Infrastructure and municipalities</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+   </a>
+   <a class="svc-photo" href="/droneatlas/en/drone-ndt-inspection/">
+    <img class="card-photo" src="/droneatlas/assets/imagery/card-roof-overlay-dimension-grid.webp" alt="Illustrative dimension grid over a structure" width="1200" height="800" decoding="async" loading="lazy" data-slot="card-ndt">
+    <span class="svc-photo-cap"><span>Visual and thermal inspection</span><span class="svc-arrow" aria-hidden="true"><svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+   </a>
 </div>
       </div>
     </section>
     <section class="cta-banner pad" id="cta"><div class="wrap"><h2 class="cta-heading">Not sure what your project needs?</h2>
-<p>Send us the site location, rough area, what the mapping is for and your preferred date on WhatsApp. We will recommend the right deliverables and send you a clear proposal.</p>
+<p>Send us the site location, rough area, what the work is for and your preferred date on WhatsApp. We will recommend the deliverables and send a clear proposal. There is no fixed price list: every proposal is quoted by scope.</p>
 <p class="btn-row"><strong><a href="https://wa.me/[TO FILL: WhatsApp number in 972XXXXXXXXX format]" data-whatsapp class="btn btn-primary">Message us on WhatsApp</a></strong> · <a href="/droneatlas/en/contact/" class="btn btn-secondary">Contact form</a></p></div></section>
 
   </main>
@@ -343,6 +418,11 @@
        <li><a href="/droneatlas/en/terrain-follow-mapping/">Terrain-follow mapping</a></li>
        <li><a href="/droneatlas/en/3d-modeling-point-cloud/">3D models &amp; point clouds</a></li>
        <li><a href="/droneatlas/en/industrial-drone-photography/">Industrial photography</a></li>
+       <li><a href="/droneatlas/en/orthophoto-aerial-mapping/">Orthophoto</a></li>
+       <li><a href="/droneatlas/en/drone-topographic-survey/">Topographic survey</a></li>
+       <li><a href="/droneatlas/en/agricultural-mapping-ndvi/">Agricultural mapping</a></li>
+       <li><a href="/droneatlas/en/infrastructure-municipalities/">Infrastructure</a></li>
+       <li><a href="/droneatlas/en/drone-ndt-inspection/">NDT inspection</a></li>
           </ul>
         </div>
         <div>
@@ -363,5 +443,6 @@
   <script src="/droneatlas/js/config.js"></script>
   <script src="/droneatlas/js/home-nav.js"></script>
   <script src="/droneatlas/js/main.js"></script>
+  <script src="/droneatlas/js/hero-video.js"></script>
 </body>
 </html>
