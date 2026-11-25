@@ -1,8 +1,6 @@
-# DroneAtlas robots.txt — SITE_ORIGIN is the recommended but unpurchased domain.
-# All pages currently have staging noindex; remove it at launch.
-User-agent: *
+User-Agent: *
 Allow: /
-Disallow: /thank-you/
-Disallow: /en/thank-you/
+Disallow: /api/
 
+Host: https://droneatlas.co.il
 Sitemap: https://droneatlas.co.il/sitemap.xml

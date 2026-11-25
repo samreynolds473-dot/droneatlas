@@ -1,0 +1,12 @@
+:HL["/_next/static/chunks/3a3863g0m71p9.css","style"]
+:HL["/_next/static/media/07a39a8a4660cc7c-s.p.0r6juujl39pe6.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/605ce01b664af129-s.p.0wgildi0cnwt9.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/6c793993b8ad9900-s.p.44osu765p-24b.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/TelAviv_ModernistBold-s.p.3h7g3gn99tyha.ttf","font",{"crossOrigin":"","type":"font/ttf"}]
+:HL["/_next/static/media/TelAviv_ModernistRegular-s.p.334hk-xnn4912.ttf","font",{"crossOrigin":"","type":"font/ttf"}]
+:HL["/_next/static/media/eb46c6ec68173374-s.p.2za9ko3quf78f.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+4:[["children",{"s":"__PAGE__","h":160}]]
+3:[["children",{"s":{"n":"id","t":"d","k":"realestate","s":[]},"h":96,"c":"$Q4"}]]
+2:[["children",{"s":"industries","h":64,"c":"$Q3"}]]
+1:[["children",{"s":{"n":"lang","t":"d","k":"en","s":["actions"]},"h":48,"c":"$Q2"}]]
+0:{"b":"AyOpZmk2G6bnHoQGCSGVW","t":{"t":{"s":"","h":80,"c":"$Q1"}}}

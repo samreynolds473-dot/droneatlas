@@ -1,0 +1,29 @@
+3:"$Sreact.fragment"
+4:"/_next/static/chunks/3qfy96eoyh-ek.js"
+5:I[39756,["$4"],"default"]
+6:I[37457,["$4"],"default"]
+b:"/_next/static/chunks/25_gzn5hgng9h.js"
+c:"/_next/static/chunks/0qb5pj6jg2izf.js"
+d:I[13126,["$b","$c"],"BlogList"]
+e:I[97367,["$4"],"OutletBoundary"]
+f:"$Sreact.suspense"
+12:"ViewportBoundary"
+13:I[97367,["$4"],"$12"]
+14:"MetadataBoundary"
+15:I[97367,["$4"],"$14"]
+16:I[27201,["$4"],"IconMark"]
+8:X
+8:C
+9:X
+a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$3","c",{"children":[[["$","header",null,{"className":"relative isolate overflow-hidden border-b border-line pt-28 pb-10 md:pt-32 md:pb-12","children":[["$","div",null,{"aria-hidden":"true","className":"absolute inset-0 -z-10 page-wash"}],["$","div",null,{"className":"container-x relative","children":["$undefined",["$","p",null,{"className":"eyebrow enter ","children":"Blog"}],["$","h1",null,{"className":"enter mt-4 max-w-4xl leading-[1.02] font-medium tracking-[-0.035em] text-balance text-[clamp(2.1rem,4.6vw,3.75rem)]","style":{"--d":"0.1s"},"children":"Knowledge from the ground and the air."}],["$","p",null,{"className":"enter max-w-2xl leading-relaxed text-pretty mt-5 text-lg font-medium text-accent","style":{"--d":"0.22s"},"children":"Guides, explainers and updates on aerial mapping, surveying and drone data."}],"$undefined"]}]]}],["$","section",null,{"aria-label":"Blog","className":"pt-10 pb-24 md:pt-14 md:pb-32","children":["$","div",null,{"className":"container-x","children":["$","$Ld",null,{"t":{"eyebrow":"Blog","title":"Knowledge from the ground and the air.","lead":"Guides, explainers and updates on aerial mapping, surveying and drone data.","filterLabel":"Filter by topic","all":"All","categories":{"guides":"Guides","technology":"Technology","construction":"Construction & infrastructure","energy":"Energy & solar","agriculture":"Agriculture & nature"},"read":"Read","minutes":"min read","emptyTitle":"The first articles are on their way.","emptyBody":"We are writing guides and explainers on mapping, surveying and drone data. Is there a topic you would like us to cover?","emptyCta":"Tell us","noneInCategory":"No articles on this topic yet."},"lang":"en","posts":[]}]}]}]],[["$","script","script-0",{"src":"/_next/static/chunks/0qb5pj6jg2izf.js","async":true}]],["$","$Le",null,{"children":["$","$f",null,{"name":"Next.MetadataOutlet","children":"$@10"}]}]]}],"p":"$@11","v":null,"s":"$9"}}]]
+2:[["children",{"s":"blog","h":64,"d":{"r":["$","$3","c",{"children":[null,["$","$L5",null,{"parallelRouterKey":"children","template":["$","$L6",null,{}]}]]}],"p":"$@7","v":"$8","s":"$9"},"c":"$Qa"}]]
+1:[["children",{"s":{"n":"lang","t":"d","k":"en","s":["actions"]},"h":48,"c":"$Q2"}]]
+0:{"t":{"t":{"s":"","h":80,"c":"$Q1"},"h":{"r":["$","$3","h",{"children":[null,["$","$L13",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","content":"#f6f3ec"}],["$","meta","3",{"name":"color-scheme","content":"light"}]]}],["$","$L15",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$f",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Blog: Drone Mapping & Surveying | Drone Atlas"}],["$","meta","1",{"name":"description","content":"Guides, explainers and updates on drone mapping, surveying, aerial data and working with the files."}],["$","meta","2",{"name":"application-name","content":"Drone Atlas"}],["$","meta","3",{"name":"robots","content":"index, follow"}],["$","link","4",{"rel":"canonical","href":"https://droneatlas.co.il/en/blog/"}],["$","link","5",{"rel":"alternate","hrefLang":"he-IL","href":"https://droneatlas.co.il/he/blog/"}],["$","link","6",{"rel":"alternate","hrefLang":"en","href":"https://droneatlas.co.il/en/blog/"}],["$","link","7",{"rel":"alternate","hrefLang":"x-default","href":"https://droneatlas.co.il/he/blog/"}],["$","meta","8",{"property":"og:title","content":"Blog: Drone Mapping & Surveying | Drone Atlas"}],["$","meta","9",{"property":"og:description","content":"Guides, explainers and updates on drone mapping, surveying, aerial data and working with the files."}],["$","meta","10",{"property":"og:url","content":"https://droneatlas.co.il/en/blog/"}],["$","meta","11",{"property":"og:site_name","content":"Drone Atlas"}],["$","meta","12",{"property":"og:locale","content":"en_US"}],["$","meta","13",{"property":"og:image","content":"https://droneatlas.co.il/images/og/default.jpg"}],["$","meta","14",{"property":"og:image:width","content":"1200"}],["$","meta","15",{"property":"og:image:height","content":"630"}],["$","meta","16",{"property":"og:image:alt","content":"Blog: Drone Mapping & Surveying"}],["$","meta","17",{"property":"og:locale:alternate","content":"he_IL"}],["$","meta","18",{"property":"og:type","content":"website"}],["$","meta","19",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","20",{"name":"twitter:title","content":"Blog: Drone Mapping & Surveying | Drone Atlas"}],["$","meta","21",{"name":"twitter:description","content":"Guides, explainers and updates on drone mapping, surveying, aerial data and working with the files."}],["$","meta","22",{"name":"twitter:image","content":"https://droneatlas.co.il/images/og/default.jpg"}],["$","link","23",{"rel":"icon","href":"/icon.svg?icon.4404ql2pg9ndz.svg","sizes":"any","type":"image/svg+xml"}],["$","$L16","24",{}]]}]}],null]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"p":"$@17","v":null,"s":"$9"}},"a":"$@18","u":"$@19","b":"AyOpZmk2G6bnHoQGCSGVW"}
+10:null
+19:true
+9:300
+9:C
+18:0
+7:"$undefined"
+17:"$undefined"
+11:"$undefined"
