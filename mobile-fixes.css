@@ -9,8 +9,14 @@
   or wider, so the desktop layout is unchanged.
 */
 
-/* Header: swap the logo and the menu cluster whenever the hamburger is showing. */
+/* Header: swap the logo and the menu cluster whenever the hamburger is showing.
+   Smooth scrolling on the document is what lets Safari stop a "back to top"
+   halfway down the page, so phones scroll instantly. */
 @media (max-width: 63.999rem) {
+  html {
+    scroll-behavior: auto;
+  }
+
   header.fixed > .container-x {
     flex-direction: row-reverse;
   }
