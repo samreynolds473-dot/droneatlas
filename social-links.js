@@ -45,23 +45,35 @@
     return document.documentElement.lang === "en" ? "en" : "he";
   }
 
-  function buildRow() {
+  function configured() {
+    var keys = ["facebook", "instagram", "linkedin"];
+    var items = [];
+    for (var i = 0; i < keys.length; i++) {
+      var url = (URLS[keys[i]] || "").trim();
+      if (url) items.push({ key: keys[i], url: url });
+    }
+    return items;
+  }
+
+  function buildRow(items) {
     var copy = COPY[language()];
     var list = document.createElement("ul");
     list.className = "social-row";
     list.setAttribute("aria-label", copy.group);
     list.setAttribute("style", ROW_STYLE);
-    ["facebook", "instagram", "linkedin"].forEach(function (key) {
-      var item = document.createElement("li");
-      item.setAttribute("style", "display:flex;margin:0;padding:0;list-style:none");
+    items.forEach(function (item) {
+      var li = document.createElement("li");
+      li.setAttribute("style", "display:flex;margin:0;padding:0;list-style:none");
       var link = document.createElement("a");
-      link.href = "#";
+      link.href = item.url;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
       link.setAttribute("style", LINK_STYLE);
-      link.setAttribute("data-social", key);
-      link.setAttribute("aria-label", copy[key]);
-      link.innerHTML = ICONS[key];
-      item.appendChild(link);
-      list.appendChild(item);
+      link.setAttribute("data-social", item.key);
+      link.setAttribute("aria-label", copy[item.key]);
+      link.innerHTML = ICONS[item.key];
+      li.appendChild(link);
+      list.appendChild(li);
     });
     return list;
   }
@@ -83,21 +95,28 @@
     }
   }
 
+  function place(slot, items, beforeHeading) {
+    if (!slot) return;
+    var existing = slot.querySelector(".social-row");
+    if (!items.length) {
+      if (existing) existing.remove();
+      return;
+    }
+    if (existing) return;
+    var row = buildRow(items);
+    if (beforeHeading) {
+      var heading = slot.querySelector("h3");
+      if (heading) slot.insertBefore(row, heading);
+      else slot.appendChild(row);
+    } else {
+      slot.appendChild(row);
+    }
+  }
+
   function ensure() {
-    var footerColumn = document.querySelector("footer .lg\\:col-span-4");
-    if (footerColumn && !footerColumn.querySelector(".social-row")) {
-      footerColumn.appendChild(buildRow());
-    }
-
-    var contactColumn = document.querySelector("#contact .lg\\:col-span-5");
-    if (contactColumn && !contactColumn.querySelector(".social-row")) {
-      var row = buildRow();
-      var heading = contactColumn.querySelector("h3");
-      if (heading) contactColumn.insertBefore(row, heading);
-      else contactColumn.appendChild(row);
-    }
-
-    applyUrls(document);
+    var items = configured();
+    place(document.querySelector("footer .lg\\:col-span-4"), items, false);
+    place(document.querySelector("#contact .lg\\:col-span-5"), items, true);
   }
 
   document.addEventListener("click", function (event) {
